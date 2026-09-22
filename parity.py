@@ -489,6 +489,120 @@ def random_case(rng: random.Random, scope: str) -> dict:
 
 
 # --------------------------------------------------------------------------
+# Round trip of the input adapter: decode a rendered Arxo scenario back into
+# the case fields and compare with the case it was rendered from. The Catala
+# payload is the case's `inputs` dict itself (plus the calendar), so the
+# Catala side of the adapter is the identity and needs no decoder.
+# --------------------------------------------------------------------------
+import re as _re
+
+_FACT = _re.compile(r'^\s*assert (not )?([a-z_0-9]+)\((.*)\) \{ id "([^"]+)-a\d+"; origin case_input; \}\s*$')
+#: The published predicate-to-field mapping of the adapter (inverse of lawtest_case).
+PRED_TO_FIELD = {
+    "vosstanovlenie_tekhnicheski_nevozmozhno": ("tekhnicheski_nevozmozhno", "flag"),
+    "ozhidaemye_raskhody_na_vosstanovlenie": ("ozhidaemye_raskhody", "money"),
+    "rynochnaya_stoimost_na_datu_otcheta": ("rynochnaya_stoimost", "money"),
+    "ostatki_peredany_v_sobstvennost_strakhovshchika": ("ostatki_peredany", "bool"),
+    "stoimost_godnykh_k_realizatsii_ostatkov": ("stoimost_godnykh_ostatkov", "money"),
+    "detal_podlezhit_zamene": ("podlezhit_zamene", "flag"),
+    "vladelets_fizicheskoe_litso": ("vladelets", "FizicheskoeLitso"),
+    "vladelets_yuridicheskoe_litso": ("vladelets", "YuridicheskoeLitso"),
+    "ne_podlezhit_obyazatelnomu_tekhosmotru": ("ne_podlezhit_tekhosmotru", "flag"),
+    "nakhoditsya_na_garantiynom_obsluzhivanii": ("na_garantiynom_obsluzhivanii", "flag"),
+    "srednegodovoy_probeg": ("srednegodovoy_probeg_km", "km"),
+    "detal_ranee_ne_povrezhdalas": ("ranee_ne_povrezhdalas", "flag"),
+    "detal_ne_podvergalas_remontu": ("ne_podvergalas_remontu", "flag"),
+    "rynochnaya_stoimost_novoy_detali": ("stoimost_novoy", "money"),
+    "stoimost_detali_s_uchetom_iznosa": ("stoimost_s_uchetom_iznosa", "money"),
+    "predlozheno_otsenshchikov": ("predlozheno", "int"),
+    "dostup_k_ts_besprepyatstvennyy": ("dostup_besprepyatstvennyy", "flag"),
+    "identifikatsiya_ts_provodima": ("identifikatsiya_provodima", "flag"),
+    "probeg_po_odometru_ustanovim": ("probeg_ustanovim", "flag"),
+    "komplektnost_ustanovima": ("komplektnost_ustanovima", "flag"),
+    "perechen_defektov_ustanovim": ("perechen_defektov_ustanovim", "flag"),
+    "fotosemka_povrezhdeniy_provodima": ("fotosemka_provodima", "flag"),
+    "priznaki_prezhnikh_remontov_ustanovimy": ("priznaki_remontov_ustanovimy", "flag"),
+    "opredelyaetsya_stoimost_vosstanovitelnogo_remonta": ("opredelyaetsya_stoimost_remonta", "bool"),
+    "dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny": ("dokumenty_o_dtp", "bool"),
+    "uproshchennoe_oformlenie_proisshestviya": ("uproshchennoe_oformlenie", "flag"),
+    "otchet_poluchen_poterpevshim": ("otchet_poluchen", "date"),
+    "otmetka_nesoglasiya_poluchena_strakhovshchikom": ("otmetka_nesoglasiya_poluchena", "date"),
+    "osmotr_osushchestvlen_strakhovshchikom": ("osmotr_osushchestvlen", "date"),
+    "otchet_predostavlen_poterpevshemu": ("otchet_predostavlen", "bool"),
+    "den_rassmotreniya_dela": ("den_rassmotreniya", "date"),
+    "itogovaya_stoimost_v_tenge": ("summa", "money"),
+    "otchet_summa_propisyu": ("rasshifrovana_propisyu", "flag"),
+}
+#: Structural facts that carry no case field.
+STRUCTURAL = {"raschet_po_ts", "detal_ts", "poterpevshiy_po_raschetu"}
+_TRISTATE = ("ostatki_peredany", "dokumenty_o_dtp", "opredelyaetsya_stoimost_remonta", "otchet_predostavlen")
+_MONEY = ("ozhidaemye_raskhody", "rynochnaya_stoimost", "stoimost_godnykh_ostatkov", "stoimost_novoy",
+          "stoimost_s_uchetom_iznosa", "summa")
+
+
+def decode_case(block: str) -> dict:
+    """Case fields as the renderer would have read them, from one `test` block."""
+    fields: dict = {}
+    for line in block.splitlines():
+        m = _FACT.match(line)
+        if not m:
+            continue
+        negated, pred, args = m.group(1), m.group(2), m.group(3)
+        if pred in STRUCTURAL:
+            continue
+        if pred not in PRED_TO_FIELD:
+            raise SystemExit(f"round trip: unknown predicate {pred}")
+        field, kind = PRED_TO_FIELD[pred]
+        last = args.rsplit(", ", 1)[-1] if ", " in args else args
+        if kind == "flag":
+            fields[field] = True
+        elif kind == "bool":
+            fields[field] = not bool(negated)
+        elif kind in ("FizicheskoeLitso", "YuridicheskoeLitso"):
+            fields[field] = kind
+        elif kind == "money":
+            fields[field] = Decimal(last.replace(" KZT", ""))
+        elif kind == "km":
+            fields[field] = int(last.replace(" km", ""))
+        elif kind == "int":
+            fields[field] = int(last)
+        elif kind == "date":
+            fields[field] = last.lstrip("@")
+    return fields
+
+
+def normalized_inputs(inputs: dict) -> dict:
+    """The case inputs as the renderer observes them: false flags and absent
+    optionals are not rendered; money is compared as a decimal."""
+    out = {}
+    for k, v in inputs.items():
+        if v is None or (v is False and k not in _TRISTATE):
+            continue
+        if k in _MONEY and isinstance(v, (int, float)) and not isinstance(v, bool):
+            out[k] = Decimal(str(v))
+        else:
+            out[k] = v
+    return out
+
+
+def run_roundtrip(cases: list[dict]) -> int:
+    rendered = render_suites({"cases": cases})
+    blocks: dict[str, str] = {}
+    for text in rendered.values():
+        for m in _re.finditer(r'test "urn:query:vred-parity:([^"]+)" \{(.*?)\n\}\n', text, _re.S):
+            blocks[m.group(1)] = m.group(2)
+    mismatches = 0
+    for case in cases:
+        want = normalized_inputs(case["inputs"])
+        got = decode_case(blocks[case["id"]])
+        if want != got:
+            mismatches += 1
+            print(f"ROUND-TRIP MISMATCH {case['id']}: rendered {got} != case {want}")
+    print(f"round trip: {len(cases) - mismatches}/{len(cases)} rendered scenarios decode back to their case fields")
+    return 1 if mismatches else 0
+
+
+# --------------------------------------------------------------------------
 # Arxo engine: law-cli found on PATH, in $LAW_CLI, or given by --law
 # --------------------------------------------------------------------------
 _LAW: list[str] | None = None
@@ -687,11 +801,17 @@ def main() -> int:
     parser.add_argument("--no-arxo", action="store_true", help="in --property, only Catala against the oracle")
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--law", metavar="BINARY", help="law-cli (or the law wrapper); default $LAW_CLI or PATH")
+    parser.add_argument("--model", metavar="FILE", help="Catala model to run instead of catala/vred_ts.catala_en "
+                        "(e.g. catala/vred_ts-alt-disjunction.catala_en)")
+    parser.add_argument("--roundtrip", action="store_true",
+                        help="decode the rendered scenarios of the 65 cases and of the random cases (seeds 1, 2) back to case fields")
     parser.add_argument("--record", type=Path, metavar="DIR", help="write JSON reports here")
     parser.add_argument("-v", "--verbose", action="store_true")
     args = parser.parse_args()
     if args.law:
         law_command(args.law)
+    if args.model:
+        globals()["MODEL"] = Path(args.model).resolve()
     rc = 0
     if args.emit:
         rc |= emit(check=False)
@@ -705,7 +825,20 @@ def main() -> int:
         rc |= run_arxo(args.record)
     if args.property:
         rc |= run_property(args.property, args.seed, not args.no_arxo, args.record)
-    if not any((args.emit, args.check, args.catala, args.arxo, args.property, args.all)):
+    if args.roundtrip:
+        cases = load_cases()
+        rc |= run_roundtrip(cases["cases"])
+        ref = Reference(load_calendar(cases))
+        scopes = ["Gibel", "StoimostDetali", "VyborOtsenshchikov", "SrokiPunkta3"]
+        for seed in (1, 2):
+            rng = random.Random(seed)
+            generated = []
+            for n in range(120):
+                inputs = random_case(rng, scopes[n % 4])
+                generated.append({"id": f"P{n:04d}", "scope": scopes[n % 4], "source": "property", "inputs": inputs,
+                                  "expected": ref.compute(scopes[n % 4], inputs), "rationale": f"seed={seed}"})
+            rc |= run_roundtrip(generated)
+    if not any((args.emit, args.check, args.catala, args.arxo, args.property, args.all, args.roundtrip)):
         parser.print_help()
         return 2
     return rc
