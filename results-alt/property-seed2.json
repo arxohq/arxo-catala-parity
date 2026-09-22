@@ -1,0 +1,2304 @@
+{
+  "count": 120,
+  "seed": 2,
+  "catala": {
+    "agreed": 120,
+    "cases": [
+      {
+        "id": "P0000",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 1272555
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0001",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 24383,
+          "stoimost_s_uchetom_iznosa": 944985
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 944985
+        },
+        "catala": {
+          "stoimost": 944985.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0002",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0003",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "osmotr_osushchestvlen": "2026-09-24",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-04-28"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": "2026-10-01",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otcheta": "2026-10-01"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0004",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "stoimost_godnykh_ostatkov": 1873955
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0005",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": false,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 20000
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0006",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 3
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0007",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-09-26",
+          "otmetka_nesoglasiya_poluchena": "2026-05-20",
+          "den_rassmotreniya": "2026-06-28"
+        },
+        "expected": {
+          "predel_otmetki": "2026-09-30",
+          "predel_otveta": "2026-05-25",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-09-30",
+          "predel_otveta": "2026-05-25"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0008",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 9354687,
+          "rynochnaya_stoimost": 7628412,
+          "ostatki_peredany": false
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0009",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 33046,
+          "stoimost_novoy": 683058,
+          "stoimost_s_uchetom_iznosa": 426425
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 426425
+        },
+        "catala": {
+          "stoimost": 426425.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0010",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0011",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-12-14",
+          "osmotr_osushchestvlen": "2026-06-21",
+          "den_rassmotreniya": "2026-04-05"
+        },
+        "expected": {
+          "predel_otmetki": "2026-12-18",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-06-26",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "catala": {
+          "predel_otmetki": "2026-12-18",
+          "predel_otcheta": "2026-06-26",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0012",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "rynochnaya_stoimost": 0,
+          "stoimost_godnykh_ostatkov": 557509
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0013",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 20000,
+          "stoimost_novoy": 261622,
+          "stoimost_s_uchetom_iznosa": 86931
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 86931
+        },
+        "catala": {
+          "stoimost": 86931.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0014",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0015",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": true,
+          "otmetka_nesoglasiya_poluchena": "2026-05-08",
+          "osmotr_osushchestvlen": "2026-03-19",
+          "den_rassmotreniya": "2026-12-18"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0016",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 4157847,
+          "rynochnaya_stoimost": 0,
+          "stoimost_godnykh_ostatkov": 1567995
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0017",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 20000,
+          "stoimost_novoy": 904340,
+          "stoimost_s_uchetom_iznosa": 160910
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 160910
+        },
+        "catala": {
+          "stoimost": 160910.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0018",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 1
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0019",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": true,
+          "osmotr_osushchestvlen": "2026-03-04",
+          "den_rassmotreniya": "2026-07-18"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0020",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 6535353,
+          "rynochnaya_stoimost": 8169192,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 1466902
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0021",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "stoimost_novoy": 960913
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0022",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 1
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0023",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-05-06",
+          "otmetka_nesoglasiya_poluchena": "2026-04-24",
+          "osmotr_osushchestvlen": "2026-11-13",
+          "den_rassmotreniya": "2026-12-14"
+        },
+        "expected": {
+          "predel_otmetki": "2026-05-13",
+          "predel_otveta": "2026-04-29",
+          "predel_otcheta": "2026-11-20",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-05-13",
+          "predel_otveta": "2026-04-29",
+          "predel_otcheta": "2026-11-20"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0024",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 0,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 209239
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0025",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 20298,
+          "stoimost_novoy": 222770,
+          "stoimost_s_uchetom_iznosa": 797469
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 797469
+        },
+        "catala": {
+          "stoimost": 797469.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0026",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0027",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-01-08",
+          "osmotr_osushchestvlen": "2026-07-31",
+          "den_rassmotreniya": "2026-02-15"
+        },
+        "expected": {
+          "predel_otmetki": "2026-01-13",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-08-07",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-01-13",
+          "predel_otcheta": "2026-08-07"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0028",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 1989626,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 1833638
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0029",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 15000,
+          "stoimost_novoy": 509465,
+          "stoimost_s_uchetom_iznosa": 932753
+        },
+        "expected": {
+          "bez_iznosa": true,
+          "stoimost": 509465
+        },
+        "catala": {
+          "bez_iznosa": true,
+          "stoimost": 509465.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0030",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 9
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0031",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": true,
+          "otchet_poluchen": "2026-07-07",
+          "otmetka_nesoglasiya_poluchena": "2027-01-03",
+          "osmotr_osushchestvlen": "2026-09-06",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-07-08"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0032",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 6627714,
+          "rynochnaya_stoimost": 1
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0033",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 20000,
+          "stoimost_novoy": 479237,
+          "stoimost_s_uchetom_iznosa": 393125
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 393125
+        },
+        "catala": {
+          "stoimost": 393125.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0034",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 3
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0035",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2027-01-05",
+          "den_rassmotreniya": "2026-04-26"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0036",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 1414502,
+          "rynochnaya_stoimost": 2623949,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 1143501
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0037",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": false,
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_s_uchetom_iznosa": 742815
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 742815
+        },
+        "catala": {
+          "stoimost": 742815.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0038",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0039",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-05-24",
+          "otmetka_nesoglasiya_poluchena": "2026-10-01",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-09-19"
+        },
+        "expected": {
+          "predel_otmetki": "2026-05-27",
+          "predel_otveta": "2026-10-06",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-05-27",
+          "predel_otveta": "2026-10-06"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0040",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "rynochnaya_stoimost": 4170833,
+          "ostatki_peredany": false
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0041",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 20001,
+          "stoimost_novoy": 505895,
+          "stoimost_s_uchetom_iznosa": 266047
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 266047
+        },
+        "catala": {
+          "stoimost": 266047.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0042",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0043",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-10-05",
+          "otmetka_nesoglasiya_poluchena": "2026-12-01",
+          "osmotr_osushchestvlen": "2027-01-04",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-04-04"
+        },
+        "expected": {
+          "predel_otmetki": "2026-10-08",
+          "predel_otveta": "2026-12-04",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-10-08",
+          "predel_otveta": "2026-12-04"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0044",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": true
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0045",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": false,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 25558,
+          "stoimost_novoy": 209231,
+          "stoimost_s_uchetom_iznosa": 966145
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 966145
+        },
+        "catala": {
+          "stoimost": 966145.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0046",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 9
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0047",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otmetka_nesoglasiya_poluchena": "2026-11-07",
+          "osmotr_osushchestvlen": "2026-09-01",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-03-27"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": "2026-11-11",
+          "predel_otcheta": "2026-09-08",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otveta": "2026-11-11",
+          "predel_otcheta": "2026-09-08"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0048",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": true
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 0
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 0.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0049",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 5230,
+          "stoimost_novoy": 182138,
+          "stoimost_s_uchetom_iznosa": 984108
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 984108
+        },
+        "catala": {
+          "stoimost": 984108.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0050",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 2
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0051",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "osmotr_osushchestvlen": "2026-03-22",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-08-23"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": "2026-04-01",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "catala": {
+          "predel_otcheta": "2026-04-01",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0052",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 428689
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -428689
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -428689.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0053",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": false,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 20000,
+          "stoimost_novoy": 318945,
+          "stoimost_s_uchetom_iznosa": 994472
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 994472
+        },
+        "catala": {
+          "stoimost": 994472.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0054",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0055",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-02-14",
+          "osmotr_osushchestvlen": "2026-10-30"
+        },
+        "expected": {
+          "predel_otmetki": "2026-02-18",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-11-06",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-02-18",
+          "predel_otcheta": "2026-11-06"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0056",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 234698
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -234698
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -234698.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0057",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 20001,
+          "stoimost_novoy": 521755,
+          "stoimost_s_uchetom_iznosa": 306171
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 306171
+        },
+        "catala": {
+          "stoimost": 306171.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0058",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 1
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0059",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-11-21",
+          "otmetka_nesoglasiya_poluchena": "2026-05-17",
+          "osmotr_osushchestvlen": "2026-02-17",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-12-11"
+        },
+        "expected": {
+          "predel_otmetki": "2026-11-25",
+          "predel_otveta": "2026-05-20",
+          "predel_otcheta": "2026-02-24",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "catala": {
+          "predel_otmetki": "2026-11-25",
+          "predel_otveta": "2026-05-20",
+          "predel_otcheta": "2026-02-24",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0060",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 5016902,
+          "rynochnaya_stoimost": 6271128,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 1727044
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": 4544084
+        },
+        "catala": {
+          "unichtozheno": true,
+          "vyplata": 4544084.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0061",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "stoimost_novoy": 748496
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0062",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0063",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "osmotr_osushchestvlen": "2026-07-19",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-06-28"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": "2026-07-24",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otcheta": "2026-07-24"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0064",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 3128113,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 753244
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0065",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 15516,
+          "stoimost_novoy": 298481,
+          "stoimost_s_uchetom_iznosa": 944453
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 944453
+        },
+        "catala": {
+          "stoimost": 944453.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0066",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 2
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0067",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otmetka_nesoglasiya_poluchena": "2026-03-11",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-08-01"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": "2026-03-17",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otveta": "2026-03-17"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0068",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": false
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0069",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_novoy": 604810,
+          "stoimost_s_uchetom_iznosa": 354463
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 354463
+        },
+        "catala": {
+          "stoimost": 354463.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0070",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0071",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-01-25",
+          "otmetka_nesoglasiya_poluchena": "2026-08-28",
+          "osmotr_osushchestvlen": "2026-06-09"
+        },
+        "expected": {
+          "predel_otmetki": "2026-01-28",
+          "predel_otveta": "2026-09-02",
+          "predel_otcheta": "2026-06-16",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-01-28",
+          "predel_otveta": "2026-09-02",
+          "predel_otcheta": "2026-06-16"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0072",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 7626523,
+          "rynochnaya_stoimost": 9865013,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 1240128
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": 9865013
+        },
+        "catala": {
+          "unichtozheno": true,
+          "vyplata": 9865013.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0073",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": false,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "stoimost_novoy": 111108,
+          "stoimost_s_uchetom_iznosa": 231305
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 231305
+        },
+        "catala": {
+          "stoimost": 231305.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0074",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0075",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": true,
+          "otmetka_nesoglasiya_poluchena": "2026-11-26",
+          "osmotr_osushchestvlen": "2026-08-29",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-03-10"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0076",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 9095843,
+          "stoimost_godnykh_ostatkov": 1108293
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0077",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": false,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_novoy": 645961,
+          "stoimost_s_uchetom_iznosa": 397549
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 397549
+        },
+        "catala": {
+          "stoimost": 397549.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0078",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 5
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0079",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-12-31",
+          "den_rassmotreniya": "2026-02-20"
+        },
+        "expected": {
+          "predel_otmetki": null,
+          "predel_otveta": null,
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0080",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 1,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 627668
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -627667
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -627667.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0081",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 20001,
+          "stoimost_novoy": 733014,
+          "stoimost_s_uchetom_iznosa": 109034
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 109034
+        },
+        "catala": {
+          "stoimost": 109034.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0082",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0083",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-04-07",
+          "otmetka_nesoglasiya_poluchena": "2026-01-18",
+          "osmotr_osushchestvlen": "2026-11-14",
+          "otchet_predostavlen": true
+        },
+        "expected": {
+          "predel_otmetki": "2026-04-10",
+          "predel_otveta": "2026-01-21",
+          "predel_otcheta": "2026-11-20",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-04-10",
+          "predel_otveta": "2026-01-21",
+          "predel_otcheta": "2026-11-20"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0084",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 3767014,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": true
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 0
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 0.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0085",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "stoimost_novoy": 219012,
+          "stoimost_s_uchetom_iznosa": 340079
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 340079
+        },
+        "catala": {
+          "stoimost": 340079.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0086",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 4
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0087",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-07-29",
+          "osmotr_osushchestvlen": "2026-05-30"
+        },
+        "expected": {
+          "predel_otmetki": "2026-08-03",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-06-05",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "catala": {
+          "predel_otmetki": "2026-08-03",
+          "predel_otcheta": "2026-06-05",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0088",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1,
+          "rynochnaya_stoimost": 1
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0089",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 20001,
+          "stoimost_novoy": 266946,
+          "stoimost_s_uchetom_iznosa": 609030
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 609030
+        },
+        "catala": {
+          "stoimost": 609030.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0090",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 3
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0091",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-10-18",
+          "otmetka_nesoglasiya_poluchena": "2026-02-03",
+          "osmotr_osushchestvlen": "2026-11-03"
+        },
+        "expected": {
+          "predel_otmetki": "2026-10-21",
+          "predel_otveta": "2026-02-06",
+          "predel_otcheta": "2026-11-10",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-10-21",
+          "predel_otveta": "2026-02-06",
+          "predel_otcheta": "2026-11-10"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0092",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 5164375,
+          "rynochnaya_stoimost": 1,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 1825469
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 1
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 1.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0093",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 20001,
+          "stoimost_novoy": 493502,
+          "stoimost_s_uchetom_iznosa": 19143
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 19143
+        },
+        "catala": {
+          "stoimost": 19143.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0094",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 4
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0095",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-03-22",
+          "osmotr_osushchestvlen": "2026-01-31",
+          "den_rassmotreniya": "2026-05-20"
+        },
+        "expected": {
+          "predel_otmetki": "2026-03-30",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-02-06",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "catala": {
+          "predel_otmetki": "2026-03-30",
+          "predel_otcheta": "2026-02-06",
+          "otchet_ne_v_srok": true,
+          "pravo_na_vyplatu": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0096",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 3985837,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 1475644
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0097",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": false,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 13963,
+          "stoimost_novoy": 697977,
+          "stoimost_s_uchetom_iznosa": 989037
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 989037
+        },
+        "catala": {
+          "stoimost": 989037.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0098",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {},
+        "expected": {
+          "obespechen": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0099",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-08-19",
+          "otmetka_nesoglasiya_poluchena": "2026-08-29",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-04-22"
+        },
+        "expected": {
+          "predel_otmetki": "2026-08-24",
+          "predel_otveta": "2026-09-02",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-08-24",
+          "predel_otveta": "2026-09-02"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0100",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 9118964,
+          "rynochnaya_stoimost": 0,
+          "ostatki_peredany": false,
+          "stoimost_godnykh_ostatkov": 572050
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -572050
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": -572050.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0101",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "stoimost_novoy": 293246,
+          "stoimost_s_uchetom_iznosa": 501782
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 501782
+        },
+        "catala": {
+          "stoimost": 501782.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0102",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 1
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0103",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-05-01",
+          "osmotr_osushchestvlen": "2026-11-24",
+          "otchet_predostavlen": false
+        },
+        "expected": {
+          "predel_otmetki": "2026-05-06",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-12-01",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-05-06",
+          "predel_otcheta": "2026-12-01"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0104",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 2288251,
+          "rynochnaya_stoimost": 0,
+          "stoimost_godnykh_ostatkov": 98642
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0105",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": false,
+          "ne_podlezhit_tekhosmotru": true,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": false,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 20000,
+          "stoimost_novoy": 993508
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0106",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 3
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0107",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-03-15",
+          "otmetka_nesoglasiya_poluchena": "2026-06-21",
+          "osmotr_osushchestvlen": "2026-11-18",
+          "otchet_predostavlen": true,
+          "den_rassmotreniya": "2026-09-28"
+        },
+        "expected": {
+          "predel_otmetki": "2026-03-19",
+          "predel_otveta": "2026-06-24",
+          "predel_otcheta": "2026-11-25",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-03-19",
+          "predel_otveta": "2026-06-24",
+          "predel_otcheta": "2026-11-25"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0108",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": true,
+          "ozhidaemye_raskhody": 1029832,
+          "rynochnaya_stoimost": 1287289,
+          "ostatki_peredany": true,
+          "stoimost_godnykh_ostatkov": 1508833
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 1287289
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": 1287289.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0109",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": false,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "FizicheskoeLitso",
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_novoy": 953341,
+          "stoimost_s_uchetom_iznosa": 974503
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 974503
+        },
+        "catala": {
+          "stoimost": 974503.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0110",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0111",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-02-19",
+          "otmetka_nesoglasiya_poluchena": "2026-07-24",
+          "osmotr_osushchestvlen": "2026-05-21"
+        },
+        "expected": {
+          "predel_otmetki": "2026-02-24",
+          "predel_otveta": "2026-07-29",
+          "predel_otcheta": "2026-05-28",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-02-24",
+          "predel_otveta": "2026-07-29",
+          "predel_otcheta": "2026-05-28"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0112",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "ozhidaemye_raskhody": 7054125,
+          "rynochnaya_stoimost": 8817655,
+          "stoimost_godnykh_ostatkov": 1199270
+        },
+        "expected": {
+          "netselesoobrazno": true,
+          "unichtozheno": true,
+          "vyplata": null
+        },
+        "catala": {
+          "netselesoobrazno": true,
+          "unichtozheno": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0113",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": false,
+          "ranee_ne_povrezhdalas": true,
+          "ne_podvergalas_remontu": true,
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_novoy": 134047
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0114",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 0
+        },
+        "expected": {
+          "obespechen": false
+        },
+        "catala": {
+          "obespechen": false
+        },
+        "problems": []
+      },
+      {
+        "id": "P0115",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-03-16",
+          "osmotr_osushchestvlen": "2026-05-06",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-04-04"
+        },
+        "expected": {
+          "predel_otmetki": "2026-03-19",
+          "predel_otveta": null,
+          "predel_otcheta": "2026-05-15",
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-03-19",
+          "predel_otcheta": "2026-05-15"
+        },
+        "problems": []
+      },
+      {
+        "id": "P0116",
+        "scope": "Gibel",
+        "inputs": {
+          "tekhnicheski_nevozmozhno": false,
+          "rynochnaya_stoimost": 7096578
+        },
+        "expected": {
+          "netselesoobrazno": null,
+          "unichtozheno": null,
+          "vyplata": null
+        },
+        "catala": {},
+        "problems": []
+      },
+      {
+        "id": "P0117",
+        "scope": "StoimostDetali",
+        "inputs": {
+          "podlezhit_zamene": true,
+          "ne_podlezhit_tekhosmotru": false,
+          "na_garantiynom_obsluzhivanii": true,
+          "ranee_ne_povrezhdalas": false,
+          "ne_podvergalas_remontu": true,
+          "vladelets": "YuridicheskoeLitso",
+          "srednegodovoy_probeg_km": 15001,
+          "stoimost_novoy": 479232,
+          "stoimost_s_uchetom_iznosa": 888207
+        },
+        "expected": {
+          "bez_iznosa": null,
+          "stoimost": 888207
+        },
+        "catala": {
+          "stoimost": 888207.0
+        },
+        "problems": []
+      },
+      {
+        "id": "P0118",
+        "scope": "VyborOtsenshchikov",
+        "inputs": {
+          "predlozheno": 3
+        },
+        "expected": {
+          "obespechen": true
+        },
+        "catala": {
+          "obespechen": true
+        },
+        "problems": []
+      },
+      {
+        "id": "P0119",
+        "scope": "SrokiPunkta3",
+        "inputs": {
+          "uproshchennoe_oformlenie": false,
+          "otchet_poluchen": "2026-09-28",
+          "otmetka_nesoglasiya_poluchena": "2026-05-25",
+          "otchet_predostavlen": false,
+          "den_rassmotreniya": "2026-09-13"
+        },
+        "expected": {
+          "predel_otmetki": "2026-10-01",
+          "predel_otveta": "2026-05-28",
+          "predel_otcheta": null,
+          "otchet_ne_v_srok": null,
+          "pravo_na_vyplatu": null
+        },
+        "catala": {
+          "predel_otmetki": "2026-10-01",
+          "predel_otveta": "2026-05-28"
+        },
+        "problems": []
+      }
+    ]
+  },
+  "arxo": null
+}
