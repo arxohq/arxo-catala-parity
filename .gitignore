@@ -1,0 +1,5 @@
+_build/
+runs/
+__pycache__/
+*.pyc
+.parity-tmp/

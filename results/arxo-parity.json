@@ -1,0 +1,418 @@
+{
+  "engine": [],
+  "programHash": "sha256:c197794a8cb3c7686933e7db0f5b5104b5e6b48c95ef9d2e338dd1a04e051a83",
+  "parts": [
+    {
+      "family": "kz.corpus.vred_ts#catala-parity",
+      "suites": [
+        "parity.lawtest"
+      ],
+      "calendar": false,
+      "passed": 48,
+      "failed": 0,
+      "tests": [
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G06"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G07"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G08"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G09"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G10"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G11"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G12"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G13"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G14"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:G15"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D06"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D07"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D08"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D09"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D10"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D11"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D12"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D13"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:D14"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:V01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:V02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:V03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:V04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:V05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O06"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O07"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:O08"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity.lawtest",
+          "title": "urn:query:vred-parity:I06"
+        }
+      ]
+    },
+    {
+      "family": "kz.corpus.vred_ts#catala-parity",
+      "suites": [
+        "parity-sroki.lawtest"
+      ],
+      "calendar": true,
+      "passed": 17,
+      "failed": 0,
+      "tests": [
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S01"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S02"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S03"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S04"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S05"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S06"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S07"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S08"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S09"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S10"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S11"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S12"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S13"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S14"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S15"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S16"
+        },
+        {
+          "failures": [],
+          "passed": true,
+          "test": "/private/tmp/claude-501/-Users-rifatjumagulov-Downloads-law-dsl/689d0495-42dc-4c38-9aaa-ac15fa1b6728/scratchpad/arxo-catala-parity/corpus/laws/kz/regulators/vred-ts/tests/parity/parity-sroki.lawtest",
+          "title": "urn:query:vred-parity:S17"
+        }
+      ]
+    }
+  ]
+}

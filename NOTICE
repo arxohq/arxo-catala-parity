@@ -1,0 +1,46 @@
+# NOTICE
+
+This repository carries a THIRD-PARTY pinned text. The code licence (Apache-2.0,
+see LICENSE) does not extend to it.
+
+## Pinned text
+
+`corpus/laws/kz/regulators/vred-ts/sources/vred-ts/ru.txt` is a byte-pinned copy of the Rules for
+Determining the Amount of Damage Caused to a Vehicle, approved by Resolution
+No. 14 of the Board of the National Bank of the Republic of Kazakhstan of
+28 January 2016, in the wording of the archived copy of 7 September 2025.
+
+| Publication | URI | content_hash | Retrieved |
+|---|---|---|---|
+| `VRED_TS_RU_TEXT` | https://web.archive.org/web/20250907213615id_/https://adilet.zan.kz/rus/docs/V1600013460 | `sha256:6840c4a9942c53c2c1734bf787e5c79a4a805a3161dab014480b34e909db07c0` | 2026-08-31T20:00:00Z |
+
+The copy is an archived snapshot of the page of the legal information system
+"Әділет" (adilet.zan.kz), not the official bytes of the publisher; the package
+manifest records this as `sourceFidelity = "pinned_unofficial_copy"`. Every
+fragment quoted in `corpus/laws/kz/regulators/vred-ts/sources.law` is an exact substring of these bytes,
+which the compiler checks.
+
+## Terms of reproduction
+
+Under Article 8 of the Law of the Republic of Kazakhstan of 10 June 1996
+No. 6-I "On Copyright and Related Rights", official documents (laws, court
+decisions, other texts of a legislative, administrative, judicial or diplomatic
+nature) and their official translations are not objects of copyright. The
+pinned text is such an official document. The source is acknowledged above and
+in `corpus/laws/kz/regulators/vred-ts/sources.law`.
+
+## Calendar data
+
+`corpus/clir/kz-official-2026.calendar.json` and
+`corpus/clir/kz-official-calendar-2026.lawir.json` are a snapshot of working
+and non-working days of the Republic of Kazakhstan for 2025–2026, derived by
+the Arxo corpus from the Law "On Holidays in the Republic of Kazakhstan" (see
+the `metadata.note` field inside the dataset). They are data of this
+repository under the code licence; the underlying law is an official document
+in the sense above.
+
+## Catala
+
+`catala/vred_ts.catala_en` is an independent model of the same Rules written in
+the Catala language (https://catala-lang.org), Apache-2.0. Catala itself is not
+distributed here.

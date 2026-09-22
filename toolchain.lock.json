@@ -1,0 +1,10 @@
+{
+  "asset": "law-package-tools-0.1.0-x86_64-unknown-linux-musl.zip",
+  "format": "law.package-toolchain-lock/0.1",
+  "repository": "arxohq/law",
+  "sha256": "604588f92141784dc33114fec8d0f261443fcd76e1058825d4e9fccbc9a87b3e",
+  "sourceCommit": "38bdd109ddbf3de48ab9e74153589573fa4fcafa",
+  "tag": "law-package-tools@0.1.0",
+  "target": "x86_64-unknown-linux-musl",
+  "version": "0.1.0"
+}

@@ -1,0 +1,148 @@
+{
+  "total": 20,
+  "killed": 20,
+  "survived": 0,
+  "rejected": 0,
+  "mutants": [
+    {
+      "id": "M01",
+      "what": "cl. 9: 'exceed' becomes 'not less than' (the 80 % boundary itself)",
+      "outcome": "KILLED",
+      "failing": 11,
+      "example": "urn:query:vred-t01"
+    },
+    {
+      "id": "M02",
+      "what": "cl. 9: threshold 80 % becomes 70 %",
+      "outcome": "KILLED",
+      "failing": 12,
+      "example": "urn:query:vred-t01"
+    },
+    {
+      "id": "M03",
+      "what": "cl. 9: payment without deduction of usable remains",
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-t15-c"
+    },
+    {
+      "id": "M04",
+      "what": "cl. 9: second alternative without the established negation of transfer",
+      "outcome": "KILLED",
+      "failing": 7,
+      "example": "urn:query:vred-t15-b"
+    },
+    {
+      "id": "M05",
+      "what": "cl. 10 (1): 'does not exceed' becomes strictly less (15,000 km boundary)",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t03"
+    },
+    {
+      "id": "M06",
+      "what": "cl. 10 (2): 20,000 km boundary",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t05"
+    },
+    {
+      "id": "M07",
+      "what": "cl. 10 (2): warranty-service condition lost",
+      "outcome": "KILLED",
+      "failing": 7,
+      "example": "urn:query:vred-t12-c"
+    },
+    {
+      "id": "M08",
+      "what": "cl. 10: 'not previously repaired' condition lost",
+      "outcome": "KILLED",
+      "failing": 7,
+      "example": "urn:query:vred-t12-b"
+    },
+    {
+      "id": "M09",
+      "what": "cl. 3: five working days become six",
+      "outcome": "KILLED",
+      "failing": 17,
+      "example": "urn:query:vred-t14-b"
+    },
+    {
+      "id": "M10",
+      "what": "cl. 3: working days become calendar days",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t14-a"
+    },
+    {
+      "id": "M11",
+      "what": "cl. 3-1: the simplified-procedure defeater of the report deadline lost",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t11-d"
+    },
+    {
+      "id": "M12",
+      "what": "cl. 3: a report on the last day of the period counted as late",
+      "outcome": "KILLED",
+      "failing": 7,
+      "example": "urn:query:vred-parity:S05"
+    },
+    {
+      "id": "M13",
+      "what": "cl. 4-1: one appraiser suffices",
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-t08"
+    },
+    {
+      "id": "M14",
+      "what": "annex 3 footnote: depreciation also applied in the cases of cl. 10 (two amounts)",
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-parity:D01"
+    },
+    {
+      "id": "M15",
+      "what": "annex 3 cl. 2: rounding-to-tenge check lost",
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-t13-h"
+    },
+    {
+      "id": "M16",
+      "what": "annex 2 cl. 4.1: an inspection act without VIN counted as complete",
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t09-b"
+    },
+    {
+      "id": "M17",
+      "what": "cl. 2 part 4: additional inspection without its own application",
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t10-b"
+    },
+    {
+      "id": "M18",
+      "what": "cl. 7: inadmissibility without the established absence of documents",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t15-g"
+    },
+    {
+      "id": "M19",
+      "what": "cl. 7: photography condition lost",
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t15-h"
+    },
+    {
+      "id": "M20",
+      "what": "annex 3 cl. 1: certification by one signature without the established absence of a seal",
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t13-b"
+    }
+  ]
+}

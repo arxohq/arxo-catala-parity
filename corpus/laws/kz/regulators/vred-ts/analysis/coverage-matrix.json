@@ -1,0 +1,828 @@
+{
+  "$comment": "Coverage matrix of the pinned source (sources/vred-ts/ru.txt): unit → requirement → implementation → scenarios → reference → status. Checked by tools/coverage_matrix.py: quotes are exact substrings of the source; rule, test, and case names must exist, with two-way completeness. Statuses: executable — executed by rules; fact — enters as a case fact by direct delegation of the Rules; boundary — a boundary with a reason; descriptive — a description without a condition or consequence.",
+  "source": "sources/vred-ts/ru.txt",
+  "open_questions": [
+    {
+      "id": "Q1",
+      "text": "Clause 3-1 lifts the «сроки осуществления страховщиком осмотра и составления акта осмотра, определения размера вреда, указанные в пункте 3» [the time limits for the insurer's conduct of the inspection and drawing up of the inspection report, and for determining the amount of damage, referred to in clause 3]. Does this extend to the time limit for the INJURED PARTY'S MARK (three business days from the day the report is received), which is not a time limit \"for the insurer's conduct\" of anything?",
+      "reading": "all three time limits of clause 3 are lifted (mark, reply, report); tests KZ-VRED-20, t11-d, S09."
+    },
+    {
+      "id": "Q2",
+      "text": "The second paragraph of clause 9 gives two payout alternatives (\"transfers … the remains … or makes … a payout net of\"), without naming who chooses the alternative.",
+      "reading": "the alternative is determined by the established fact of the transfer of the remains, or by its established negation; case silence means the payout is undetermined (§113)."
+    },
+    {
+      "id": "Q3",
+      "text": "Clause 9 does not name a lower bound for the payout \"net of the value of the remains fit for sale\": when the value of the remains exceeds the market value, the arithmetic yields a negative amount.",
+      "reading": "the formula is applied literally (case G14), zero is not implied as a floor — pending the owner's decision."
+    },
+    {
+      "id": "SPEC-1",
+      "text": "The status of the §175 result under the code CALENDAR_OUT_OF_RANGE: the E-0105 list assigns to MISSING_INPUT only MISSING_CALENDAR and CALENDAR_DATASET_INVALID (\"other codes are RUNTIME_ERROR\"); both implementations answer MISSING_INPUT byte-identically.",
+      "reading": "test t14-g checks the issue code and NEITHER, it does not pin the status; the classification is a prose gap, pending errata."
+    }
+  ],
+  "rows": [
+    {
+      "id": "1",
+      "unit": "п. 1",
+      "quote": "определяют порядок определения размера вреда, причиненного транспортному средству",
+      "requirement": "subject matter and legal basis of the Rules",
+      "status": "boundary",
+      "reason": "no condition, addressee, or consequence; the reason is verified against the text in sources/vred-ts/articles.json",
+      "rules": []
+    },
+    {
+      "id": "2.1",
+      "unit": "п. 2 ч. 1",
+      "quote": "осуществляется страховщиком или оценщиком с применением лицензионного специализированного программного обеспечения",
+      "requirement": "the assessment is conducted by the insurer or the appraiser, with licensed software, on the basis of an application with the data of annex 1",
+      "rules": [
+        "RaschetStrakhovshchikom",
+        "RaschetOtsenshchikom"
+      ],
+      "facts": [
+        "spo_primeneno",
+        "raschet_osushchestvlyaet_strakhovshchik"
+      ],
+      "tests": [
+        "KZ-VRED-21-RASCHET-STRAKHOVSHCHIKOM",
+        "KZ-VRED-22-RASCHET-OTSENSHCHIKOM"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "2.2",
+      "unit": "п. 2 ч. 2",
+      "quote": "оформляется путем составления акта осмотра, содержащего сведения, предусмотренные приложением 2",
+      "requirement": "the inspection is formalized by drawing up a report with the data of annex 2 and information on possible defects; the defect information is a value",
+      "rules": [
+        "OsmotrOformlenAktom"
+      ],
+      "tests": [
+        "KZ-VRED-25-ORGANIZATSIYA-RASCHETA",
+        "KZ-VRED-26-ORGANIZATSIYA-BEZ-SOGLASOVANIYA",
+        "urn:query:vred-t19-e"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "2.3",
+      "unit": "п. 2 ч. 3",
+      "quote": "Осмотр проводится на станциях технического обслуживания по требованию потерпевшего",
+      "requirement": "duty to conduct the inspection at a service station on request (the Rules do not name a time limit — the window is open)",
+      "rules": [
+        "OsmotrNaStantsiiPoTrebovaniyu"
+      ],
+      "tests": [
+        "urn:query:vred-t17-a",
+        "urn:query:vred-t17-b"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "2.4",
+      "unit": "п. 2 ч. 4",
+      "quote": "Проведение дополнительного осмотра транспортного средства, в том числе при наличии скрытых дефектов осуществляется также на основании заявления",
+      "requirement": "additional inspection — on application with the data of annex 1, by the insurer, with a report per annex 2; the adjustment for hidden defects — as an addendum to the report",
+      "rules": [
+        "DopolnitelnyyOsmotrOformlenAktom",
+        "DopolnitelnyyOsmotrPoPravilam",
+        "KorrektirovkaPriSkrytykhDefektakh"
+      ],
+      "tests": [
+        "urn:query:vred-t10-a",
+        "urn:query:vred-t10-b",
+        "urn:query:vred-t10-c",
+        "urn:query:vred-t10-d"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "2.5",
+      "unit": "п. 2 ч. 5",
+      "quote": "сохраняет поврежденное имущество в таком состоянии, в каком оно находилось после транспортного происшествия и предоставляет возможность страховщику произвести расчет размера вреда",
+      "requirement": "from the day the application is filed: preserve the property (a maintenance duty) and provide the opportunity for the assessment (an achievement duty)",
+      "rules": [
+        "SokhranenieImushchestva",
+        "PredostavlenieVozmozhnostiRascheta"
+      ],
+      "tests": [
+        "urn:query:vred-t17-c",
+        "urn:query:vred-t17-d"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "3.1",
+      "unit": "п. 3 ч. 1",
+      "quote": "регулируются пунктом 3 статьи 22 Закона",
+      "requirement": "time limits for the inspection, the inspection report, and determining the amount of damage",
+      "status": "boundary",
+      "reason": "a reference to cl. 3 of art. 22 of the Law, whose bytes are not in the package; duty 2.3 is recorded with an open window",
+      "rules": []
+    },
+    {
+      "id": "3.2",
+      "unit": "п. 3 ч. 2 и ч. 6",
+      "quote": "страховщик представляет потерпевшему (выгодоприобретателю) или их представителям отчет о размере вреда для ознакомления",
+      "requirement": "duty to submit the report; window — up to the fifth business day from the day of the inspection (part 6), no time limit under simplified formalization",
+      "rules": [
+        "ObyazannostPredostavitOtchet",
+        "ObyazannostPredostavitOtchetBezSroka"
+      ],
+      "tests": [
+        "urn:query:vred-t11-a",
+        "urn:query:vred-t11-b",
+        "urn:query:vred-t11-c",
+        "urn:query:vred-t11-d"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "3.3",
+      "unit": "п. 3 ч. 3",
+      "quote": "в течение 3 (трех) рабочих дней со дня получения отчета о размере вреда указывает в полученном отчете отметку о согласии либо несогласии",
+      "requirement": "a mark of agreement or disagreement with reasons — within three business days from the day the report is received",
+      "rules": [
+        "PredelOtmetkiPoterpevshego",
+        "OtmetkaSoglasiya",
+        "OtmetkaNesoglasiyaSPrichinami",
+        "ObyazannostProstavitOtmetku"
+      ],
+      "tests": [
+        "KZ-VRED-13-OTMETKA-V-SROK",
+        "KZ-VRED-13-OTMETKA-V-SROK/2",
+        "KZ-VRED-14-OTMETKA-PROSROCHENA",
+        "urn:query:vred-t14-a",
+        "urn:query:vred-t14-e",
+        "urn:query:vred-t14-g",
+        "urn:query:vred-t16-a"
+      ],
+      "cases": [
+        "S01",
+        "S02",
+        "S05",
+        "S06",
+        "S10",
+        "S13",
+        "S16",
+        "S17"
+      ],
+      "status": "executable",
+      "questions": [
+        "SPEC-1"
+      ]
+    },
+    {
+      "id": "3.4",
+      "unit": "п. 3 ч. 4",
+      "quote": "в течение 3 (трех) рабочих дней после получения отметки о несогласии",
+      "requirement": "adjustment of the assessment or a written reply — within three business days after receiving the disagreement mark",
+      "rules": [
+        "PredelOtvetaStrakhovshchika",
+        "ReaktsiyaKorrektirovkoy",
+        "ReaktsiyaPismennymOtvetom",
+        "ObyazannostOtvetitNaNesoglasie"
+      ],
+      "tests": [
+        "KZ-VRED-15-OTVET-KORREKTIROVKOY",
+        "KZ-VRED-16-OTVET-PISMENNYY",
+        "urn:query:vred-t14-c"
+      ],
+      "cases": [
+        "S04",
+        "S15"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "3.5",
+      "unit": "п. 3 ч. 5",
+      "quote": "Отчет о размере вреда составляется страховщиком и включает калькуляцию определения размера вреда",
+      "requirement": "the report is drawn up by the insurer, with a calculation from the software, per annex 3",
+      "rules": [
+        "OtchetSostavlenPoPravilam"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "3.6",
+      "unit": "п. 3 ч. 6",
+      "quote": "При непредоставлении страховщиком отчета о размере вреда потерпевшему (выгодоприобретателю) или их представителю в течение 5 (пяти) рабочих дней со дня осуществления страховщиком осмотра",
+      "requirement": "a limit of five business days from the day of the inspection; failure to submit in time (received after the limit, or not submitted at all as of the check date) gives the right to a payout under cl. 3-1 of art. 22 of the Law; the amount of the payout is outside the boundary",
+      "rules": [
+        "PredelPredostavleniyaOtcheta",
+        "OtchetPoluchenPosleSroka",
+        "OtchetNePredostavlenVovse",
+        "PravoNaVyplatuPriNepredostavleniiOtcheta"
+      ],
+      "tests": [
+        "KZ-VRED-17-OTCHET-POZDNO",
+        "KZ-VRED-18-OTCHET-NE-PREDOSTAVLEN-VOVSE",
+        "KZ-VRED-19-OTCHET-V-POSLEDNIY-DEN",
+        "urn:query:vred-t14-b",
+        "urn:query:vred-t14-d"
+      ],
+      "cases": [
+        "S03",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S11",
+        "S12",
+        "S14",
+        "S17"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "3-1",
+      "unit": "п. 3-1",
+      "quote": "не применяются при упрощенном оформлении транспортного происшествия",
+      "requirement": "under simplified formalization there are no clause 3 time limits: `unless` defeaters on the three limits, and an open-ended duty to submit the report",
+      "rules": [
+        "PredelOtmetkiPoterpevshego",
+        "PredelOtvetaStrakhovshchika",
+        "PredelPredostavleniyaOtcheta",
+        "ObyazannostPredostavitOtchetBezSroka"
+      ],
+      "tests": [
+        "KZ-VRED-20-UPROSHCHENNOE-OFORMLENIE",
+        "urn:query:vred-t11-d"
+      ],
+      "cases": [
+        "S09"
+      ],
+      "status": "executable",
+      "questions": [
+        "Q1"
+      ]
+    },
+    {
+      "id": "4",
+      "unit": "п. 4",
+      "quote": "действует также в отношении оценщика, привлеченного страховщиком на основании договора об оказании услуг",
+      "requirement": "the procedure of clauses 2 and 3 applies to the engaged appraiser (carried into the assessment)",
+      "rules": [
+        "PrivlechennyyOtsenshchikVeretRaschet"
+      ],
+      "tests": [
+        "KZ-VRED-22-RASCHET-OTSENSHCHIKOM"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "4-1",
+      "unit": "п. 4-1",
+      "quote": "предоставляет потерпевшему или его представителю на выбор не менее двух оценщиков",
+      "requirement": "at least two appraisers to choose from; the insurer's duty when engaging an appraiser",
+      "rules": [
+        "VyborOtsenshchikovObespechen",
+        "VyborOtsenshchikovNeObespechen",
+        "ObyazannostPredlozhitDvukhOtsenshchikov"
+      ],
+      "tests": [
+        "urn:query:vred-t07",
+        "urn:query:vred-t08",
+        "KZ-VRED-11-DVA-OTSENSHCHIKA",
+        "KZ-VRED-12-ODIN-OTSENSHCHIK",
+        "urn:query:vred-t15-f",
+        "urn:query:vred-t17-e",
+        "urn:query:vred-t17-f"
+      ],
+      "cases": [
+        "V*"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "5",
+      "unit": "п. 5",
+      "quote": "в порядке, предусмотренном статьей 29-1 Закона",
+      "requirement": "challenging the assessment results",
+      "status": "boundary",
+      "reason": "a pure reference to art. 29-1 of the Law (pending_addressee in articles.json)",
+      "rules": []
+    },
+    {
+      "id": "6",
+      "unit": "п. 6",
+      "quote": "Организация расчета размера вреда включает следующие этапы",
+      "requirement": "three stages: agreeing on the place and time, inspection with a report, assessment with the software",
+      "rules": [
+        "OrganizatsiyaRaschetaVypolnena"
+      ],
+      "tests": [
+        "KZ-VRED-25-ORGANIZATSIYA-RASCHETA",
+        "KZ-VRED-26-ORGANIZATSIYA-BEZ-SOGLASOVANIYA"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "7.1",
+      "unit": "п. 7 ч. 1",
+      "quote": "Проведение осмотра транспортного средства осуществляется при условии возможности",
+      "requirement": "seven conditions of possibility for the inspection, all at once",
+      "rules": [
+        "OsmotrVozmozhen"
+      ],
+      "tests": [
+        "KZ-VRED-23-OSMOTR-S-DOKUMENTAMI",
+        "urn:query:vred-t15-h"
+      ],
+      "cases": [
+        "O*"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "7.2",
+      "unit": "п. 7 ч. 2",
+      "quote": "При определении стоимости восстановительного ремонта транспортного средства осмотр проводится при наличии документов",
+      "requirement": "when determining the cost of restoration repair — only with documents on the damage from this traffic accident; without them (established) it is inadmissible",
+      "rules": [
+        "OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+        "OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+        "OsmotrNedopustimBezDokumentovODtp"
+      ],
+      "tests": [
+        "KZ-VRED-23-OSMOTR-S-DOKUMENTAMI",
+        "KZ-VRED-24-OSMOTR-BEZ-DOKUMENTOV",
+        "urn:query:vred-t15-g"
+      ],
+      "cases": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O07"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "7.3",
+      "unit": "п. 7 ч. 3",
+      "quote": "Результаты осмотра поврежденного транспортного средства фиксируются страховщиком в акте осмотра, составленном по форме согласно приложению 2",
+      "requirement": "the inspection results — in a report in the form of annex 2",
+      "rules": [
+        "OsmotrOformlenAktom",
+        "AktOsmotraSoderzhitTrebuemyeSvedeniya"
+      ],
+      "tests": [
+        "urn:query:vred-t09-a",
+        "KZ-VRED-27-OTCHET-OFORMLEN"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "7.4",
+      "unit": "п. 7 ч. 4",
+      "quote": "Дополнительными источниками информации к акту осмотра являются фотоматериалы поврежденного транспортного средства",
+      "requirement": "photo materials — an additional source of information for the report",
+      "status": "descriptive",
+      "reason": "a qualification without a condition or consequence within the Rules; damage photographs as an element of the report are checked by the row for annex 2 cl. 5 (item 5.2)",
+      "rules": []
+    },
+    {
+      "id": "8",
+      "unit": "п. 8",
+      "quote": "в счет страховой выплаты организует и осуществляет оплату ремонта поврежденного транспортного средства",
+      "requirement": "the insurer's discretion, by agreement with the injured party, to pay for repairs in lieu of a payout",
+      "rules": [
+        "OplataRemontaVSchetVyplaty"
+      ],
+      "tests": [
+        "KZ-VRED-30-POZITSII-PUNKTOV-8-I-11"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "9.1",
+      "unit": "п. 9 ч. 1",
+      "quote": "превышают 80 (восемьдесят) процентов от его рыночной стоимости на дату формирования отчета о размере вреда",
+      "requirement": "destroyed on technical impossibility or economic inexpediency; inexpedient if the expected expenses exceed 80% of the market value as of the report date; the numeric threshold bounds are also entered as variants rows (DECISION-0186)",
+      "rules": [
+        "EkonomicheskayaNetselesoobraznost",
+        "UnichtozhenoPoTekhnicheskoyNevozmozhnosti",
+        "UnichtozhenoPoEkonomicheskoyNetselesoobraznosti"
+      ],
+      "tests": [
+        "urn:query:vred-t01",
+        "urn:query:vred-t02",
+        "KZ-VRED-01-POROG-80-RAVNO",
+        "KZ-VRED-02-POROG-80-PREVYSHEN",
+        "KZ-VRED-03-UNICHTOZHENO-TEKHNICHESKI",
+        "urn:query:vred-t15-e",
+        "urn:query:vred-t15-j",
+        "Порог: не превышен",
+        "Порог: превышен"
+      ],
+      "cases": [
+        "G01",
+        "G02",
+        "G03",
+        "G08",
+        "G10",
+        "G11",
+        "G12",
+        "G13",
+        "G15"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "9.2",
+      "unit": "п. 9 ч. 2",
+      "quote": "передает в собственность страховщика остатки поврежденного транспортного средства либо осуществляет страховую выплату за минусом стоимости годных к реализации деталей, узлов, агрегатов, материалов",
+      "requirement": "payout on destruction: market value on transfer of the remains, or net of the value of the sellable remains (on an established negation of the transfer)",
+      "rules": [
+        "VyplataPriPeredacheOstatkov",
+        "VyplataZaMinusomGodnykhOstatkov"
+      ],
+      "tests": [
+        "KZ-VRED-04-VYPLATA-S-PEREDACHEY-OSTATKOV",
+        "KZ-VRED-05-VYPLATA-ZA-MINUSOM-OSTATKOV",
+        "urn:query:vred-t15-a",
+        "urn:query:vred-t15-b",
+        "urn:query:vred-t15-c",
+        "urn:query:vred-t15-d"
+      ],
+      "cases": [
+        "G04",
+        "G05",
+        "G06",
+        "G07",
+        "G09",
+        "G14",
+        "G15"
+      ],
+      "status": "executable",
+      "questions": [
+        "Q2",
+        "Q3"
+      ]
+    },
+    {
+      "id": "10.1",
+      "unit": "п. 10 пп. 1",
+      "quote": "среднегодовой пробег транспортного средства не превышает 15 тысяч километров",
+      "requirement": "individual: technical inspection not mandatory, mileage ≤ 15,000 km, the part is intact and unrepaired — value of the new part without depreciation",
+      "rules": [
+        "NovayaDetalUFizicheskogoLitsa"
+      ],
+      "tests": [
+        "urn:query:vred-t03",
+        "urn:query:vred-t04",
+        "KZ-VRED-06-PROBEG-FIZLITSO-15000",
+        "KZ-VRED-07-PROBEG-FIZLITSO-15001",
+        "urn:query:vred-t12-a",
+        "urn:query:vred-t12-b",
+        "urn:query:vred-t12-d",
+        "urn:query:vred-t12-e",
+        "urn:query:vred-t15-i"
+      ],
+      "cases": [
+        "D01",
+        "D02",
+        "D05",
+        "D07",
+        "D08",
+        "D10",
+        "D11",
+        "D12",
+        "D14"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "10.2",
+      "unit": "п. 10 пп. 2",
+      "quote": "среднегодовой пробег транспортного средства не превышает 20 тысяч километров",
+      "requirement": "legal entity: under warranty service, mileage ≤ 20,000 km, the part is intact and unrepaired",
+      "rules": [
+        "NovayaDetalUYuridicheskogoLitsa"
+      ],
+      "tests": [
+        "urn:query:vred-t05",
+        "urn:query:vred-t06",
+        "KZ-VRED-08-PROBEG-YURLITSO-20000",
+        "KZ-VRED-09-PROBEG-YURLITSO-20001",
+        "urn:query:vred-t12-c"
+      ],
+      "cases": [
+        "D03",
+        "D04",
+        "D06",
+        "D13"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "10.3",
+      "unit": "п. 10 (общее условие)",
+      "quote": "заменяемая деталь транспортного средства не была ранее повреждена и не подвергалась ремонту",
+      "requirement": "two conditions about the part, conjoined",
+      "rules": [
+        "DetalNePovrezhdalasINeRemontirovalas"
+      ],
+      "tests": [
+        "urn:query:vred-t12-a",
+        "urn:query:vred-t12-b"
+      ],
+      "cases": [
+        "D07",
+        "D14"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "10.4",
+      "unit": "п. 10 ч. 2",
+      "quote": "выгодоприобретатель передает в собственность страховщика заменяемую деталь по требованию страховщика",
+      "requirement": "duty to transfer the replaced part on request (window open)",
+      "rules": [
+        "ObyazannostPeredatZamenyaemuyuDetal"
+      ],
+      "tests": [
+        "KZ-VRED-10-PEREDACHA-DETALI-DUTY",
+        "KZ-VRED-10-PEREDACHA-DETALI-DUTY/2"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "11",
+      "unit": "п. 11",
+      "quote": "обеспечивается возможность расчета амортизационного износа на своем интернет-ресурсе",
+      "requirement": "the ombudsman and insurers provide the possibility of a depreciation calculation (window open); the amount of depreciation is outside the Rules",
+      "rules": [
+        "ObyazannostOmbudsmanaObespechitRaschetIznosa",
+        "ObyazannostStrakhovshchikaObespechitRaschetIznosa"
+      ],
+      "tests": [
+        "KZ-VRED-30-POZITSII-PUNKTOV-8-I-11",
+        "KZ-VRED-30-POZITSII-PUNKTOV-8-I-11/2"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П1",
+      "unit": "прил. 1",
+      "quote": "1) о дате и времени поступления заявления;",
+      "requirement": "two kinds of application data",
+      "rules": [
+        "ZayavlenieSoderzhitTrebuemyeSvedeniya"
+      ],
+      "tests": [
+        "KZ-VRED-21-RASCHET-STRAKHOVSHCHIKOM",
+        "urn:query:vred-t10-a"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П2.0",
+      "unit": "прил. 2 пп. 1, 2, 6",
+      "quote": "1. Дата, время проведения и составления акта осмотра поврежденного транспортного средства.",
+      "requirement": "six groups of report data (date and time, owner, presenting person, vehicle, damaged elements, inspector); dates, owner, and inspector — as values",
+      "rules": [
+        "AktOsmotraSoderzhitTrebuemyeSvedeniya"
+      ],
+      "tests": [
+        "urn:query:vred-t09-a",
+        "urn:query:vred-t09-b",
+        "urn:query:vred-t19-a",
+        "urn:query:vred-t19-b",
+        "urn:query:vred-t19-d"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П2.3",
+      "unit": "прил. 2 п. 3 (3.1–3.3)",
+      "quote": "3.3. документ, подтверждающий право собственности на транспортное средство",
+      "requirement": "full name, IIN and ID, title document — as field values",
+      "rules": [
+        "AktSoderzhitSvedeniyaOPredstavivshemLitse"
+      ],
+      "tests": [
+        "urn:query:vred-t09-a",
+        "urn:query:vred-t09-e",
+        "urn:query:vred-t19-a"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П2.4",
+      "unit": "прил. 2 п. 4 (4.1–4.8)",
+      "quote": "4.8. фото одометра (при наличии).",
+      "requirement": "eight facts about the vehicle; odometer photo — if there is an odometer; each fact — as a field value (VIN, make and model, plate number, year, mileage, equipment, image, photo), presence derived by a bridge",
+      "rules": [
+        "AktSoderzhitSvedeniyaOTs",
+        "FotoOdometraPrilozheno",
+        "FotoOdometraNeTrebuetsyaBezOdometra"
+      ],
+      "tests": [
+        "urn:query:vred-t09-a",
+        "urn:query:vred-t09-b",
+        "urn:query:vred-t09-c",
+        "urn:query:vred-t09-d",
+        "urn:query:vred-t19-a",
+        "urn:query:vred-t19-c",
+        "urn:query:vred-t19-d"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П2.5",
+      "unit": "прил. 2 п. 5 (5.1–5.3)",
+      "quote": "5.3. информация о возможных скрытых повреждениях",
+      "requirement": "part names, damage photographs, information on possible hidden damage — as field values",
+      "rules": [
+        "AktSoderzhitSvedeniyaOPovrezhdennykhElementakh"
+      ],
+      "tests": [
+        "urn:query:vred-t09-a",
+        "urn:query:vred-t09-f",
+        "urn:query:vred-t19-a"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.1.1",
+      "unit": "прил. 3 п. 1 пп. 1",
+      "quote": "заверяется печатью (при наличии) с указанием фамилии, имени, отчества (при его наличии) и подписью лица, утверждающего отчет",
+      "requirement": "eight elements of the title page; certification by seal if any and by signature; each element — as a field value, presence derived by a bridge",
+      "rules": [
+        "OtchetSoderzhitTitulnyyList",
+        "OtchetZaverenPechatyuIPodpisyu",
+        "OtchetZaverenPodpisyuBezPechati"
+      ],
+      "tests": [
+        "urn:query:vred-t13-a",
+        "urn:query:vred-t13-b",
+        "urn:query:vred-t13-c",
+        "urn:query:vred-t20-a",
+        "urn:query:vred-t20-b",
+        "urn:query:vred-t20-d",
+        "urn:query:vred-t20-e"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.1.2",
+      "unit": "прил. 3 п. 1 пп. 2",
+      "quote": "расчет амортизационного износа;",
+      "requirement": "the calculation section — the depreciation calculation; the section is content (a Text value), presence derived by a bridge; the Rules contain no depreciation formulas; the calculation section is presented as the value `otchet_raschet_iznosa`, its existence read by the clause 1 rule (§98, E-0165)",
+      "facts": [
+        "otchet_soderzhit_raschet_amortizatsionnogo_iznosa"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN",
+        "urn:query:vred-t20-a"
+      ],
+      "status": "executable",
+      "rules": [
+        "OtchetSoderzhitSvedeniyaPunkta1"
+      ]
+    },
+    {
+      "id": "П3.1.3",
+      "unit": "прил. 3 п. 1 пп. 3",
+      "quote": "указание объемов и стоимости восстановительных работ, указание стоимости материалов указание итоговой стоимости восстановительного ремонта",
+      "requirement": "four calculation statements; amounts — as Money values, work volumes — as text",
+      "rules": [
+        "OtchetSoderzhitStoimostiIObemy"
+      ],
+      "tests": [
+        "urn:query:vred-t13-d",
+        "urn:query:vred-t13-e",
+        "urn:query:vred-t20-a",
+        "urn:query:vred-t20-c"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.1.4",
+      "unit": "прил. 3 п. 1 пп. 4",
+      "quote": "исходные данные для составления калькуляции: заявление на проведение расчета, акт осмотра, иные документы",
+      "requirement": "three kinds of report annexes; annexes — as values (files, list)",
+      "rules": [
+        "OtchetSoderzhitPrilozheniya"
+      ],
+      "tests": [
+        "urn:query:vred-t13-e",
+        "urn:query:vred-t13-f",
+        "urn:query:vred-t20-a"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.1",
+      "unit": "прил. 3 п. 1 (свод)",
+      "quote": "Отчет о размере вреда, причиненного транспортному средству, содержит следующие сведения",
+      "requirement": "four parts of the report, conjoined",
+      "rules": [
+        "OtchetSoderzhitSvedeniyaPunkta1"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.2",
+      "unit": "прил. 3 п. 2",
+      "quote": "в виде цифры, округленной до тенге, с письменной расшифровкой суммы в скобках",
+      "requirement": "the final value in tenge without a fractional part, with a written amount in words; the rounding mode is not chosen (integrity is checked); the written amount — as a value",
+      "rules": [
+        "OtchetSoderzhitItogovuyuVelichinu"
+      ],
+      "tests": [
+        "urn:query:vred-t13-g",
+        "urn:query:vred-t13-h",
+        "urn:query:vred-t13-i",
+        "urn:query:vred-t20-a"
+      ],
+      "cases": [
+        "I*"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.3",
+      "unit": "прил. 3 п. 3",
+      "quote": "2) об отсутствии жалоб и претензий при исполнении страховщиком требований законодательных актов",
+      "requirement": "two marks in the report",
+      "rules": [
+        "OtchetSoderzhitOtmetki"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.4",
+      "unit": "прил. 3 п. 4",
+      "quote": "утверждается руководителем страховой организации или уполномоченным им лицом",
+      "requirement": "approval by the head of the insurance organization or a person authorized by them; the full name of the approving person — as a value",
+      "rules": [
+        "OtchetUtverzhdenRukovoditelem",
+        "OtchetUtverzhdenUpolnomochennymLitsom"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN",
+        "urn:query:vred-t20-a"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.5",
+      "unit": "прил. 3 п. 5",
+      "quote": "в бумажном или электронном виде в формате, не позволяющем вносить какие-либо изменения",
+      "requirement": "paper or electronic form in a non-modifiable format",
+      "rules": [
+        "OtchetVBumazhnomVide",
+        "OtchetVElektronnomVide",
+        "OtchetOformlenPoPrilozheniyu3"
+      ],
+      "tests": [
+        "KZ-VRED-27-OTCHET-OFORMLEN"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "П3.*",
+      "unit": "прил. 3 сноска",
+      "quote": "износ не применяется в случаях, указанных в пункте 10 Правил",
+      "requirement": "in the cases of cl. 10 — value of the new part; outside them — value net of depreciation (an external result)",
+      "rules": [
+        "StoimostDetaliBezIznosa",
+        "StoimostDetaliSUchetomIznosa"
+      ],
+      "tests": [
+        "KZ-VRED-28-STOIMOST-DETALI-BEZ-IZNOSA",
+        "KZ-VRED-29-STOIMOST-DETALI-S-IZNOSOM"
+      ],
+      "cases": [
+        "D*"
+      ],
+      "status": "executable"
+    },
+    {
+      "id": "Т",
+      "unit": "заголовок и главы 1–2",
+      "quote": "Глава 2. Порядок определения размера вреда, причиненного транспортному средству",
+      "requirement": "headings",
+      "status": "descriptive",
+      "reason": "division units without content; pinned by fragments VRED_TS_TITLE, VRED_TS_GL_1, VRED_TS_GL_2",
+      "rules": []
+    }
+  ]
+}

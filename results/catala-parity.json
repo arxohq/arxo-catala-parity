@@ -1,0 +1,586 @@
+{
+  "clerk": [
+    "1.2.0"
+  ],
+  "cases": [
+    {
+      "id": "G01",
+      "scope": "Gibel",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G02",
+      "scope": "Gibel",
+      "catala": {
+        "netselesoobrazno": true,
+        "unichtozheno": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G03",
+      "scope": "Gibel",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G04",
+      "scope": "Gibel",
+      "catala": {
+        "unichtozheno": true,
+        "vyplata": 1000000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G05",
+      "scope": "Gibel",
+      "catala": {
+        "unichtozheno": true,
+        "vyplata": 850000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G06",
+      "scope": "Gibel",
+      "catala": {
+        "unichtozheno": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G07",
+      "scope": "Gibel",
+      "catala": {
+        "netselesoobrazno": true,
+        "unichtozheno": true,
+        "vyplata": 1000000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G08",
+      "scope": "Gibel",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G09",
+      "scope": "Gibel",
+      "catala": {
+        "unichtozheno": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G10",
+      "scope": "Gibel",
+      "catala": {
+        "netselesoobrazno": true,
+        "unichtozheno": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G11",
+      "scope": "Gibel",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G12",
+      "scope": "Gibel",
+      "catala": {
+        "netselesoobrazno": true,
+        "unichtozheno": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G13",
+      "scope": "Gibel",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G14",
+      "scope": "Gibel",
+      "catala": {
+        "unichtozheno": true,
+        "vyplata": -50000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "G15",
+      "scope": "Gibel",
+      "catala": {
+        "netselesoobrazno": true,
+        "unichtozheno": true,
+        "vyplata": 1000000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D01",
+      "scope": "StoimostDetali",
+      "catala": {
+        "bez_iznosa": true,
+        "stoimost": 240000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D02",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D03",
+      "scope": "StoimostDetali",
+      "catala": {
+        "bez_iznosa": true,
+        "stoimost": 240000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D04",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D05",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D06",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D07",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D08",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D09",
+      "scope": "StoimostDetali",
+      "catala": {
+        "bez_iznosa": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D10",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D11",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D12",
+      "scope": "StoimostDetali",
+      "catala": {
+        "bez_iznosa": true,
+        "stoimost": 240000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D13",
+      "scope": "StoimostDetali",
+      "catala": {
+        "bez_iznosa": true,
+        "stoimost": 240000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "D14",
+      "scope": "StoimostDetali",
+      "catala": {
+        "stoimost": 96000.0
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "V01",
+      "scope": "VyborOtsenshchikov",
+      "catala": {
+        "obespechen": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "V02",
+      "scope": "VyborOtsenshchikov",
+      "catala": {
+        "obespechen": false
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "V03",
+      "scope": "VyborOtsenshchikov",
+      "catala": {
+        "obespechen": false
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "V04",
+      "scope": "VyborOtsenshchikov",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "V05",
+      "scope": "VyborOtsenshchikov",
+      "catala": {
+        "obespechen": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O01",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "vozmozhen": true,
+        "dopustim": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O02",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "vozmozhen": true,
+        "dopustim": false
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O03",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "vozmozhen": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O04",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "vozmozhen": true,
+        "dopustim": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O05",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "vozmozhen": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O06",
+      "scope": "DopustimostOsmotra",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O07",
+      "scope": "DopustimostOsmotra",
+      "catala": {
+        "dopustim": false
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "O08",
+      "scope": "DopustimostOsmotra",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S01",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-09-04"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S02",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-03-12"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S03",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otcheta": "2026-03-31"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S04",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otveta": "2026-04-20"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S05",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-09-11",
+        "predel_otcheta": "2026-09-08"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S06",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-09-14",
+        "predel_otcheta": "2026-09-08",
+        "otchet_ne_v_srok": true,
+        "pravo_na_vyplatu": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S07",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otcheta": "2026-09-08"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S08",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otcheta": "2026-09-08",
+        "otchet_ne_v_srok": true,
+        "pravo_na_vyplatu": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S09",
+      "scope": "SrokiPunkta3",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S10",
+      "scope": "SrokiPunkta3",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S11",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otcheta": "2026-12-31"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S12",
+      "scope": "SrokiPunkta3",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S13",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-05-13"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S14",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otcheta": "2026-01-09"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S15",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otveta": "2026-10-29"
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S16",
+      "scope": "SrokiPunkta3",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "S17",
+      "scope": "SrokiPunkta3",
+      "catala": {
+        "predel_otmetki": "2026-09-14",
+        "predel_otcheta": "2026-09-08",
+        "otchet_ne_v_srok": true,
+        "pravo_na_vyplatu": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I01",
+      "scope": "ItogovayaVelichina",
+      "catala": {
+        "nadlezhashche": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I02",
+      "scope": "ItogovayaVelichina",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I03",
+      "scope": "ItogovayaVelichina",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I04",
+      "scope": "ItogovayaVelichina",
+      "catala": {
+        "nadlezhashche": true
+      },
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I05",
+      "scope": "ItogovayaVelichina",
+      "catala": {},
+      "error": null,
+      "problems": []
+    },
+    {
+      "id": "I06",
+      "scope": "ItogovayaVelichina",
+      "catala": {},
+      "error": null,
+      "problems": []
+    }
+  ]
+}
