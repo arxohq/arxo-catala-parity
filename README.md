@@ -113,9 +113,9 @@ that produced them.
 Without the engine binary: the Catala rows (65 of 65; 120 of 120 on each seed
 with `--no-arxo`) and the rendering check. With the binary: the Arxo rows, the
 property mode on the Arxo side and the mutation checks; with the checker
-binary as well, the certification. The revision of the artifact that revision 4
-of the paper reports is tagged `paper-rev4` and published as a GitHub release;
-`paper-rev2` and `paper-rev3` are the revisions the two external reviews read. The repository's history was rewritten once on 22 September 2026
+binary as well, the certification. The revision of the artifact that revision 5
+of the paper reports is tagged `paper-rev5` and published as a GitHub release;
+`paper-rev2`, `paper-rev3` and `paper-rev4` are the revisions the three external reviews read. The repository's history was rewritten once on 22 September 2026
 when the package's comments were translated; the tags are the stable citation
 targets.
 
