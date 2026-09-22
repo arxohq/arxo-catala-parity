@@ -45,6 +45,7 @@ parity.py                               the runner: emit/check, Catala, Arxo, pr
 mutants.py                              the mutation check
 results/                                recorded JSON reports of the runs above
 docs/REPORT.md                          the parity report
+docs/claim-ledger.csv                   every claim of the paper with its status (measured / pilot / mechanized / counted / cited) and evidence
 tools/toolchain.py, toolchain.lock.json pinned download of the engine release (see below)
 ```
 
@@ -91,6 +92,15 @@ The engine release is pinned in `toolchain.lock.json`
 public. Until then the binary is available to reviewers on request from the
 maintainer; the recorded reports in `results/` carry the SHA-256 of the binary
 that produced them.
+
+## What a third party can reproduce
+
+Without the engine binary: the Catala rows (65 of 65; 120 of 120 on each seed
+with `--no-arxo`) and the rendering check. With the binary: the Arxo rows, the
+property mode on the Arxo side and the mutation check. The revision reviewed
+for the paper is tagged `paper-rev2`; the repository's history was rewritten
+once on 22 September 2026 when the package's comments were translated, and the
+tag is the stable citation target.
 
 ## What is and is not established here
 
