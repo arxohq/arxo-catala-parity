@@ -125,13 +125,13 @@ def main() -> int:
         for n, (rel, op, new_lines, what) in enumerate(plan):
             work = Path(tmp) / f"m{n:04d}"
             source = work / "package"
-            shutil.copytree(PACKAGE, source, ignore=shutil.ignore_patterns("tests", "sources", "analysis", "__pycache__"))
+            shutil.copytree(PACKAGE, source, ignore=shutil.ignore_patterns("tests", "analysis", "__pycache__"))
             (source / rel).write_text("".join(new_lines), encoding="utf-8")
             try:
                 engine = Arxo(work, package=source)
-            except SystemExit:
+            except SystemExit as refusal:
                 counts["REJECTED"] += 1
-                outcomes.append({"id": n, "op": op, "site": what, "outcome": "REJECTED"})
+                outcomes.append({"id": n, "op": op, "site": what, "outcome": "REJECTED", "detail": str(refusal)[-200:]})
                 shutil.rmtree(work, ignore_errors=True)
                 continue
             failing = 0

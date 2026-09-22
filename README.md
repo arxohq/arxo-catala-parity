@@ -24,6 +24,9 @@ Re-obtained from this repository on 22 September 2026 (`results/`):
 | 240 random cases (two seeds), Python oracle versus Catala | 240 of 240 |
 | the same 240 random cases, Python oracle versus Arxo | 240 of 240 |
 | 20 targeted mutations of the Arxo model against its 169 scenarios | 20 of 20 caught |
+| the alternative Catala encoding (one disjunctive exception, no guard), 65 reference and 240 random cases | 65 of 65, 240 of 240 |
+| the input adapter: rendered scenarios decoded back to case fields, 65 + 240 cases | all |
+| SYS_TOTAL systematic operator-based mutations against the 169 scenarios | SYS_KILLED caught, SYS_SURVIVED survived, SYS_REJECTED rejected |
 
 Where a norm states an algorithm, both languages reproduce it identically.
 What each of them does beyond the algorithm is the subject of the paper;
@@ -35,14 +38,16 @@ measurements.
 ```
 cases.json                              65 reference cases: inputs, expected outputs, rationale, clause
 catala/vred_ts.catala_en                the Catala model (six scopes), written from the pinned text
+catala/vred_ts-alt-disjunction.catala_en the same model with the two grounds of a late report as one disjunctive exception (no guard)
 catala/README.md                        agreed semantics of the comparison; what is not compared
 corpus/laws/kz/regulators/vred-ts/      the Arxo package kz.corpus.vred_ts, as in the Arxo corpus (comments in English)
     package.law, sources.law, modules/  sources, pinned text and its fragments, 67 rules
     tests/                              169 scenarios in three families; tests/parity/ are the 65 cases rendered
     law.toml, law.lock                  manifest and lock (the lock pins the calendar snapshot by hash)
 corpus/clir/                            the official-calendar snapshot of 2025–2026, pinned bytes
-parity.py                               the runner: emit/check, Catala, Arxo, property mode
-mutants.py                              the mutation check
+parity.py                               the runner: emit/check, Catala (--model for the alternative encoding), Arxo, property mode, --roundtrip
+mutants.py                              the 20 targeted mutations
+mutants_systematic.py                   operator-based mutations over every rule module (CMP, DROP, NEG, CONST, UNIT, UNLESS)
 results/                                recorded JSON reports of the runs above
 docs/REPORT.md                          the parity report
 docs/claim-ledger.csv                   every claim of the paper with its status (measured / pilot / mechanized / counted / cited) and evidence
@@ -79,6 +84,9 @@ python3 parity.py --arxo --law /path/to/law-cli
 python3 parity.py --property 120 --seed 1 --law /path/to/law-cli
 python3 mutants.py --law /path/to/law-cli
 python3 parity.py --all --law /path/to/law-cli --record results
+python3 parity.py --roundtrip                                   # adapter round trip, no engine needed
+python3 parity.py --catala --model catala/vred_ts-alt-disjunction.catala_en
+python3 mutants_systematic.py --law /path/to/law-cli --record results
 ```
 
 `--arxo` lowers the package with the pinned imports context, adds the calendar
