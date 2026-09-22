@@ -23,7 +23,7 @@ Re-obtained from this repository on 22 September 2026 (`results/`):
 | the same 65 cases as Arxo scenarios, Arxo engine | 65 of 65 |
 | 240 random cases (two seeds), Python oracle versus Catala | 240 of 240 |
 | the same 240 random cases, Python oracle versus Arxo | 240 of 240 |
-| 20 targeted mutations of the Arxo model against its 157 scenarios | 20 of 20 caught |
+| 20 targeted mutations of the Arxo model against its 169 scenarios | 20 of 20 caught |
 
 Where a norm states an algorithm, both languages reproduce it identically.
 What each of them does beyond the algorithm is the subject of the paper;
@@ -38,7 +38,7 @@ catala/vred_ts.catala_en                the Catala model (six scopes), written f
 catala/README.md                        agreed semantics of the comparison; what is not compared
 corpus/laws/kz/regulators/vred-ts/      the Arxo package kz.corpus.vred_ts, as in the Arxo corpus (comments in English)
     package.law, sources.law, modules/  sources, pinned text and its fragments, 67 rules
-    tests/                              157 scenarios in six families; tests/parity/ are the 65 cases rendered
+    tests/                              169 scenarios in three families; tests/parity/ are the 65 cases rendered
     law.toml, law.lock                  manifest and lock (the lock pins the calendar snapshot by hash)
 corpus/clir/                            the official-calendar snapshot of 2025–2026, pinned bytes
 parity.py                               the runner: emit/check, Catala, Arxo, property mode

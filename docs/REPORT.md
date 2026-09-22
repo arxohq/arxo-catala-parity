@@ -14,7 +14,7 @@ Kazakhstan of 28 January 2016, in the wording of the archived copy of
 7 September 2025. Nineteen fragments, thirteen clauses, three annexes; the text
 is pinned by content hash (`NOTICE`).
 
-The Arxo package `kz.corpus.vred_ts` (67 rules, 157 scenarios in six
+The Arxo package `kz.corpus.vred_ts` (67 rules, 169 scenarios in three
 families; source comments and documentation in English, the pinned text and
 labels in the original Russian) models the Rules including their non-computational parts: ten
 duties and one liberty, the defeasible layer, the composition of documents
@@ -43,7 +43,7 @@ independently of each other.
    calendar snapshot), and checks Catala and Arxo against it.
 4. **Mutations.** `mutants.py` applies 20 one-line changes to the Arxo sources
    (thresholds, comparison operators, dropped conditions, changed periods),
-   lowers each mutant and runs all 157 scenarios of the package against it.
+   lowers each mutant and runs all 169 scenarios of the package against it.
    Each mutant must be caught by at least one scenario.
 
 ## 3. Results (22 September 2026, this repository)

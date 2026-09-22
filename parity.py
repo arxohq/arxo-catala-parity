@@ -509,6 +509,14 @@ def law_command(explicit: str | None) -> list[str]:
     return _LAW
 
 
+def engine_identity() -> dict:
+    """The engine binary named by file name and by SHA-256 of its bytes: the only
+    version identity that survives a rename of the file."""
+    import hashlib
+    path = Path(law_command(None)[0])
+    return {"binary": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+
+
 def law(*args: str, **kwargs) -> subprocess.CompletedProcess:
     return subprocess.run([*law_command(None), *args], capture_output=True, text=True, **kwargs)
 
@@ -588,7 +596,7 @@ def run_arxo(record: Path | None) -> int:
         if record:
             record.mkdir(parents=True, exist_ok=True)
             (record / "arxo-parity.json").write_text(json.dumps(
-                {"engine": law("version").stdout.strip().splitlines()[:1], "programHash": engine.ir.get("semanticHash"),
+                {"engine": engine_identity(), "programHash": engine.ir.get("semanticHash"),
                  "parts": reports}, ensure_ascii=False, indent=2), encoding="utf-8")
     return 1 if failures else 0
 

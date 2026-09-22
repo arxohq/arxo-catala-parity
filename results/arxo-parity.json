@@ -1,5 +1,8 @@
 {
-  "engine": [],
+  "engine": {
+    "binary": "law-cli",
+    "sha256": "2c0be5299f5a9794ceeac8ed5ff6be4635ff004fa7578732d6337c3cdbd4bd4e"
+  },
   "programHash": "sha256:c197794a8cb3c7686933e7db0f5b5104b5e6b48c95ef9d2e338dd1a04e051a83",
   "parts": [
     {
