@@ -1,0 +1,2429 @@
+{
+  "engine": {
+    "binary": "law-cli",
+    "sha256": "556f455c89b4f8abe1ad85583e57037098500543c505216b66a17d212e674ed3"
+  },
+  "coreRules": [
+    "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+    "gibel-ts.law:UnichtozhenoPoEkonomicheskoyNetselesoobraznosti",
+    "gibel-ts.law:UnichtozhenoPoTekhnicheskoyNevozmozhnosti",
+    "gibel-ts.law:VyplataPriPeredacheOstatkov",
+    "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+    "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+    "otsenka.law:DetalNePovrezhdalasINeRemontirovalas",
+    "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+    "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+    "otsenka.law:StoimostDetaliBezIznosa",
+    "otsenka.law:StoimostDetaliSUchetomIznosa",
+    "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+    "otsenshchiki.law:VyborOtsenshchikovObespechen",
+    "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+    "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+    "sroki-i-vozrazheniya.law:PravoNaVyplatuPriNepredostavleniiOtcheta",
+    "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+    "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+    "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+    "sroki-i-vozrazheniya.law:assert:srok_otmetki_poterpevshego",
+    "sroki-i-vozrazheniya.law:assert:srok_otveta_strakhovshchika",
+    "sroki-i-vozrazheniya.law:assert:srok_predostavleniya_otcheta",
+    "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+    "usloviya.law:OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+    "usloviya.law:OsmotrNedopustimBezDokumentovODtp",
+    "usloviya.law:OsmotrVozmozhen"
+  ],
+  "queried": [
+    "detal_otsenivaetsya_bez_iznosa",
+    "osmotr_dopustim",
+    "osmotr_vozmozhen",
+    "otchet_ne_predostavlen_v_srok",
+    "otchet_soderzhit_itogovuyu_velichinu",
+    "pravo_na_vyplatu_po_punktu_3_1_stati_22_zakona",
+    "predel_otmetki_poterpevshego",
+    "predel_otveta_strakhovshchika",
+    "predel_predostavleniya_otcheta",
+    "stoimost_zamenyaemoy_detali",
+    "strakhovaya_vyplata_pri_gibeli",
+    "ts_schitaetsya_unichtozhennym",
+    "vosstanovlenie_ekonomicheski_netselesoobrazno",
+    "vybor_otsenshchikov_obespechen"
+  ],
+  "total": 153,
+  "compiled": 97,
+  "rejected": 56,
+  "matrix": {
+    "reference": {
+      "killed": 76,
+      "survived": 17,
+      "equivalent": 4
+    },
+    "random": {
+      "killed": 59,
+      "survived": 34,
+      "equivalent": 4
+    },
+    "authored": {
+      "killed": 70,
+      "survived": 23,
+      "equivalent": 4
+    },
+    "all": {
+      "killed": 78,
+      "survived": 15,
+      "equivalent": 4
+    }
+  },
+  "randomCount": 120,
+  "seeds": [
+    1,
+    2
+  ],
+  "mutants": [
+    {
+      "id": 0,
+      "op": "DROP",
+      "site": "otsenka.law:57 drop premise `detal_ranee_ne_povrezhdalas(d)`",
+      "rule": "otsenka.law:DetalNePovrezhdalasINeRemontirovalas",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 0,
+        "random": 2,
+        "all": 1
+      }
+    },
+    {
+      "id": 1,
+      "op": "NEG",
+      "site": "otsenka.law:57 add not",
+      "rule": "otsenka.law:DetalNePovrezhdalasINeRemontirovalas",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 5,
+        "all": 6
+      }
+    },
+    {
+      "id": 2,
+      "op": "DROP",
+      "site": "otsenka.law:58 drop premise `detal_ne_podvergalas_remontu(d)`",
+      "rule": "otsenka.law:DetalNePovrezhdalasINeRemontirovalas",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 3,
+      "op": "NEG",
+      "site": "otsenka.law:58 add not",
+      "rule": "otsenka.law:DetalNePovrezhdalasINeRemontirovalas",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 5,
+        "all": 6
+      }
+    },
+    {
+      "id": 4,
+      "op": "DROP",
+      "site": "otsenka.law:68 drop premise `detal_ts(d: d, v: v)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": "binding",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 5,
+      "op": "NEG",
+      "site": "otsenka.law:68 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 7,
+        "random": 1,
+        "all": 10
+      }
+    },
+    {
+      "id": 6,
+      "op": "DROP",
+      "site": "otsenka.law:69 drop premise `detal_podlezhit_zamene(d)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 7,
+      "op": "NEG",
+      "site": "otsenka.law:69 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 7,
+        "random": 1,
+        "all": 10
+      }
+    },
+    {
+      "id": 8,
+      "op": "DROP",
+      "site": "otsenka.law:70 drop premise `vladelets_fizicheskoe_litso(v)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 0,
+        "random": 1,
+        "all": 2
+      }
+    },
+    {
+      "id": 9,
+      "op": "NEG",
+      "site": "otsenka.law:70 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 7,
+        "random": 1,
+        "all": 10
+      }
+    },
+    {
+      "id": 10,
+      "op": "DROP",
+      "site": "otsenka.law:71 drop premise `ne_podlezhit_obyazatelnomu_tekhosmotru(v)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 0,
+        "random": 1,
+        "all": 1
+      }
+    },
+    {
+      "id": 11,
+      "op": "NEG",
+      "site": "otsenka.law:71 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 7,
+        "random": 1,
+        "all": 10
+      }
+    },
+    {
+      "id": 12,
+      "op": "DROP",
+      "site": "otsenka.law:72 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 13,
+      "op": "NEG",
+      "site": "otsenka.law:72 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 14,
+      "op": "CMP",
+      "site": "otsenka.law:73 <= -> <",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 1,
+        "all": 3
+      }
+    },
+    {
+      "id": 15,
+      "op": "DROP",
+      "site": "otsenka.law:73 drop premise `distance <= 15000 km`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 4,
+        "random": 2,
+        "all": 5
+      }
+    },
+    {
+      "id": 16,
+      "op": "CONST",
+      "site": "otsenka.law:73 15000 -> 15001",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 0,
+        "all": 3
+      }
+    },
+    {
+      "id": 17,
+      "op": "DROP",
+      "site": "otsenka.law:74 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 1,
+        "random": 0,
+        "all": 3
+      }
+    },
+    {
+      "id": 18,
+      "op": "NEG",
+      "site": "otsenka.law:74 add not",
+      "rule": "otsenka.law:NovayaDetalUFizicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 7,
+        "random": 1,
+        "all": 10
+      }
+    },
+    {
+      "id": 19,
+      "op": "DROP",
+      "site": "otsenka.law:84 drop premise `detal_ts(d: d, v: v)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": "binding",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 20,
+      "op": "NEG",
+      "site": "otsenka.law:84 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 4,
+        "all": 4
+      }
+    },
+    {
+      "id": 21,
+      "op": "DROP",
+      "site": "otsenka.law:85 drop premise `detal_podlezhit_zamene(d)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 1,
+        "all": 0
+      }
+    },
+    {
+      "id": 22,
+      "op": "NEG",
+      "site": "otsenka.law:85 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 4,
+        "all": 4
+      }
+    },
+    {
+      "id": 23,
+      "op": "DROP",
+      "site": "otsenka.law:86 drop premise `vladelets_yuridicheskoe_litso(v)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 4,
+        "all": 2
+      }
+    },
+    {
+      "id": 24,
+      "op": "NEG",
+      "site": "otsenka.law:86 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 4,
+        "all": 4
+      }
+    },
+    {
+      "id": 25,
+      "op": "DROP",
+      "site": "otsenka.law:87 drop premise `nakhoditsya_na_garantiynom_obsluzhivanii(v)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 6,
+        "all": 2
+      }
+    },
+    {
+      "id": 26,
+      "op": "NEG",
+      "site": "otsenka.law:87 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 4,
+        "all": 4
+      }
+    },
+    {
+      "id": 27,
+      "op": "DROP",
+      "site": "otsenka.law:88 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 28,
+      "op": "NEG",
+      "site": "otsenka.law:88 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 29,
+      "op": "CMP",
+      "site": "otsenka.law:89 <= -> <",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 1,
+        "all": 3
+      }
+    },
+    {
+      "id": 30,
+      "op": "DROP",
+      "site": "otsenka.law:89 drop premise `distance <= 20000 km`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 4,
+        "all": 3
+      }
+    },
+    {
+      "id": 31,
+      "op": "CONST",
+      "site": "otsenka.law:89 20000 -> 20001",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 2,
+        "all": 3
+      }
+    },
+    {
+      "id": 32,
+      "op": "DROP",
+      "site": "otsenka.law:90 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 2,
+        "all": 0
+      }
+    },
+    {
+      "id": 33,
+      "op": "NEG",
+      "site": "otsenka.law:90 add not",
+      "rule": "otsenka.law:NovayaDetalUYuridicheskogoLitsa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 4,
+        "all": 4
+      }
+    },
+    {
+      "id": 34,
+      "op": "DROP",
+      "site": "otsenka.law:126 drop premise `detal_otsenivaetsya_bez_iznosa(d)`",
+      "rule": "otsenka.law:StoimostDetaliBezIznosa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 9,
+        "authored": 0,
+        "random": 49,
+        "all": 9
+      }
+    },
+    {
+      "id": 35,
+      "op": "NEG",
+      "site": "otsenka.law:126 add not",
+      "rule": "otsenka.law:StoimostDetaliBezIznosa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 4,
+        "authored": 1,
+        "random": 4,
+        "all": 5
+      }
+    },
+    {
+      "id": 36,
+      "op": "DROP",
+      "site": "otsenka.law:127 drop premise `rynochnaya_stoimost_novoy_detali(d: d, amount: amo`",
+      "rule": "otsenka.law:StoimostDetaliBezIznosa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 37,
+      "op": "NEG",
+      "site": "otsenka.law:127 add not",
+      "rule": "otsenka.law:StoimostDetaliBezIznosa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 38,
+      "op": "DROP",
+      "site": "otsenka.law:134 drop premise `stoimost_detali_s_uchetom_iznosa(d: d, amount: amo`",
+      "rule": "otsenka.law:StoimostDetaliSUchetomIznosa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "d использует несвязанные переменные [d, amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 39,
+      "op": "NEG",
+      "site": "otsenka.law:134 add not",
+      "rule": "otsenka.law:StoimostDetaliSUchetomIznosa",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "л использует несвязанные переменные [d, amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 40,
+      "op": "UNLESS",
+      "site": "otsenka.law:138 drop defeater",
+      "rule": "otsenka.law:StoimostDetaliSUchetomIznosa",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 4,
+        "authored": 0,
+        "random": 5,
+        "all": 4
+      }
+    },
+    {
+      "id": 41,
+      "op": "DROP",
+      "site": "usloviya.law:28 drop premise `dostup_k_ts_besprepyatstvennyy(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 42,
+      "op": "NEG",
+      "site": "usloviya.law:28 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 43,
+      "op": "DROP",
+      "site": "usloviya.law:29 drop premise `identifikatsiya_ts_provodima(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 44,
+      "op": "NEG",
+      "site": "usloviya.law:29 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 45,
+      "op": "DROP",
+      "site": "usloviya.law:30 drop premise `probeg_po_odometru_ustanovim(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 46,
+      "op": "NEG",
+      "site": "usloviya.law:30 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 47,
+      "op": "DROP",
+      "site": "usloviya.law:31 drop premise `komplektnost_ustanovima(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 48,
+      "op": "NEG",
+      "site": "usloviya.law:31 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 49,
+      "op": "DROP",
+      "site": "usloviya.law:32 drop premise `perechen_defektov_ustanovim(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 50,
+      "op": "NEG",
+      "site": "usloviya.law:32 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 51,
+      "op": "DROP",
+      "site": "usloviya.law:33 drop premise `fotosemka_povrezhdeniy_provodima(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 1,
+        "random": 0,
+        "all": 3
+      }
+    },
+    {
+      "id": 52,
+      "op": "NEG",
+      "site": "usloviya.law:33 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 53,
+      "op": "DROP",
+      "site": "usloviya.law:34 drop premise `priznaki_prezhnikh_remontov_ustanovimy(r)`",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 54,
+      "op": "NEG",
+      "site": "usloviya.law:34 add not",
+      "rule": "usloviya.law:OsmotrVozmozhen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 5,
+        "authored": 1,
+        "random": 0,
+        "all": 6
+      }
+    },
+    {
+      "id": 55,
+      "op": "DROP",
+      "site": "usloviya.law:44 drop premise `osmotr_vozmozhen(r)`",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 1,
+        "random": 0,
+        "all": 1
+      }
+    },
+    {
+      "id": 56,
+      "op": "NEG",
+      "site": "usloviya.law:44 add not",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 57,
+      "op": "DROP",
+      "site": "usloviya.law:45 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": "equivalent",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 58,
+      "op": "NEG",
+      "site": "usloviya.law:45 add not",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 59,
+      "op": "DROP",
+      "site": "usloviya.law:46 drop premise `dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny(r)`",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 0,
+        "all": 4
+      }
+    },
+    {
+      "id": 60,
+      "op": "NEG",
+      "site": "usloviya.law:46 add not",
+      "rule": "usloviya.law:OsmotrDopustimPriOpredeleniiStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 0,
+        "all": 4
+      }
+    },
+    {
+      "id": 61,
+      "op": "DROP",
+      "site": "usloviya.law:52 drop premise `osmotr_vozmozhen(r)`",
+      "rule": "usloviya.law:OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 62,
+      "op": "NEG",
+      "site": "usloviya.law:52 add not",
+      "rule": "usloviya.law:OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 63,
+      "op": "DROP",
+      "site": "usloviya.law:53 drop premise `not opredelyaetsya_stoimost_vosstanovitelnogo_remo`",
+      "rule": "usloviya.law:OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 2,
+        "random": 0,
+        "all": 5
+      }
+    },
+    {
+      "id": 64,
+      "op": "NEG",
+      "site": "usloviya.law:53 remove not",
+      "rule": "usloviya.law:OsmotrDopustimVneOpredeleniyaStoimostiRemonta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 2,
+        "random": 0,
+        "all": 5
+      }
+    },
+    {
+      "id": 65,
+      "op": "DROP",
+      "site": "usloviya.law:59 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
+      "rule": "usloviya.law:OsmotrNedopustimBezDokumentovODtp",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 66,
+      "op": "NEG",
+      "site": "usloviya.law:59 add not",
+      "rule": "usloviya.law:OsmotrNedopustimBezDokumentovODtp",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 67,
+      "op": "DROP",
+      "site": "usloviya.law:60 drop premise `not dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny`",
+      "rule": "usloviya.law:OsmotrNedopustimBezDokumentovODtp",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 0,
+        "all": 3
+      }
+    },
+    {
+      "id": 68,
+      "op": "NEG",
+      "site": "usloviya.law:60 remove not",
+      "rule": "usloviya.law:OsmotrNedopustimBezDokumentovODtp",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 0,
+        "all": 4
+      }
+    },
+    {
+      "id": 69,
+      "op": "DROP",
+      "site": "oformlenie.law:154 drop premise `itogovaya_stoimost_v_tenge(o: o, amount: amount)`",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "терм использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 70,
+      "op": "NEG",
+      "site": "oformlenie.law:154 add not",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "терм использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 71,
+      "op": "DROP",
+      "site": "oformlenie.law:155 drop premise `round(amount, 0, \"HALF_UP\") == amount`",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 0,
+        "all": 4
+      }
+    },
+    {
+      "id": 72,
+      "op": "NEG",
+      "site": "oformlenie.law:155 add not",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "wer failed:\n/var/folders/wj/hg9czcw57n93ff0w1935kd6w0000gn/T/parity-core-kzjzs9w3/m0072/package/modules/otchet/oformlenie.law:155:18: error LDC-E1305: not поверх не-атома в теле — вне L0-среза (§190)\n"
+    },
+    {
+      "id": 73,
+      "op": "DROP",
+      "site": "oformlenie.law:156 drop premise `otchet_summa_propisyu(o: o, propis: _)`",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 0,
+        "random": 0,
+        "all": 1
+      }
+    },
+    {
+      "id": 74,
+      "op": "NEG",
+      "site": "oformlenie.law:156 add not",
+      "rule": "oformlenie.law:OtchetSoderzhitItogovuyuVelichinu",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
+    },
+    {
+      "id": 75,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:40 3 -> 4",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_otmetki_poterpevshego",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 6,
+        "authored": 2,
+        "random": 32,
+        "all": 8
+      }
+    },
+    {
+      "id": 76,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:40 unit swap",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_otmetki_poterpevshego",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 1,
+        "random": 19,
+        "all": 3
+      }
+    },
+    {
+      "id": 77,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:58 drop premise `srok_otmetki_poterpevshego(limit)`",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 78,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:58 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 79,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:59 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 80,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:59 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 81,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:60 drop defeater",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtmetkiPoterpevshego",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 0,
+        "random": 7,
+        "all": 1
+      }
+    },
+    {
+      "id": 82,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:108 3 -> 4",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_otveta_strakhovshchika",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 1,
+        "random": 22,
+        "all": 3
+      }
+    },
+    {
+      "id": 83,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:108 unit swap",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_otveta_strakhovshchika",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 0,
+        "random": 10,
+        "all": 1
+      }
+    },
+    {
+      "id": 84,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:114 drop premise `srok_otveta_strakhovshchika(limit)`",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 85,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:114 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 86,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:115 drop premise `otmetka_nesoglasiya_poluchena_strakhovshchikom(r: `",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 87,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:115 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 88,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:116 drop defeater",
+      "rule": "sroki-i-vozrazheniya.law:PredelOtvetaStrakhovshchika",
+      "class": "untested",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 4,
+        "all": 0
+      }
+    },
+    {
+      "id": 89,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:166 5 -> 6",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_predostavleniya_otcheta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 8,
+        "authored": 4,
+        "random": 32,
+        "all": 12
+      }
+    },
+    {
+      "id": 90,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:166 unit swap",
+      "rule": "sroki-i-vozrazheniya.law:assert:srok_predostavleniya_otcheta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 9,
+        "authored": 3,
+        "random": 28,
+        "all": 12
+      }
+    },
+    {
+      "id": 91,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:172 drop premise `srok_predostavleniya_otcheta(limit)`",
+      "rule": "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 92,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:172 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 93,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:173 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
+      "rule": "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 94,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:173 add not",
+      "rule": "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 95,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:174 drop defeater",
+      "rule": "sroki-i-vozrazheniya.law:PredelPredostavleniyaOtcheta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 9,
+        "all": 3
+      }
+    },
+    {
+      "id": 96,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:195 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 97,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:195 add not",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 98,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:196 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 99,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:196 add not",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 100,
+      "op": "CMP",
+      "site": "sroki-i-vozrazheniya.law:197 > -> >=",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 101,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:197 drop premise `got > due`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetPoluchenPosleSroka",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 13,
+        "all": 2
+      }
+    },
+    {
+      "id": 102,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:203 drop premise `not otchet_predostavlen_poterpevshemu(r)`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": "untested",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 3,
+        "all": 0
+      }
+    },
+    {
+      "id": 103,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:203 remove not",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 2,
+        "random": 5,
+        "all": 3
+      }
+    },
+    {
+      "id": 104,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:204 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 105,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:204 add not",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 106,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:205 drop premise `den_rassmotreniya_dela(r: r, day: day)`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 107,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:205 add not",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 108,
+      "op": "CMP",
+      "site": "sroki-i-vozrazheniya.law:206 > -> >=",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "SURVIVED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 0,
+        "all": 2
+      }
+    },
+    {
+      "id": 109,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:206 drop premise `day > due`",
+      "rule": "sroki-i-vozrazheniya.law:OtchetNePredostavlenVovse",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 1,
+        "random": 6,
+        "all": 2
+      }
+    },
+    {
+      "id": 110,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:212 drop premise `otchet_ne_predostavlen_v_srok(r)`",
+      "rule": "sroki-i-vozrazheniya.law:PravoNaVyplatuPriNepredostavleniiOtcheta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 14,
+        "authored": 2,
+        "random": 51,
+        "all": 16
+      }
+    },
+    {
+      "id": 111,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:212 add not",
+      "rule": "sroki-i-vozrazheniya.law:PravoNaVyplatuPriNepredostavleniiOtcheta",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 3,
+        "random": 9,
+        "all": 6
+      }
+    },
+    {
+      "id": 112,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:213 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "rule": "sroki-i-vozrazheniya.law:PravoNaVyplatuPriNepredostavleniiOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "eta: head использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 113,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:213 add not",
+      "rule": "sroki-i-vozrazheniya.law:PravoNaVyplatuPriNepredostavleniiOtcheta",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 114,
+      "op": "DROP",
+      "site": "otsenshchiki.law:52 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovObespechen",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 115,
+      "op": "NEG",
+      "site": "otsenshchiki.law:52 add not",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovObespechen",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 116,
+      "op": "CMP",
+      "site": "otsenshchiki.law:53 >= -> >",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovObespechen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 3,
+        "random": 7,
+        "all": 4
+      }
+    },
+    {
+      "id": 117,
+      "op": "DROP",
+      "site": "otsenshchiki.law:53 drop premise `n >= 2`",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovObespechen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 4,
+        "random": 17,
+        "all": 6
+      }
+    },
+    {
+      "id": 118,
+      "op": "CONST",
+      "site": "otsenshchiki.law:53 2 -> 3",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovObespechen",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 1,
+        "authored": 3,
+        "random": 7,
+        "all": 4
+      }
+    },
+    {
+      "id": 119,
+      "op": "DROP",
+      "site": "otsenshchiki.law:59 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 120,
+      "op": "NEG",
+      "site": "otsenshchiki.law:59 add not",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 121,
+      "op": "CMP",
+      "site": "otsenshchiki.law:60 < -> <=",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+      "class": "equivalent",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 122,
+      "op": "DROP",
+      "site": "otsenshchiki.law:60 drop premise `n < 2`",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+      "class": "equivalent",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 123,
+      "op": "CONST",
+      "site": "otsenshchiki.law:60 2 -> 3",
+      "rule": "otsenshchiki.law:VyborOtsenshchikovNeObespechen",
+      "class": "equivalent",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 124,
+      "op": "DROP",
+      "site": "gibel-ts.law:41 drop premise `ozhidaemye_raskhody_na_vosstanovlenie(v: v, amount`",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "/терм использует несвязанные переменные [costs] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 125,
+      "op": "NEG",
+      "site": "gibel-ts.law:41 add not",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "/терм использует несвязанные переменные [costs] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 126,
+      "op": "DROP",
+      "site": "gibel-ts.law:42 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 10,
+        "authored": 10,
+        "random": 52,
+        "all": 20
+      }
+    },
+    {
+      "id": 127,
+      "op": "NEG",
+      "site": "gibel-ts.law:42 add not",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 128,
+      "op": "CONST",
+      "site": "gibel-ts.law:43 0.8 -> 0.7",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 4,
+        "random": 6,
+        "all": 7
+      }
+    },
+    {
+      "id": 129,
+      "op": "CMP",
+      "site": "gibel-ts.law:44 > -> >=",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 3,
+        "random": 4,
+        "all": 6
+      }
+    },
+    {
+      "id": 130,
+      "op": "DROP",
+      "site": "gibel-ts.law:44 drop premise `costs > porog_gibeli`",
+      "rule": "gibel-ts.law:EkonomicheskayaNetselesoobraznost",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": ":\n/var/folders/wj/hg9czcw57n93ff0w1935kd6w0000gn/T/parity-core-kzjzs9w3/m0130/package/modules/vyplata/gibel-ts.law:43:13: error LDC-E0201: локальный терм porog_gibeli не используется после объявления\n"
+    },
+    {
+      "id": 131,
+      "op": "DROP",
+      "site": "gibel-ts.law:50 drop premise `vosstanovlenie_tekhnicheski_nevozmozhno(v)`",
+      "rule": "gibel-ts.law:UnichtozhenoPoTekhnicheskoyNevozmozhnosti",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "sti: head использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 132,
+      "op": "NEG",
+      "site": "gibel-ts.law:50 add not",
+      "rule": "gibel-ts.law:UnichtozhenoPoTekhnicheskoyNevozmozhnosti",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 133,
+      "op": "DROP",
+      "site": "gibel-ts.law:56 drop premise `vosstanovlenie_ekonomicheski_netselesoobrazno(v)`",
+      "rule": "gibel-ts.law:UnichtozhenoPoEkonomicheskoyNetselesoobraznosti",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "sti: head использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 134,
+      "op": "NEG",
+      "site": "gibel-ts.law:56 add not",
+      "rule": "gibel-ts.law:UnichtozhenoPoEkonomicheskoyNetselesoobraznosti",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 135,
+      "op": "DROP",
+      "site": "gibel-ts.law:66 drop premise `raschet_po_ts(r: r, v: v)`",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": "binding",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "SURVIVED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 0,
+        "all": 0
+      }
+    },
+    {
+      "id": 136,
+      "op": "NEG",
+      "site": "gibel-ts.law:66 add not",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 1,
+        "random": 14,
+        "all": 4
+      }
+    },
+    {
+      "id": 137,
+      "op": "DROP",
+      "site": "gibel-ts.law:67 drop premise `ts_schitaetsya_unichtozhennym(v)`",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 5,
+        "all": 0
+      }
+    },
+    {
+      "id": 138,
+      "op": "NEG",
+      "site": "gibel-ts.law:67 add not",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 3,
+        "authored": 1,
+        "random": 14,
+        "all": 4
+      }
+    },
+    {
+      "id": 139,
+      "op": "DROP",
+      "site": "gibel-ts.law:68 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 140,
+      "op": "NEG",
+      "site": "gibel-ts.law:68 add not",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 141,
+      "op": "DROP",
+      "site": "gibel-ts.law:69 drop premise `ostatki_peredany_v_sobstvennost_strakhovshchika(r)`",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 6,
+        "authored": 3,
+        "random": 23,
+        "all": 9
+      }
+    },
+    {
+      "id": 142,
+      "op": "NEG",
+      "site": "gibel-ts.law:69 add not",
+      "rule": "gibel-ts.law:VyplataPriPeredacheOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 6,
+        "authored": 2,
+        "random": 26,
+        "all": 8
+      }
+    },
+    {
+      "id": 143,
+      "op": "DROP",
+      "site": "gibel-ts.law:79 drop premise `raschet_po_ts(r: r, v: v)`",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 144,
+      "op": "NEG",
+      "site": "gibel-ts.law:79 add not",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 145,
+      "op": "DROP",
+      "site": "gibel-ts.law:80 drop premise `ts_schitaetsya_unichtozhennym(v)`",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": "co-asserted",
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "SURVIVED",
+        "random": "KILLED",
+        "all": "SURVIVED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 0,
+        "random": 4,
+        "all": 0
+      }
+    },
+    {
+      "id": 146,
+      "op": "NEG",
+      "site": "gibel-ts.law:80 add not",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 7,
+        "all": 4
+      }
+    },
+    {
+      "id": 147,
+      "op": "DROP",
+      "site": "gibel-ts.law:81 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 7,
+        "all": 4
+      }
+    },
+    {
+      "id": 148,
+      "op": "NEG",
+      "site": "gibel-ts.law:81 add not",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 149,
+      "op": "DROP",
+      "site": "gibel-ts.law:82 drop premise `stoimost_godnykh_k_realizatsii_ostatkov(v: v, amou`",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 7,
+        "all": 4
+      }
+    },
+    {
+      "id": 150,
+      "op": "NEG",
+      "site": "gibel-ts.law:82 add not",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": "REJECTED",
+      "detail": "рал использует несвязанные переменные [salvage] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
+    },
+    {
+      "id": 151,
+      "op": "DROP",
+      "site": "gibel-ts.law:83 drop premise `not ostatki_peredany_v_sobstvennost_strakhovshchik`",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "SURVIVED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 0,
+        "authored": 2,
+        "random": 17,
+        "all": 2
+      }
+    },
+    {
+      "id": 152,
+      "op": "NEG",
+      "site": "gibel-ts.law:83 remove not",
+      "rule": "gibel-ts.law:VyplataZaMinusomGodnykhOstatkov",
+      "class": null,
+      "outcome": {
+        "reference": "KILLED",
+        "authored": "KILLED",
+        "random": "KILLED",
+        "all": "KILLED"
+      },
+      "failing": {
+        "reference": 2,
+        "authored": 2,
+        "random": 16,
+        "all": 4
+      }
+    }
+  ]
+}

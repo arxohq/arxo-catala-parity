@@ -61,6 +61,16 @@ independently of each other.
    is their disjunction, with no guard between them. `parity.py --catala
    --model …` and `--property … --model …` run it on the same cases
    (`results-alt/`).
+7. **Mutation matrix of the compared core.** `mutants_core.py` restricts the
+   operators of step 4 to the 26 rules in the dependency cone of the 14
+   predicates the parity suites query, and runs each compiled mutant against
+   four corpora: the 65 reference cases, the 240 random cases (rendered for
+   the mutant and judged by the oracle's expectations), the 104 authored
+   scenarios, and all 169 scenarios.
+8. **Certification.** `certify.py` evaluates every query of the parity suites
+   into an evaluation document with `law-cli eval` (inline deadline policies
+   pinned into program nodes as the engine's runner does) and hands program,
+   case and document to `lawcheck`, the Lean checker.
 
 ## 3. Results (22 September 2026, this repository)
 
@@ -76,6 +86,8 @@ independently of each other.
 | 65 reference cases, alternative Catala encoding | 65 of 65 |
 | 120 random cases per seed, oracle versus alternative Catala encoding | 120 of 120 (seed 1), 120 of 120 (seed 2) |
 | Round trip of the adapter, 65 reference and 240 random cases | 65 of 65, 240 of 240 |
+| Core mutants (97 compiled of 153; 56 rejected) caught by: 65 reference / 240 random / 104 authored / all 169 / scenarios and random together | 76 / 59 / 70 / 78 / 84; 4 equivalent survivors in every corpus |
+| 219 evaluation documents of the 65 reference cases, Lean checker | 219 accepted, 0 refused |
 
 The JSON reports in `results/` carry the per-case Catala outputs, the per-suite
 engine reports, the per-seed property logs and the per-mutant outcomes.
@@ -108,6 +120,35 @@ not defects of the model. Six of them lie in the six compared scopes
 run against mutants; doing so would likely catch the destruction-premise
 mutants.
 
+### 3b. The compared core by corpus
+
+Of the 97 compiled core mutants, the 65 reference cases catch 76, the 240
+random cases 59, the 104 authored scenarios 70, all 169 scenarios 78, and the
+scenarios together with the random cases 84. Four survivors are equivalent on
+the queried outputs. Of the eleven non-equivalent mutants that all 169
+scenarios miss, the random cases catch six (`gibel-ts.law` 67, 80;
+`otsenka.law` 85, 90; `sroki-i-vozrazheniya.law` 116, 203). The nine that
+survive every corpus are structural: `otsenka.law` 68, 84 and `gibel-ts.law` 66
+(binding premises) and `usloviya.law` 28–32, 34 (one of the seven conditions of
+clause 7, asserted by every scenario as a block). 25 mutants the scenarios catch
+survive the random cases, whose generator does not reach those branches.
+
+### 3c. Certification of the reference documents
+
+219 documents (118 without the calendar, 101 with it), all accepted by
+`lawcheck`. Proved: 646 leaves, 77 rule applications, 14 query nodes, 110
+safety checks (§190); defeasible layer: 224 candidates, 21 defeats, 175
+certificates (§181.1), 182 survivors. Admitted 359 nodes: defeasible rules
+recorded as candidates, applications whose conjunct or head lies outside the
+checked fragment (arithmetic terms §52/§57 and negation as failure §113: the
+eighty-percent comparison, the payout net of remains, the mileage limits, the
+count of appraisers), and conclusions resting on them. Outside the fragment
+175 nodes: 64 `NEITHER` and 4 `FALSE_ONLY` answers (statements of absence), 27
+negative leaves, 80 collection queries. The checker certifies the structure of
+every document and the defeasible-layer defeats; it does not prove the money
+arithmetic. Checker binary sha256 `8f917228…` (commit `ef7913cfc1`, toolchain
+`leanprover/lean4:v4.33.0`); report `results/certify.json`.
+
 In the original pilot (9 September 2026) the same 65 cases were also run by
 the second Arxo evaluator, the Python reference implementation, and its
 evaluation documents were byte-identical to the Rust engine's. That evaluator
@@ -124,7 +165,7 @@ result, not as something this artifact re-establishes.
 | 4 | Catala rounds `money * 80%` on an amount with tiyn; Arxo does not | difference of language semantics, not a defect | comparison restricted to whole tenge; the Arxo behaviour pinned by scenario `urn:query:vred-t15-j` |
 
 No defect of the Rust engine, of the Python evaluator or of the Catala model was
-found; the engine core was not changed for the comparison.
+detected by the reported experiment; the engine core was not changed for the comparison.
 
 ## 5. Timing (9 September 2026, Apple Silicon, macOS 24.6, warm runs)
 

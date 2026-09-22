@@ -27,6 +27,8 @@ Re-obtained from this repository on 22 September 2026 (`results/`):
 | the alternative Catala encoding (one disjunctive exception, no guard), 65 reference and 240 random cases | 65 of 65, 240 of 240 |
 | the input adapter: rendered scenarios decoded back to case fields, 65 + 240 cases | all |
 | 420 systematic operator-based mutations against the 169 scenarios | 133 caught, 97 survived, 190 rejected by static checks (survivors classified in `docs/REPORT.md` ยง3a) |
+| the 97 compiled mutants of the compared core, by corpus (65 reference / 240 random / 104 authored / all 169 / scenarios and random together) | caught 76 / 59 / 70 / 78 / 84; 4 equivalent (`results/mutants-core.json`) |
+| 219 evaluation documents of the 65 reference cases through the Lean checker | 219 accepted; strict steps proved, arithmetic and defeasible steps admitted (`results/certify.json`) |
 
 Where a norm states an algorithm, both languages reproduce it identically.
 What each of them does beyond the algorithm is the subject of the paper;
@@ -48,6 +50,9 @@ corpus/clir/                            the official-calendar snapshot of 2025โ€
 parity.py                               the runner: emit/check, Catala (--model for the alternative encoding), Arxo, property mode, --roundtrip
 mutants.py                              the 20 targeted mutations
 mutants_systematic.py                   operator-based mutations over every rule module (CMP, DROP, NEG, CONST, UNIT, UNLESS)
+mutants_core.py                         the same operators restricted to the cone of the compared outputs, run by corpus (reference, random, authored, all)
+survivors_ledger.py                     the surviving systematic mutants with class, rationale and mutated line -> results/survivors-classified.csv
+certify.py                              every query of the parity suites evaluated into a document and checked by the Lean checker (`lawcheck`)
 results/                                recorded JSON reports of the runs above
 docs/REPORT.md                          the parity report
 docs/claim-ledger.csv                   every claim of the paper with its status (measured / pilot / mechanized / counted / cited) and evidence
@@ -87,6 +92,8 @@ python3 parity.py --all --law /path/to/law-cli --record results
 python3 parity.py --roundtrip                                   # adapter round trip, no engine needed
 python3 parity.py --catala --model catala/vred_ts-alt-disjunction.catala_en
 python3 mutants_systematic.py --law /path/to/law-cli --record results
+python3 mutants_core.py --law /path/to/law-cli --record results
+python3 certify.py --law /path/to/law-cli --checker /path/to/lawcheck --record results
 ```
 
 `--arxo` lowers the package with the pinned imports context, adds the calendar
@@ -105,10 +112,10 @@ that produced them.
 
 Without the engine binary: the Catala rows (65 of 65; 120 of 120 on each seed
 with `--no-arxo`) and the rendering check. With the binary: the Arxo rows, the
-property mode on the Arxo side and the two mutation checks. The revision of
-the artifact that revision 3 of the paper reports is tagged `paper-rev3` and
-published as a GitHub release; `paper-rev2` is the revision the external
-review read. The repository's history was rewritten once on 22 September 2026
+property mode on the Arxo side and the mutation checks; with the checker
+binary as well, the certification. The revision of the artifact that revision 4
+of the paper reports is tagged `paper-rev4` and published as a GitHub release;
+`paper-rev2` and `paper-rev3` are the revisions the two external reviews read. The repository's history was rewritten once on 22 September 2026
 when the package's comments were translated; the tags are the stable citation
 targets.
 
