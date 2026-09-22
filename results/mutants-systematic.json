@@ -1,0 +1,2564 @@
+{
+  "engine": {
+    "binary": "law-cli",
+    "sha256": "556f455c89b4f8abe1ad85583e57037098500543c505216b66a17d212e674ed3"
+  },
+  "total": 420,
+  "KILLED": 0,
+  "SURVIVED": 0,
+  "REJECTED": 420,
+  "byOperator": {
+    "DROP": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 206
+    },
+    "NEG": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 192
+    },
+    "CMP": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 7
+    },
+    "CONST": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 8
+    },
+    "UNLESS": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 4
+    },
+    "UNIT": {
+      "KILLED": 0,
+      "SURVIVED": 0,
+      "REJECTED": 3
+    }
+  },
+  "mutants": [
+    {
+      "id": 0,
+      "op": "DROP",
+      "site": "otsenka.law:57 drop premise `detal_ranee_ne_povrezhdalas(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 1,
+      "op": "NEG",
+      "site": "otsenka.law:57 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 2,
+      "op": "DROP",
+      "site": "otsenka.law:58 drop premise `detal_ne_podvergalas_remontu(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 3,
+      "op": "NEG",
+      "site": "otsenka.law:58 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 4,
+      "op": "DROP",
+      "site": "otsenka.law:68 drop premise `detal_ts(d: d, v: v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 5,
+      "op": "NEG",
+      "site": "otsenka.law:68 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 6,
+      "op": "DROP",
+      "site": "otsenka.law:69 drop premise `detal_podlezhit_zamene(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 7,
+      "op": "NEG",
+      "site": "otsenka.law:69 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 8,
+      "op": "DROP",
+      "site": "otsenka.law:70 drop premise `vladelets_fizicheskoe_litso(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 9,
+      "op": "NEG",
+      "site": "otsenka.law:70 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 10,
+      "op": "DROP",
+      "site": "otsenka.law:71 drop premise `ne_podlezhit_obyazatelnomu_tekhosmotru(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 11,
+      "op": "NEG",
+      "site": "otsenka.law:71 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 12,
+      "op": "DROP",
+      "site": "otsenka.law:72 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 13,
+      "op": "NEG",
+      "site": "otsenka.law:72 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 14,
+      "op": "CMP",
+      "site": "otsenka.law:73 <= -> <",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 15,
+      "op": "DROP",
+      "site": "otsenka.law:73 drop premise `distance <= 15000 km`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 16,
+      "op": "CONST",
+      "site": "otsenka.law:73 15000 -> 15001",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 17,
+      "op": "DROP",
+      "site": "otsenka.law:74 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 18,
+      "op": "NEG",
+      "site": "otsenka.law:74 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 19,
+      "op": "DROP",
+      "site": "otsenka.law:84 drop premise `detal_ts(d: d, v: v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 20,
+      "op": "NEG",
+      "site": "otsenka.law:84 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 21,
+      "op": "DROP",
+      "site": "otsenka.law:85 drop premise `detal_podlezhit_zamene(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 22,
+      "op": "NEG",
+      "site": "otsenka.law:85 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 23,
+      "op": "DROP",
+      "site": "otsenka.law:86 drop premise `vladelets_yuridicheskoe_litso(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 24,
+      "op": "NEG",
+      "site": "otsenka.law:86 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 25,
+      "op": "DROP",
+      "site": "otsenka.law:87 drop premise `nakhoditsya_na_garantiynom_obsluzhivanii(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 26,
+      "op": "NEG",
+      "site": "otsenka.law:87 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 27,
+      "op": "DROP",
+      "site": "otsenka.law:88 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 28,
+      "op": "NEG",
+      "site": "otsenka.law:88 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 29,
+      "op": "CMP",
+      "site": "otsenka.law:89 <= -> <",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 30,
+      "op": "DROP",
+      "site": "otsenka.law:89 drop premise `distance <= 20000 km`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 31,
+      "op": "CONST",
+      "site": "otsenka.law:89 20000 -> 20001",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 32,
+      "op": "DROP",
+      "site": "otsenka.law:90 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 33,
+      "op": "NEG",
+      "site": "otsenka.law:90 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 34,
+      "op": "DROP",
+      "site": "otsenka.law:105 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 35,
+      "op": "NEG",
+      "site": "otsenka.law:105 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 36,
+      "op": "DROP",
+      "site": "otsenka.law:106 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 37,
+      "op": "NEG",
+      "site": "otsenka.law:106 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 38,
+      "op": "DROP",
+      "site": "otsenka.law:107 drop premise `detal_otsenivaetsya_bez_iznosa(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 39,
+      "op": "NEG",
+      "site": "otsenka.law:107 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 40,
+      "op": "DROP",
+      "site": "otsenka.law:108 drop premise `trebovanie_o_peredache_detali(r: r, d: d, day: day`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 41,
+      "op": "NEG",
+      "site": "otsenka.law:108 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 42,
+      "op": "DROP",
+      "site": "otsenka.law:126 drop premise `detal_otsenivaetsya_bez_iznosa(d)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 43,
+      "op": "NEG",
+      "site": "otsenka.law:126 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 44,
+      "op": "DROP",
+      "site": "otsenka.law:127 drop premise `rynochnaya_stoimost_novoy_detali(d: d, amount: amo`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 45,
+      "op": "NEG",
+      "site": "otsenka.law:127 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 46,
+      "op": "DROP",
+      "site": "otsenka.law:134 drop premise `stoimost_detali_s_uchetom_iznosa(d: d, amount: amo`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 47,
+      "op": "NEG",
+      "site": "otsenka.law:134 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 48,
+      "op": "UNLESS",
+      "site": "otsenka.law:138 drop defeater",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 49,
+      "op": "DROP",
+      "site": "dostupnost-rascheta.law:32 drop premise `ombudsman_deystvuet(x)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 50,
+      "op": "NEG",
+      "site": "dostupnost-rascheta.law:32 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 51,
+      "op": "DROP",
+      "site": "dostupnost-rascheta.law:33 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 52,
+      "op": "NEG",
+      "site": "dostupnost-rascheta.law:33 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 53,
+      "op": "DROP",
+      "site": "dostupnost-rascheta.law:48 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 54,
+      "op": "NEG",
+      "site": "dostupnost-rascheta.law:48 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 55,
+      "op": "DROP",
+      "site": "dostupnost-rascheta.law:49 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 56,
+      "op": "NEG",
+      "site": "dostupnost-rascheta.law:49 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 57,
+      "op": "DROP",
+      "site": "akt.law:72 drop premise `akt_fio_predstavivshego(a: a, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 58,
+      "op": "NEG",
+      "site": "akt.law:72 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 59,
+      "op": "DROP",
+      "site": "akt.law:73 drop premise `akt_iin_predstavivshego(a: a, iin: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 60,
+      "op": "NEG",
+      "site": "akt.law:73 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 61,
+      "op": "DROP",
+      "site": "akt.law:74 drop premise `akt_udostoverenie_predstavivshego(a: a, nomer: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 62,
+      "op": "NEG",
+      "site": "akt.law:74 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 63,
+      "op": "DROP",
+      "site": "akt.law:75 drop premise `akt_dokument_o_prave_sobstvennosti(a: a, dokument:`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 64,
+      "op": "NEG",
+      "site": "akt.law:75 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 65,
+      "op": "DROP",
+      "site": "akt.law:84 drop premise `akt_foto_odometra(a: a, fayl: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 66,
+      "op": "NEG",
+      "site": "akt.law:84 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 67,
+      "op": "DROP",
+      "site": "akt.law:90 drop premise `odometr_otsutstvuet(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 68,
+      "op": "NEG",
+      "site": "akt.law:90 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 69,
+      "op": "DROP",
+      "site": "akt.law:96 drop premise `akt_vin(a: a, vin: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 70,
+      "op": "NEG",
+      "site": "akt.law:96 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 71,
+      "op": "DROP",
+      "site": "akt.law:97 drop premise `akt_marka(a: a, marka: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 72,
+      "op": "NEG",
+      "site": "akt.law:97 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 73,
+      "op": "DROP",
+      "site": "akt.law:98 drop premise `akt_model(a: a, model: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 74,
+      "op": "NEG",
+      "site": "akt.law:98 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 75,
+      "op": "DROP",
+      "site": "akt.law:99 drop premise `akt_gos_nomer(a: a, nomer: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 76,
+      "op": "NEG",
+      "site": "akt.law:99 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 77,
+      "op": "DROP",
+      "site": "akt.law:100 drop premise `akt_god_vypuska(a: a, god: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 78,
+      "op": "NEG",
+      "site": "akt.law:100 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 79,
+      "op": "DROP",
+      "site": "akt.law:101 drop premise `akt_probeg(a: a, probeg: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 80,
+      "op": "NEG",
+      "site": "akt.law:101 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 81,
+      "op": "DROP",
+      "site": "akt.law:102 drop premise `akt_dopolnitelnoe_oborudovanie(a: a, opisanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 82,
+      "op": "NEG",
+      "site": "akt.law:102 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 83,
+      "op": "DROP",
+      "site": "akt.law:103 drop premise `akt_snimok_identifikatsionnogo_nomera(a: a, fayl: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 84,
+      "op": "NEG",
+      "site": "akt.law:103 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 85,
+      "op": "DROP",
+      "site": "akt.law:104 drop premise `trebovanie_o_foto_odometra_soblyudeno(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 86,
+      "op": "NEG",
+      "site": "akt.law:104 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 87,
+      "op": "DROP",
+      "site": "akt.law:110 drop premise `akt_povrezhdennye_detali(a: a, perechen: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 88,
+      "op": "NEG",
+      "site": "akt.law:110 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 89,
+      "op": "DROP",
+      "site": "akt.law:111 drop premise `akt_fotografii_povrezhdeniy(a: a, fayly: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 90,
+      "op": "NEG",
+      "site": "akt.law:111 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 91,
+      "op": "DROP",
+      "site": "akt.law:112 drop premise `akt_skrytye_povrezhdeniya(a: a, opisanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 92,
+      "op": "NEG",
+      "site": "akt.law:112 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 93,
+      "op": "DROP",
+      "site": "akt.law:120 drop premise `akt_data_provedeniya_osmotra(a: a, moment: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 94,
+      "op": "NEG",
+      "site": "akt.law:120 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 95,
+      "op": "DROP",
+      "site": "akt.law:121 drop premise `akt_data_sostavleniya(a: a, moment: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 96,
+      "op": "NEG",
+      "site": "akt.law:121 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 97,
+      "op": "DROP",
+      "site": "akt.law:122 drop premise `akt_sobstvennik(a: a, naimenovanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 98,
+      "op": "NEG",
+      "site": "akt.law:122 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 99,
+      "op": "DROP",
+      "site": "akt.law:123 drop premise `akt_soderzhit_svedeniya_o_predstavivshem_lice(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 100,
+      "op": "NEG",
+      "site": "akt.law:123 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 101,
+      "op": "DROP",
+      "site": "akt.law:124 drop premise `akt_soderzhit_svedeniya_o_ts(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 102,
+      "op": "NEG",
+      "site": "akt.law:124 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 103,
+      "op": "DROP",
+      "site": "akt.law:125 drop premise `akt_soderzhit_svedeniya_o_povrezhdennykh_elementak`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 104,
+      "op": "NEG",
+      "site": "akt.law:125 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 105,
+      "op": "DROP",
+      "site": "akt.law:126 drop premise `akt_fio_osmotrevshego(a: a, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 106,
+      "op": "NEG",
+      "site": "akt.law:126 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 107,
+      "op": "DROP",
+      "site": "akt.law:133 drop premise `akt_osmotra_po_raschetu(a: a, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 108,
+      "op": "NEG",
+      "site": "akt.law:133 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 109,
+      "op": "DROP",
+      "site": "akt.law:134 drop premise `akt_soderzhit_svedeniya_prilozheniya_2(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 110,
+      "op": "DROP",
+      "site": "akt.law:135 drop premise `akt_vozmozhnye_defekty(a: a, opisanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 111,
+      "op": "NEG",
+      "site": "akt.law:135 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 112,
+      "op": "DROP",
+      "site": "provedenie.law:28 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 113,
+      "op": "NEG",
+      "site": "provedenie.law:28 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 114,
+      "op": "DROP",
+      "site": "provedenie.law:29 drop premise `trebovanie_ob_osmotre_na_sto(r: r, p: p, day: day)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 115,
+      "op": "NEG",
+      "site": "provedenie.law:29 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 116,
+      "op": "DROP",
+      "site": "provedenie.law:57 drop premise `akt_dopolnitelnogo_osmotra_po_raschetu(a: a, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 117,
+      "op": "NEG",
+      "site": "provedenie.law:57 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 118,
+      "op": "DROP",
+      "site": "provedenie.law:58 drop premise `akt_soderzhit_svedeniya_prilozheniya_2(a)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 119,
+      "op": "DROP",
+      "site": "provedenie.law:64 drop premise `zayavlenie_o_dopolnitelnom_osmotre(z: z, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 120,
+      "op": "NEG",
+      "site": "provedenie.law:64 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 121,
+      "op": "DROP",
+      "site": "provedenie.law:65 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 122,
+      "op": "DROP",
+      "site": "provedenie.law:66 drop premise `dopolnitelnyy_osmotr_proveden_strakhovshchikom(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 123,
+      "op": "NEG",
+      "site": "provedenie.law:66 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 124,
+      "op": "DROP",
+      "site": "provedenie.law:67 drop premise `dopolnitelnyy_osmotr_oformlen(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 125,
+      "op": "NEG",
+      "site": "provedenie.law:67 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 126,
+      "op": "DROP",
+      "site": "provedenie.law:73 drop premise `skrytye_defekty_vyyavleny(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 127,
+      "op": "NEG",
+      "site": "provedenie.law:73 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 128,
+      "op": "DROP",
+      "site": "provedenie.law:74 drop premise `dopolnitelnyy_osmotr_proveden_po_pravilam(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 129,
+      "op": "NEG",
+      "site": "provedenie.law:74 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 130,
+      "op": "DROP",
+      "site": "usloviya.law:28 drop premise `dostup_k_ts_besprepyatstvennyy(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 131,
+      "op": "NEG",
+      "site": "usloviya.law:28 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 132,
+      "op": "DROP",
+      "site": "usloviya.law:29 drop premise `identifikatsiya_ts_provodima(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 133,
+      "op": "NEG",
+      "site": "usloviya.law:29 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 134,
+      "op": "DROP",
+      "site": "usloviya.law:30 drop premise `probeg_po_odometru_ustanovim(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 135,
+      "op": "NEG",
+      "site": "usloviya.law:30 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 136,
+      "op": "DROP",
+      "site": "usloviya.law:31 drop premise `komplektnost_ustanovima(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 137,
+      "op": "NEG",
+      "site": "usloviya.law:31 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 138,
+      "op": "DROP",
+      "site": "usloviya.law:32 drop premise `perechen_defektov_ustanovim(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 139,
+      "op": "NEG",
+      "site": "usloviya.law:32 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 140,
+      "op": "DROP",
+      "site": "usloviya.law:33 drop premise `fotosemka_povrezhdeniy_provodima(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 141,
+      "op": "NEG",
+      "site": "usloviya.law:33 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 142,
+      "op": "DROP",
+      "site": "usloviya.law:34 drop premise `priznaki_prezhnikh_remontov_ustanovimy(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 143,
+      "op": "NEG",
+      "site": "usloviya.law:34 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 144,
+      "op": "DROP",
+      "site": "usloviya.law:44 drop premise `osmotr_vozmozhen(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 145,
+      "op": "NEG",
+      "site": "usloviya.law:44 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 146,
+      "op": "DROP",
+      "site": "usloviya.law:45 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 147,
+      "op": "NEG",
+      "site": "usloviya.law:45 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 148,
+      "op": "DROP",
+      "site": "usloviya.law:46 drop premise `dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 149,
+      "op": "NEG",
+      "site": "usloviya.law:46 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 150,
+      "op": "DROP",
+      "site": "usloviya.law:52 drop premise `osmotr_vozmozhen(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 151,
+      "op": "NEG",
+      "site": "usloviya.law:52 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 152,
+      "op": "DROP",
+      "site": "usloviya.law:53 drop premise `not opredelyaetsya_stoimost_vosstanovitelnogo_remo`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 153,
+      "op": "NEG",
+      "site": "usloviya.law:53 remove not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 154,
+      "op": "DROP",
+      "site": "usloviya.law:59 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 155,
+      "op": "NEG",
+      "site": "usloviya.law:59 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 156,
+      "op": "DROP",
+      "site": "usloviya.law:60 drop premise `not dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 157,
+      "op": "NEG",
+      "site": "usloviya.law:60 remove not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 158,
+      "op": "DROP",
+      "site": "oformlenie.law:90 drop premise `otchet_pechat(o: o, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 159,
+      "op": "NEG",
+      "site": "oformlenie.law:90 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 160,
+      "op": "DROP",
+      "site": "oformlenie.law:91 drop premise `otchet_podpis_utverzhdayushchego(o: o, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 161,
+      "op": "NEG",
+      "site": "oformlenie.law:91 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 162,
+      "op": "DROP",
+      "site": "oformlenie.law:97 drop premise `pechat_otsutstvuet(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 163,
+      "op": "NEG",
+      "site": "oformlenie.law:97 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 164,
+      "op": "DROP",
+      "site": "oformlenie.law:98 drop premise `otchet_podpis_utverzhdayushchego(o: o, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 165,
+      "op": "NEG",
+      "site": "oformlenie.law:98 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 166,
+      "op": "DROP",
+      "site": "oformlenie.law:104 drop premise `otchet_nomer(o: o, nomer: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 167,
+      "op": "NEG",
+      "site": "oformlenie.law:104 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 168,
+      "op": "DROP",
+      "site": "oformlenie.law:105 drop premise `otchet_data_sostavleniya(o: o, day: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 169,
+      "op": "NEG",
+      "site": "oformlenie.law:105 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 170,
+      "op": "DROP",
+      "site": "oformlenie.law:106 drop premise `otchet_marka(o: o, marka: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 171,
+      "op": "NEG",
+      "site": "oformlenie.law:106 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 172,
+      "op": "DROP",
+      "site": "oformlenie.law:107 drop premise `otchet_model(o: o, model: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 173,
+      "op": "NEG",
+      "site": "oformlenie.law:107 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 174,
+      "op": "DROP",
+      "site": "oformlenie.law:108 drop premise `otchet_gos_nomer(o: o, nomer: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 175,
+      "op": "NEG",
+      "site": "oformlenie.law:108 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 176,
+      "op": "DROP",
+      "site": "oformlenie.law:109 drop premise `otchet_data_osmotra(o: o, day: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 177,
+      "op": "NEG",
+      "site": "oformlenie.law:109 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 178,
+      "op": "DROP",
+      "site": "oformlenie.law:110 drop premise `otchet_zayavitel(o: o, naimenovanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 179,
+      "op": "NEG",
+      "site": "oformlenie.law:110 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 180,
+      "op": "DROP",
+      "site": "oformlenie.law:111 drop premise `otchet_strakhovshchik_naimenovanie(o: o, naimenova`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 181,
+      "op": "NEG",
+      "site": "oformlenie.law:111 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 182,
+      "op": "DROP",
+      "site": "oformlenie.law:112 drop premise `otchet_strakhovshchik_bin(o: o, bin: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 183,
+      "op": "NEG",
+      "site": "oformlenie.law:112 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 184,
+      "op": "DROP",
+      "site": "oformlenie.law:113 drop premise `otchet_strakhovshchik_rekvizity(o: o, rekvizity: _`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 185,
+      "op": "NEG",
+      "site": "oformlenie.law:113 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 186,
+      "op": "DROP",
+      "site": "oformlenie.law:114 drop premise `otchet_strakhovshchik_adres(o: o, adres: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 187,
+      "op": "NEG",
+      "site": "oformlenie.law:114 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 188,
+      "op": "DROP",
+      "site": "oformlenie.law:115 drop premise `otchet_zaveren(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 189,
+      "op": "NEG",
+      "site": "oformlenie.law:115 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 190,
+      "op": "DROP",
+      "site": "oformlenie.law:116 drop premise `otchet_opisanie_obekta(o: o, opisanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 191,
+      "op": "NEG",
+      "site": "oformlenie.law:116 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 192,
+      "op": "DROP",
+      "site": "oformlenie.law:122 drop premise `otchet_stoimost_detaley(o: o, amount: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 193,
+      "op": "NEG",
+      "site": "oformlenie.law:122 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 194,
+      "op": "DROP",
+      "site": "oformlenie.law:123 drop premise `otchet_obemy_rabot(o: o, opisanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 195,
+      "op": "NEG",
+      "site": "oformlenie.law:123 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 196,
+      "op": "DROP",
+      "site": "oformlenie.law:124 drop premise `otchet_stoimost_rabot(o: o, amount: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 197,
+      "op": "NEG",
+      "site": "oformlenie.law:124 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 198,
+      "op": "DROP",
+      "site": "oformlenie.law:125 drop premise `otchet_stoimost_materialov(o: o, amount: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 199,
+      "op": "NEG",
+      "site": "oformlenie.law:125 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 200,
+      "op": "DROP",
+      "site": "oformlenie.law:126 drop premise `otchet_stoimost_remonta(o: o, amount: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 201,
+      "op": "NEG",
+      "site": "oformlenie.law:126 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 202,
+      "op": "DROP",
+      "site": "oformlenie.law:132 drop premise `otchet_kalkulyatsiya_spo(o: o, fayl: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 203,
+      "op": "NEG",
+      "site": "oformlenie.law:132 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 204,
+      "op": "DROP",
+      "site": "oformlenie.law:133 drop premise `otchet_fotografii_obekta(o: o, fayly: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 205,
+      "op": "NEG",
+      "site": "oformlenie.law:133 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 206,
+      "op": "DROP",
+      "site": "oformlenie.law:134 drop premise `otchet_iskhodnye_dannye(o: o, perechen: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 207,
+      "op": "NEG",
+      "site": "oformlenie.law:134 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 208,
+      "op": "DROP",
+      "site": "oformlenie.law:140 drop premise `otchet_soderzhit_titulnyy_list(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 209,
+      "op": "NEG",
+      "site": "oformlenie.law:140 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 210,
+      "op": "DROP",
+      "site": "oformlenie.law:141 drop premise `otchet_raschet_iznosa(o: o, soderzhanie: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 211,
+      "op": "NEG",
+      "site": "oformlenie.law:141 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 212,
+      "op": "DROP",
+      "site": "oformlenie.law:142 drop premise `otchet_soderzhit_stoimosti_i_obemy(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 213,
+      "op": "NEG",
+      "site": "oformlenie.law:142 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 214,
+      "op": "DROP",
+      "site": "oformlenie.law:143 drop premise `otchet_soderzhit_prilozheniya(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 215,
+      "op": "NEG",
+      "site": "oformlenie.law:143 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 216,
+      "op": "DROP",
+      "site": "oformlenie.law:154 drop premise `itogovaya_stoimost_v_tenge(o: o, amount: amount)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 217,
+      "op": "NEG",
+      "site": "oformlenie.law:154 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 218,
+      "op": "DROP",
+      "site": "oformlenie.law:155 drop premise `round(amount, 0, \"HALF_UP\") == amount`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 219,
+      "op": "NEG",
+      "site": "oformlenie.law:155 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 220,
+      "op": "DROP",
+      "site": "oformlenie.law:156 drop premise `otchet_summa_propisyu(o: o, propis: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 221,
+      "op": "NEG",
+      "site": "oformlenie.law:156 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 222,
+      "op": "DROP",
+      "site": "oformlenie.law:162 drop premise `otchet_predusmatrivaet_otmetku_o_soglasii(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 223,
+      "op": "NEG",
+      "site": "oformlenie.law:162 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 224,
+      "op": "DROP",
+      "site": "oformlenie.law:163 drop premise `otchet_predusmatrivaet_otmetku_ob_otsutstvii_zhalo`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 225,
+      "op": "NEG",
+      "site": "oformlenie.law:163 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 226,
+      "op": "DROP",
+      "site": "oformlenie.law:170 drop premise `otchet_utverdil_rukovoditel(o: o, fio: _)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 227,
+      "op": "NEG",
+      "site": "oformlenie.law:170 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 228,
+      "op": "DROP",
+      "site": "oformlenie.law:176 drop premise `otchet_utverdilo_upolnomochennoe_litso(o: o, fio: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 229,
+      "op": "NEG",
+      "site": "oformlenie.law:176 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 230,
+      "op": "DROP",
+      "site": "oformlenie.law:184 drop premise `otchet_predostavlen_v_bumazhnom_vide(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 231,
+      "op": "NEG",
+      "site": "oformlenie.law:184 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 232,
+      "op": "DROP",
+      "site": "oformlenie.law:185 drop premise `format_ne_pozvolyaet_vnosit_izmeneniya(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 233,
+      "op": "NEG",
+      "site": "oformlenie.law:185 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 234,
+      "op": "DROP",
+      "site": "oformlenie.law:191 drop premise `otchet_predostavlen_v_elektronnom_vide(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 235,
+      "op": "NEG",
+      "site": "oformlenie.law:191 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 236,
+      "op": "DROP",
+      "site": "oformlenie.law:192 drop premise `format_ne_pozvolyaet_vnosit_izmeneniya(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 237,
+      "op": "NEG",
+      "site": "oformlenie.law:192 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 238,
+      "op": "DROP",
+      "site": "oformlenie.law:198 drop premise `otchet_soderzhit_svedeniya_punkta_1(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 239,
+      "op": "DROP",
+      "site": "oformlenie.law:199 drop premise `otchet_soderzhit_itogovuyu_velichinu(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 240,
+      "op": "NEG",
+      "site": "oformlenie.law:199 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 241,
+      "op": "DROP",
+      "site": "oformlenie.law:200 drop premise `otchet_soderzhit_otmetki(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 242,
+      "op": "NEG",
+      "site": "oformlenie.law:200 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 243,
+      "op": "DROP",
+      "site": "oformlenie.law:201 drop premise `otchet_utverzhden(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 244,
+      "op": "NEG",
+      "site": "oformlenie.law:201 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 245,
+      "op": "DROP",
+      "site": "oformlenie.law:202 drop premise `otchet_predostavlen_v_dopustimom_vide(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 246,
+      "op": "NEG",
+      "site": "oformlenie.law:202 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 247,
+      "op": "DROP",
+      "site": "oformlenie.law:210 drop premise `otchet_po_raschetu(o: o, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 248,
+      "op": "NEG",
+      "site": "oformlenie.law:210 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 249,
+      "op": "DROP",
+      "site": "oformlenie.law:211 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 250,
+      "op": "NEG",
+      "site": "oformlenie.law:211 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 251,
+      "op": "DROP",
+      "site": "oformlenie.law:212 drop premise `otchet_vklyuchaet_kalkulyatsiyu_iz_spo(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 252,
+      "op": "NEG",
+      "site": "oformlenie.law:212 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 253,
+      "op": "DROP",
+      "site": "oformlenie.law:213 drop premise `otchet_oformlen_po_prilozheniyu_3(o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 254,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:40 3 -> 4",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 255,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:40 unit swap",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 256,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:58 drop premise `srok_otmetki_poterpevshego(limit)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 257,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:58 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 258,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:59 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 259,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:59 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 260,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:60 drop defeater",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 261,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:69 drop premise `otmetka_o_soglasii_prostavlena(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 262,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:69 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 263,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:75 drop premise `otmetka_o_nesoglasii_prostavlena(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 264,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:75 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 265,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:76 drop premise `prichiny_nesoglasiya_ukazany(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 266,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:76 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 267,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:87 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 268,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:87 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 269,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:88 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 270,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:88 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 271,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:89 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 272,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:89 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 273,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:90 drop premise `predel_otmetki_poterpevshego(r: r, day: due)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 274,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:90 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 275,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:108 3 -> 4",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 276,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:108 unit swap",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 277,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:114 drop premise `srok_otveta_strakhovshchika(limit)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 278,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:114 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 279,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:115 drop premise `otmetka_nesoglasiya_poluchena_strakhovshchikom(r: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 280,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:115 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 281,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:116 drop defeater",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 282,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:127 drop premise `korrektirovka_rascheta_predostavlena(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 283,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:127 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 284,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:133 drop premise `pismennyy_otvet_o_korrektnosti_napravlen(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 285,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:133 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 286,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:144 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 287,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:144 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 288,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:145 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 289,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:145 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 290,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:146 drop premise `otmetka_nesoglasiya_poluchena_strakhovshchikom(r: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 291,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:146 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 292,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:147 drop premise `predel_otveta_strakhovshchika(r: r, day: due)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 293,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:147 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 294,
+      "op": "CONST",
+      "site": "sroki-i-vozrazheniya.law:166 5 -> 6",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 295,
+      "op": "UNIT",
+      "site": "sroki-i-vozrazheniya.law:166 unit swap",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 296,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:172 drop premise `srok_predostavleniya_otcheta(limit)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 297,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:172 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 298,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:173 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 299,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:173 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 300,
+      "op": "UNLESS",
+      "site": "sroki-i-vozrazheniya.law:174 drop defeater",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 301,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:195 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 302,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:195 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 303,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:196 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 304,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:196 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 305,
+      "op": "CMP",
+      "site": "sroki-i-vozrazheniya.law:197 > -> >=",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 306,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:197 drop premise `got > due`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 307,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:203 drop premise `not otchet_predostavlen_poterpevshemu(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 308,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:203 remove not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 309,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:204 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 310,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:204 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 311,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:205 drop premise `den_rassmotreniya_dela(r: r, day: day)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 312,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:205 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 313,
+      "op": "CMP",
+      "site": "sroki-i-vozrazheniya.law:206 > -> >=",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 314,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:206 drop premise `day > due`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 315,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:212 drop premise `otchet_ne_predostavlen_v_srok(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 316,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:212 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 317,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:213 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 318,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:213 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 319,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:235 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 320,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:235 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 321,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:236 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 322,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:236 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 323,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:237 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 324,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:237 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 325,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:238 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 326,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:238 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 327,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:256 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 328,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:256 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 329,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:257 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 330,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:257 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 331,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:258 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 332,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:258 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 333,
+      "op": "DROP",
+      "site": "sroki-i-vozrazheniya.law:259 drop premise `uproshchennoe_oformlenie_proisshestviya(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 334,
+      "op": "NEG",
+      "site": "sroki-i-vozrazheniya.law:259 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 335,
+      "op": "DROP",
+      "site": "organizatsiya.law:23 drop premise `raschet_osushchestvlyaet_strakhovshchik(r: r, s: s`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 336,
+      "op": "NEG",
+      "site": "organizatsiya.law:23 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 337,
+      "op": "DROP",
+      "site": "organizatsiya.law:24 drop premise `zayavlenie_po_raschetu(z: z, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 338,
+      "op": "NEG",
+      "site": "organizatsiya.law:24 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 339,
+      "op": "DROP",
+      "site": "organizatsiya.law:25 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 340,
+      "op": "DROP",
+      "site": "organizatsiya.law:26 drop premise `spo_primeneno(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 341,
+      "op": "NEG",
+      "site": "organizatsiya.law:26 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 342,
+      "op": "DROP",
+      "site": "organizatsiya.law:37 drop premise `mesto_i_vremya_osmotra_soglasovany(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 343,
+      "op": "NEG",
+      "site": "organizatsiya.law:37 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 344,
+      "op": "DROP",
+      "site": "organizatsiya.law:38 drop premise `osmotr_oformlen(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 345,
+      "op": "NEG",
+      "site": "organizatsiya.law:38 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 346,
+      "op": "DROP",
+      "site": "organizatsiya.law:39 drop premise `spo_primeneno(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 347,
+      "op": "NEG",
+      "site": "organizatsiya.law:39 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 348,
+      "op": "DROP",
+      "site": "otsenshchiki.law:30 drop premise `otsenshchik_privlechen_po_dogovoru(s: s, o: o, r: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 349,
+      "op": "NEG",
+      "site": "otsenshchiki.law:30 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 350,
+      "op": "DROP",
+      "site": "otsenshchiki.law:38 drop premise `raschet_osushchestvlyaet_otsenshchik(r: r, o: o)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 351,
+      "op": "NEG",
+      "site": "otsenshchiki.law:38 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 352,
+      "op": "DROP",
+      "site": "otsenshchiki.law:39 drop premise `zayavlenie_po_raschetu(z: z, r: r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 353,
+      "op": "NEG",
+      "site": "otsenshchiki.law:39 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 354,
+      "op": "DROP",
+      "site": "otsenshchiki.law:40 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 355,
+      "op": "DROP",
+      "site": "otsenshchiki.law:41 drop premise `spo_primeneno(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 356,
+      "op": "NEG",
+      "site": "otsenshchiki.law:41 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 357,
+      "op": "DROP",
+      "site": "otsenshchiki.law:52 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 358,
+      "op": "NEG",
+      "site": "otsenshchiki.law:52 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 359,
+      "op": "CMP",
+      "site": "otsenshchiki.law:53 >= -> >",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 360,
+      "op": "DROP",
+      "site": "otsenshchiki.law:53 drop premise `n >= 2`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 361,
+      "op": "CONST",
+      "site": "otsenshchiki.law:53 2 -> 3",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 362,
+      "op": "DROP",
+      "site": "otsenshchiki.law:59 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 363,
+      "op": "NEG",
+      "site": "otsenshchiki.law:59 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 364,
+      "op": "CMP",
+      "site": "otsenshchiki.law:60 < -> <=",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 365,
+      "op": "DROP",
+      "site": "otsenshchiki.law:60 drop premise `n < 2`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 366,
+      "op": "CONST",
+      "site": "otsenshchiki.law:60 2 -> 3",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 367,
+      "op": "DROP",
+      "site": "otsenshchiki.law:71 drop premise `otsenshchik_privlechen_po_dogovoru(s: s, o: o, r: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 368,
+      "op": "NEG",
+      "site": "otsenshchiki.law:71 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 369,
+      "op": "DROP",
+      "site": "otsenshchiki.law:72 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 370,
+      "op": "NEG",
+      "site": "otsenshchiki.law:72 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 371,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:26 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 372,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:26 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 373,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:27 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 374,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:27 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 375,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:28 drop premise `zayavlenie_predstavleno_v_den(r: r, day: day)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 376,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:28 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 377,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:43 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 378,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:43 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 379,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:44 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 380,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:44 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 381,
+      "op": "DROP",
+      "site": "uchastie-poterpevshego.law:45 drop premise `zayavlenie_predstavleno_v_den(r: r, day: day)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 382,
+      "op": "NEG",
+      "site": "uchastie-poterpevshego.law:45 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 383,
+      "op": "DROP",
+      "site": "zayavlenie.law:24 drop premise `zayavlenie_soderzhit_datu_i_vremya_postupleniya(z)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 384,
+      "op": "NEG",
+      "site": "zayavlenie.law:24 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 385,
+      "op": "DROP",
+      "site": "zayavlenie.law:25 drop premise `zayavlenie_soderzhit_svedeniya_ob_imushchestve(z)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 386,
+      "op": "NEG",
+      "site": "zayavlenie.law:25 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 387,
+      "op": "DROP",
+      "site": "gibel-ts.law:41 drop premise `ozhidaemye_raskhody_na_vosstanovlenie(v: v, amount`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 388,
+      "op": "NEG",
+      "site": "gibel-ts.law:41 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 389,
+      "op": "DROP",
+      "site": "gibel-ts.law:42 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 390,
+      "op": "NEG",
+      "site": "gibel-ts.law:42 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 391,
+      "op": "CONST",
+      "site": "gibel-ts.law:43 0.8 -> 0.7",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 392,
+      "op": "CMP",
+      "site": "gibel-ts.law:44 > -> >=",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 393,
+      "op": "DROP",
+      "site": "gibel-ts.law:44 drop premise `costs > porog_gibeli`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 394,
+      "op": "DROP",
+      "site": "gibel-ts.law:50 drop premise `vosstanovlenie_tekhnicheski_nevozmozhno(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 395,
+      "op": "NEG",
+      "site": "gibel-ts.law:50 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 396,
+      "op": "DROP",
+      "site": "gibel-ts.law:56 drop premise `vosstanovlenie_ekonomicheski_netselesoobrazno(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 397,
+      "op": "NEG",
+      "site": "gibel-ts.law:56 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 398,
+      "op": "DROP",
+      "site": "gibel-ts.law:66 drop premise `raschet_po_ts(r: r, v: v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 399,
+      "op": "NEG",
+      "site": "gibel-ts.law:66 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 400,
+      "op": "DROP",
+      "site": "gibel-ts.law:67 drop premise `ts_schitaetsya_unichtozhennym(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 401,
+      "op": "NEG",
+      "site": "gibel-ts.law:67 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 402,
+      "op": "DROP",
+      "site": "gibel-ts.law:68 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 403,
+      "op": "NEG",
+      "site": "gibel-ts.law:68 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 404,
+      "op": "DROP",
+      "site": "gibel-ts.law:69 drop premise `ostatki_peredany_v_sobstvennost_strakhovshchika(r)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 405,
+      "op": "NEG",
+      "site": "gibel-ts.law:69 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 406,
+      "op": "DROP",
+      "site": "gibel-ts.law:79 drop premise `raschet_po_ts(r: r, v: v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 407,
+      "op": "NEG",
+      "site": "gibel-ts.law:79 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 408,
+      "op": "DROP",
+      "site": "gibel-ts.law:80 drop premise `ts_schitaetsya_unichtozhennym(v)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 409,
+      "op": "NEG",
+      "site": "gibel-ts.law:80 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 410,
+      "op": "DROP",
+      "site": "gibel-ts.law:81 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 411,
+      "op": "NEG",
+      "site": "gibel-ts.law:81 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 412,
+      "op": "DROP",
+      "site": "gibel-ts.law:82 drop premise `stoimost_godnykh_k_realizatsii_ostatkov(v: v, amou`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 413,
+      "op": "NEG",
+      "site": "gibel-ts.law:82 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 414,
+      "op": "DROP",
+      "site": "gibel-ts.law:83 drop premise `not ostatki_peredany_v_sobstvennost_strakhovshchik`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 415,
+      "op": "NEG",
+      "site": "gibel-ts.law:83 remove not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 416,
+      "op": "DROP",
+      "site": "oplata-remonta.law:21 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 417,
+      "op": "NEG",
+      "site": "oplata-remonta.law:21 add not",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 418,
+      "op": "DROP",
+      "site": "oplata-remonta.law:22 drop premise `oplata_remonta_soglasovana(r: r, p: p)`",
+      "outcome": "REJECTED"
+    },
+    {
+      "id": 419,
+      "op": "NEG",
+      "site": "oplata-remonta.law:22 add not",
+      "outcome": "REJECTED"
+    }
+  ]
+}
