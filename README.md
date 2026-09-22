@@ -26,7 +26,7 @@ Re-obtained from this repository on 22 September 2026 (`results/`):
 | 20 targeted mutations of the Arxo model against its 169 scenarios | 20 of 20 caught |
 | the alternative Catala encoding (one disjunctive exception, no guard), 65 reference and 240 random cases | 65 of 65, 240 of 240 |
 | the input adapter: rendered scenarios decoded back to case fields, 65 + 240 cases | all |
-| SYS_TOTAL systematic operator-based mutations against the 169 scenarios | SYS_KILLED caught, SYS_SURVIVED survived, SYS_REJECTED rejected |
+| 420 systematic operator-based mutations against the 169 scenarios | 133 caught, 97 survived, 190 rejected by static checks (survivors classified in `docs/REPORT.md` §3a) |
 
 Where a norm states an algorithm, both languages reproduce it identically.
 What each of them does beyond the algorithm is the subject of the paper;
@@ -105,10 +105,12 @@ that produced them.
 
 Without the engine binary: the Catala rows (65 of 65; 120 of 120 on each seed
 with `--no-arxo`) and the rendering check. With the binary: the Arxo rows, the
-property mode on the Arxo side and the mutation check. The revision reviewed
-for the paper is tagged `paper-rev2`; the repository's history was rewritten
-once on 22 September 2026 when the package's comments were translated, and the
-tag is the stable citation target.
+property mode on the Arxo side and the two mutation checks. The revision of
+the artifact that revision 3 of the paper reports is tagged `paper-rev3` and
+published as a GitHub release; `paper-rev2` is the revision the external
+review read. The repository's history was rewritten once on 22 September 2026
+when the package's comments were translated; the tags are the stable citation
+targets.
 
 ## What is and is not established here
 

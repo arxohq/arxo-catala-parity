@@ -45,6 +45,22 @@ independently of each other.
    (thresholds, comparison operators, dropped conditions, changed periods),
    lowers each mutant and runs all 169 scenarios of the package against it.
    Each mutant must be caught by at least one scenario.
+   `mutants_systematic.py` applies six operators (CMP, DROP, NEG, CONST, UNIT,
+   UNLESS) to every applicable line of every rule module, one mutant per site,
+   and runs each mutant against the same 169 scenarios. Survivors are
+   classified by hand (§3a).
+5. **Round trip of the input adapter.** `parity.py --roundtrip` decodes the
+   rendered Arxo scenarios back into case fields through the published
+   predicate-to-field mapping and compares them with the case they were
+   rendered from, for the 65 reference cases and the 240 random cases. The
+   Catala payload is the case's input dictionary itself, so the Catala side of
+   the adapter is the identity.
+6. **Alternative Catala encoding.** `catala/vred_ts-alt-disjunction.catala_en`
+   encodes the two grounds of a late report (clause 3-1: report not received,
+   or received after the inspection period) as one exception whose condition
+   is their disjunction, with no guard between them. `parity.py --catala
+   --model …` and `--property … --model …` run it on the same cases
+   (`results-alt/`).
 
 ## 3. Results (22 September 2026, this repository)
 
@@ -56,9 +72,41 @@ independently of each other.
 | 120 random cases, seed 1: oracle versus Catala / versus Arxo | 120 of 120 / 120 of 120 |
 | 120 random cases, seed 2: oracle versus Catala / versus Arxo | 120 of 120 / 120 of 120 |
 | 20 targeted mutations of the Arxo model | 20 of 20 killed, 0 survived, 0 rejected |
+| 420 systematic mutations of the Arxo model (`results/mutants-systematic.json`) | 133 killed, 97 survived, 190 rejected by static checks |
+| 65 reference cases, alternative Catala encoding | 65 of 65 |
+| 120 random cases per seed, oracle versus alternative Catala encoding | 120 of 120 (seed 1), 120 of 120 (seed 2) |
+| Round trip of the adapter, 65 reference and 240 random cases | 65 of 65, 240 of 240 |
 
 The JSON reports in `results/` carry the per-case Catala outputs, the per-suite
 engine reports, the per-seed property logs and the per-mutant outcomes.
+
+### 3a. Survivors of the systematic mutations
+
+The generator produced 420 mutants over the 13 rule modules. The compiler
+rejected 190 before any scenario ran: 188 because deleting or negating a
+premise left a rule variable bound only by a negated or absent conjunct
+(the range-restriction check, specification §190), one for a local term left
+unused (`LDC-E0201`), one for a negation over a non-atom (`LDC-E1305`). Of the
+230 mutants that compiled, 133 were caught and 97 survived. By operator, over
+compiled mutants: DROP 45 of 137, NEG 69 of 71, CMP 6 of 7, CONST 7 of 8,
+UNIT 3 of 3, UNLESS 3 of 4.
+
+The 97 survivors, classified by reading each site:
+
+| Class | Count | Sites | Reading |
+|---|---|---|---|
+| (i) binding premise deleted | 9 | `otsenka.law` 68, 84; `gibel-ts.law` 66; `oformlenie.law` 210, 211; `organizatsiya.law` 23, 24; `otsenshchiki.law` 38, 39 | every scenario holds one vehicle, one calculation, one report; a rule that pairs entities across cases has nothing to pair with |
+| (ii) one element of a document-completeness rule deleted | 58 | `akt.law` (20), `oformlenie.law` (36, all but 210, 211), `zayavlenie.law` 24, 25 | the scenarios exercise a complete document and specific omissions, not each element omitted singly |
+| (iii) premise co-asserted by every scenario reaching the rule | 20 | `usloviya.law` 28–32, 34; `organizatsiya.law` 25, 26, 38, 39; `otsenshchiki.law` 40, 41; `provedenie.law` 65, 66; `otsenka.law` 85, 90, 107; `gibel-ts.law` 67, 80; `oplata-remonta.law` 22 | the clause-7 conditions, the annex-1 and inspection premises, the legal-entity path of clause 10, the destruction premise of the payout rules, the agreement of clause 8 |
+| (iv) path no scenario takes | 6 | `sroki-i-vozrazheniya.law` 75, 76 (DROP and NEG each), 116 (UNLESS), 203 | a note of disagreement with reasons; the simplified-procedure defeater of the insurer's response period; a report never provided |
+| (v) equivalent on the queried outputs | 4 | `otsenshchiki.law` 60 (CMP, DROP, CONST); `usloviya.law` 45 | the strict rule for two or more appraisers dominates the defeasible denial whatever the perturbation; the sibling clause-7 rule establishes the same conclusion |
+
+Classes (ii)–(iv), 84 mutants, are untested behaviour of the scenario suite,
+not defects of the model. Six of them lie in the six compared scopes
+(`gibel-ts.law` 67, 80; `otsenka.law` 85, 90; `sroki-i-vozrazheniya.law` 116,
+203) and mark where the reference cases do not look. The random cases were not
+run against mutants; doing so would likely catch the destruction-premise
+mutants.
 
 In the original pilot (9 September 2026) the same 65 cases were also run by
 the second Arxo evaluator, the Python reference implementation, and its

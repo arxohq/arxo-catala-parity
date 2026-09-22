@@ -4,39 +4,39 @@
     "sha256": "556f455c89b4f8abe1ad85583e57037098500543c505216b66a17d212e674ed3"
   },
   "total": 420,
-  "KILLED": 0,
-  "SURVIVED": 0,
-  "REJECTED": 420,
+  "KILLED": 133,
+  "SURVIVED": 97,
+  "REJECTED": 190,
   "byOperator": {
     "DROP": {
-      "KILLED": 0,
-      "SURVIVED": 0,
-      "REJECTED": 206
+      "KILLED": 45,
+      "SURVIVED": 92,
+      "REJECTED": 69
     },
     "NEG": {
-      "KILLED": 0,
-      "SURVIVED": 0,
-      "REJECTED": 192
+      "KILLED": 69,
+      "SURVIVED": 2,
+      "REJECTED": 121
     },
     "CMP": {
-      "KILLED": 0,
-      "SURVIVED": 0,
-      "REJECTED": 7
+      "KILLED": 6,
+      "SURVIVED": 1,
+      "REJECTED": 0
     },
     "CONST": {
-      "KILLED": 0,
-      "SURVIVED": 0,
-      "REJECTED": 8
+      "KILLED": 7,
+      "SURVIVED": 1,
+      "REJECTED": 0
     },
     "UNLESS": {
-      "KILLED": 0,
-      "SURVIVED": 0,
-      "REJECTED": 4
+      "KILLED": 3,
+      "SURVIVED": 1,
+      "REJECTED": 0
     },
     "UNIT": {
-      "KILLED": 0,
+      "KILLED": 3,
       "SURVIVED": 0,
-      "REJECTED": 3
+      "REJECTED": 0
     }
   },
   "mutants": [
@@ -44,2521 +44,3171 @@
       "id": 0,
       "op": "DROP",
       "site": "otsenka.law:57 drop premise `detal_ranee_ne_povrezhdalas(d)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-parity:D14"
     },
     {
       "id": 1,
       "op": "NEG",
       "site": "otsenka.law:57 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t12-a"
     },
     {
       "id": 2,
       "op": "DROP",
       "site": "otsenka.law:58 drop premise `detal_ne_podvergalas_remontu(d)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t12-b"
     },
     {
       "id": 3,
       "op": "NEG",
       "site": "otsenka.law:58 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t12-a"
     },
     {
       "id": 4,
       "op": "DROP",
       "site": "otsenka.law:68 drop premise `detal_ts(d: d, v: v)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 5,
       "op": "NEG",
       "site": "otsenka.law:68 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 10,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 6,
       "op": "DROP",
       "site": "otsenka.law:69 drop premise `detal_podlezhit_zamene(d)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t12-e"
     },
     {
       "id": 7,
       "op": "NEG",
       "site": "otsenka.law:69 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 10,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 8,
       "op": "DROP",
       "site": "otsenka.law:70 drop premise `vladelets_fizicheskoe_litso(v)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-parity:D06"
     },
     {
       "id": 9,
       "op": "NEG",
       "site": "otsenka.law:70 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 10,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 10,
       "op": "DROP",
       "site": "otsenka.law:71 drop premise `ne_podlezhit_obyazatelnomu_tekhosmotru(v)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-parity:D05"
     },
     {
       "id": 11,
       "op": "NEG",
       "site": "otsenka.law:71 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 10,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 12,
       "op": "DROP",
       "site": "otsenka.law:72 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 13,
       "op": "NEG",
       "site": "otsenka.law:72 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 14,
       "op": "CMP",
       "site": "otsenka.law:73 <= -> <",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 15,
       "op": "DROP",
       "site": "otsenka.law:73 drop premise `distance <= 15000 km`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 5,
+      "example": "urn:query:vred-t04"
     },
     {
       "id": 16,
       "op": "CONST",
       "site": "otsenka.law:73 15000 -> 15001",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t04"
     },
     {
       "id": 17,
       "op": "DROP",
       "site": "otsenka.law:74 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t12-b"
     },
     {
       "id": 18,
       "op": "NEG",
       "site": "otsenka.law:74 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 10,
+      "example": "urn:query:vred-t03"
     },
     {
       "id": 19,
       "op": "DROP",
       "site": "otsenka.law:84 drop premise `detal_ts(d: d, v: v)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 20,
       "op": "NEG",
       "site": "otsenka.law:84 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 21,
       "op": "DROP",
       "site": "otsenka.law:85 drop premise `detal_podlezhit_zamene(d)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 22,
       "op": "NEG",
       "site": "otsenka.law:85 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 23,
       "op": "DROP",
       "site": "otsenka.law:86 drop premise `vladelets_yuridicheskoe_litso(v)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t12-d"
     },
     {
       "id": 24,
       "op": "NEG",
       "site": "otsenka.law:86 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 25,
       "op": "DROP",
       "site": "otsenka.law:87 drop premise `nakhoditsya_na_garantiynom_obsluzhivanii(v)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t12-c"
     },
     {
       "id": 26,
       "op": "NEG",
       "site": "otsenka.law:87 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 27,
       "op": "DROP",
       "site": "otsenka.law:88 drop premise `srednegodovoy_probeg(v: v, distance: distance)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 28,
       "op": "NEG",
       "site": "otsenka.law:88 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рм использует несвязанные переменные [distance] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 29,
       "op": "CMP",
       "site": "otsenka.law:89 <= -> <",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 30,
       "op": "DROP",
       "site": "otsenka.law:89 drop premise `distance <= 20000 km`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t06"
     },
     {
       "id": 31,
       "op": "CONST",
       "site": "otsenka.law:89 20000 -> 20001",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t06"
     },
     {
       "id": 32,
       "op": "DROP",
       "site": "otsenka.law:90 drop premise `detal_ne_povrezhdalas_i_ne_remontirovalas(d)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 33,
       "op": "NEG",
       "site": "otsenka.law:90 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t05"
     },
     {
       "id": 34,
       "op": "DROP",
       "site": "otsenka.law:105 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 35,
       "op": "NEG",
       "site": "otsenka.law:105 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 36,
       "op": "DROP",
       "site": "otsenka.law:106 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 37,
       "op": "NEG",
       "site": "otsenka.law:106 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 38,
       "op": "DROP",
       "site": "otsenka.law:107 drop premise `detal_otsenivaetsya_bez_iznosa(d)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 39,
       "op": "NEG",
       "site": "otsenka.law:107 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "KZ-VRED-10-PEREDACHA-DETALI-DUTY"
     },
     {
       "id": 40,
       "op": "DROP",
       "site": "otsenka.law:108 drop premise `trebovanie_o_peredache_detali(r: r, d: d, day: day`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 41,
       "op": "NEG",
       "site": "otsenka.law:108 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 42,
       "op": "DROP",
       "site": "otsenka.law:126 drop premise `detal_otsenivaetsya_bez_iznosa(d)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-parity:D02"
     },
     {
       "id": 43,
       "op": "NEG",
       "site": "otsenka.law:126 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 5,
+      "example": "urn:query:vred-parity:D01"
     },
     {
       "id": 44,
       "op": "DROP",
       "site": "otsenka.law:127 drop premise `rynochnaya_stoimost_novoy_detali(d: d, amount: amo`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 45,
       "op": "NEG",
       "site": "otsenka.law:127 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 46,
       "op": "DROP",
       "site": "otsenka.law:134 drop premise `stoimost_detali_s_uchetom_iznosa(d: d, amount: amo`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "d использует несвязанные переменные [d, amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 47,
       "op": "NEG",
       "site": "otsenka.law:134 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "л использует несвязанные переменные [d, amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 48,
       "op": "UNLESS",
       "site": "otsenka.law:138 drop defeater",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-parity:D01"
     },
     {
       "id": 49,
       "op": "DROP",
       "site": "dostupnost-rascheta.law:32 drop premise `ombudsman_deystvuet(x)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ondition) использует несвязанные переменные [x] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 50,
       "op": "NEG",
       "site": "dostupnost-rascheta.law:32 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [x] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 51,
       "op": "DROP",
       "site": "dostupnost-rascheta.law:33 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 52,
       "op": "NEG",
       "site": "dostupnost-rascheta.law:33 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "итерал использует несвязанные переменные [r, p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 53,
       "op": "DROP",
       "site": "dostupnost-rascheta.law:48 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ondition) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 54,
       "op": "NEG",
       "site": "dostupnost-rascheta.law:48 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 55,
       "op": "DROP",
       "site": "dostupnost-rascheta.law:49 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 56,
       "op": "NEG",
       "site": "dostupnost-rascheta.law:49 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 57,
       "op": "DROP",
       "site": "akt.law:72 drop premise `akt_fio_predstavivshego(a: a, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 58,
       "op": "NEG",
       "site": "akt.law:72 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 59,
       "op": "DROP",
       "site": "akt.law:73 drop premise `akt_iin_predstavivshego(a: a, iin: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 60,
       "op": "NEG",
       "site": "akt.law:73 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 61,
       "op": "DROP",
       "site": "akt.law:74 drop premise `akt_udostoverenie_predstavivshego(a: a, nomer: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 62,
       "op": "NEG",
       "site": "akt.law:74 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 63,
       "op": "DROP",
       "site": "akt.law:75 drop premise `akt_dokument_o_prave_sobstvennosti(a: a, dokument:`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t09-e"
     },
     {
       "id": 64,
       "op": "NEG",
       "site": "akt.law:75 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 65,
       "op": "DROP",
       "site": "akt.law:84 drop premise `akt_foto_odometra(a: a, fayl: _)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eno: head использует несвязанные переменные [a] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 66,
       "op": "NEG",
       "site": "akt.law:84 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 67,
       "op": "DROP",
       "site": "akt.law:90 drop premise `odometr_otsutstvuet(a)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "tra: head использует несвязанные переменные [a] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 68,
       "op": "NEG",
       "site": "akt.law:90 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [a] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 69,
       "op": "DROP",
       "site": "akt.law:96 drop premise `akt_vin(a: a, vin: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t09-b"
     },
     {
       "id": 70,
       "op": "NEG",
       "site": "akt.law:96 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 71,
       "op": "DROP",
       "site": "akt.law:97 drop premise `akt_marka(a: a, marka: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 72,
       "op": "NEG",
       "site": "akt.law:97 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 73,
       "op": "DROP",
       "site": "akt.law:98 drop premise `akt_model(a: a, model: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 74,
       "op": "NEG",
       "site": "akt.law:98 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 75,
       "op": "DROP",
       "site": "akt.law:99 drop premise `akt_gos_nomer(a: a, nomer: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 76,
       "op": "NEG",
       "site": "akt.law:99 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 77,
       "op": "DROP",
       "site": "akt.law:100 drop premise `akt_god_vypuska(a: a, god: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 78,
       "op": "NEG",
       "site": "akt.law:100 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 79,
       "op": "DROP",
       "site": "akt.law:101 drop premise `akt_probeg(a: a, probeg: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 80,
       "op": "NEG",
       "site": "akt.law:101 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 81,
       "op": "DROP",
       "site": "akt.law:102 drop premise `akt_dopolnitelnoe_oborudovanie(a: a, opisanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 82,
       "op": "NEG",
       "site": "akt.law:102 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 83,
       "op": "DROP",
       "site": "akt.law:103 drop premise `akt_snimok_identifikatsionnogo_nomera(a: a, fayl: `",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 84,
       "op": "NEG",
       "site": "akt.law:103 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 85,
       "op": "DROP",
       "site": "akt.law:104 drop premise `trebovanie_o_foto_odometra_soblyudeno(a)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t09-d"
     },
     {
       "id": 86,
       "op": "NEG",
       "site": "akt.law:104 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t09-a"
     },
     {
       "id": 87,
       "op": "DROP",
       "site": "akt.law:110 drop premise `akt_povrezhdennye_detali(a: a, perechen: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 88,
       "op": "NEG",
       "site": "akt.law:110 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 89,
       "op": "DROP",
       "site": "akt.law:111 drop premise `akt_fotografii_povrezhdeniy(a: a, fayly: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 90,
       "op": "NEG",
       "site": "akt.law:111 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 91,
       "op": "DROP",
       "site": "akt.law:112 drop premise `akt_skrytye_povrezhdeniya(a: a, opisanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t09-f"
     },
     {
       "id": 92,
       "op": "NEG",
       "site": "akt.law:112 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 93,
       "op": "DROP",
       "site": "akt.law:120 drop premise `akt_data_provedeniya_osmotra(a: a, moment: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 94,
       "op": "NEG",
       "site": "akt.law:120 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 95,
       "op": "DROP",
       "site": "akt.law:121 drop premise `akt_data_sostavleniya(a: a, moment: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 96,
       "op": "NEG",
       "site": "akt.law:121 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 97,
       "op": "DROP",
       "site": "akt.law:122 drop premise `akt_sobstvennik(a: a, naimenovanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 98,
       "op": "NEG",
       "site": "akt.law:122 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 99,
       "op": "DROP",
       "site": "akt.law:123 drop premise `akt_soderzhit_svedeniya_o_predstavivshem_lice(a)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 100,
       "op": "NEG",
       "site": "akt.law:123 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t09-a"
     },
     {
       "id": 101,
       "op": "DROP",
       "site": "akt.law:124 drop premise `akt_soderzhit_svedeniya_o_ts(a)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t09-b"
     },
     {
       "id": 102,
       "op": "NEG",
       "site": "akt.law:124 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t09-a"
     },
     {
       "id": 103,
       "op": "DROP",
       "site": "akt.law:125 drop premise `akt_soderzhit_svedeniya_o_povrezhdennykh_elementak`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 104,
       "op": "NEG",
       "site": "akt.law:125 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t09-a"
     },
     {
       "id": 105,
       "op": "DROP",
       "site": "akt.law:126 drop premise `akt_fio_osmotrevshego(a: a, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 106,
       "op": "NEG",
       "site": "akt.law:126 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 107,
       "op": "DROP",
       "site": "akt.law:133 drop premise `akt_osmotra_po_raschetu(a: a, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "tom: head использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 108,
       "op": "NEG",
       "site": "akt.law:133 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 109,
       "op": "DROP",
       "site": "akt.law:134 drop premise `akt_soderzhit_svedeniya_prilozheniya_2(a)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 110,
       "op": "DROP",
       "site": "akt.law:135 drop premise `akt_vozmozhnye_defekty(a: a, opisanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 111,
       "op": "NEG",
       "site": "akt.law:135 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 112,
       "op": "DROP",
       "site": "provedenie.law:28 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 113,
       "op": "NEG",
       "site": "provedenie.law:28 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 114,
       "op": "DROP",
       "site": "provedenie.law:29 drop premise `trebovanie_ob_osmotre_na_sto(r: r, p: p, day: day)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "dow) использует несвязанные переменные [p, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 115,
       "op": "NEG",
       "site": "provedenie.law:29 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [p, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 116,
       "op": "DROP",
       "site": "provedenie.law:57 drop premise `akt_dopolnitelnogo_osmotra_po_raschetu(a: a, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "tom: head использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 117,
       "op": "NEG",
       "site": "provedenie.law:57 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 118,
       "op": "DROP",
       "site": "provedenie.law:58 drop premise `akt_soderzhit_svedeniya_prilozheniya_2(a)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-c"
     },
     {
       "id": 119,
       "op": "DROP",
       "site": "provedenie.law:64 drop premise `zayavlenie_o_dopolnitelnom_osmotre(z: z, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-b"
     },
     {
       "id": 120,
       "op": "NEG",
       "site": "provedenie.law:64 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 121,
       "op": "DROP",
       "site": "provedenie.law:65 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 122,
       "op": "DROP",
       "site": "provedenie.law:66 drop premise `dopolnitelnyy_osmotr_proveden_strakhovshchikom(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 123,
       "op": "NEG",
       "site": "provedenie.law:66 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 124,
       "op": "DROP",
       "site": "provedenie.law:67 drop premise `dopolnitelnyy_osmotr_oformlen(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-c"
     },
     {
       "id": 125,
       "op": "NEG",
       "site": "provedenie.law:67 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 126,
       "op": "DROP",
       "site": "provedenie.law:73 drop premise `skrytye_defekty_vyyavleny(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-d"
     },
     {
       "id": 127,
       "op": "NEG",
       "site": "provedenie.law:73 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 128,
       "op": "DROP",
       "site": "provedenie.law:74 drop premise `dopolnitelnyy_osmotr_proveden_po_pravilam(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t10-b"
     },
     {
       "id": 129,
       "op": "NEG",
       "site": "provedenie.law:74 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 130,
       "op": "DROP",
       "site": "usloviya.law:28 drop premise `dostup_k_ts_besprepyatstvennyy(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 131,
       "op": "NEG",
       "site": "usloviya.law:28 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 132,
       "op": "DROP",
       "site": "usloviya.law:29 drop premise `identifikatsiya_ts_provodima(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 133,
       "op": "NEG",
       "site": "usloviya.law:29 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 134,
       "op": "DROP",
       "site": "usloviya.law:30 drop premise `probeg_po_odometru_ustanovim(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 135,
       "op": "NEG",
       "site": "usloviya.law:30 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 136,
       "op": "DROP",
       "site": "usloviya.law:31 drop premise `komplektnost_ustanovima(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 137,
       "op": "NEG",
       "site": "usloviya.law:31 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 138,
       "op": "DROP",
       "site": "usloviya.law:32 drop premise `perechen_defektov_ustanovim(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 139,
       "op": "NEG",
       "site": "usloviya.law:32 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 140,
       "op": "DROP",
       "site": "usloviya.law:33 drop premise `fotosemka_povrezhdeniy_provodima(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t15-h"
     },
     {
       "id": 141,
       "op": "NEG",
       "site": "usloviya.law:33 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 142,
       "op": "DROP",
       "site": "usloviya.law:34 drop premise `priznaki_prezhnikh_remontov_ustanovimy(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 143,
       "op": "NEG",
       "site": "usloviya.law:34 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 144,
       "op": "DROP",
       "site": "usloviya.law:44 drop premise `osmotr_vozmozhen(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t15-h"
     },
     {
       "id": 145,
       "op": "NEG",
       "site": "usloviya.law:44 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 146,
       "op": "DROP",
       "site": "usloviya.law:45 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 147,
       "op": "NEG",
       "site": "usloviya.law:45 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 148,
       "op": "DROP",
       "site": "usloviya.law:46 drop premise `dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-g"
     },
     {
       "id": 149,
       "op": "NEG",
       "site": "usloviya.law:46 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-parity:O01"
     },
     {
       "id": 150,
       "op": "DROP",
       "site": "usloviya.law:52 drop premise `osmotr_vozmozhen(r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 151,
       "op": "NEG",
       "site": "usloviya.law:52 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 152,
       "op": "DROP",
       "site": "usloviya.law:53 drop premise `not opredelyaetsya_stoimost_vosstanovitelnogo_remo`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 5,
+      "example": "urn:query:vred-t15-g"
     },
     {
       "id": 153,
       "op": "NEG",
       "site": "usloviya.law:53 remove not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 5,
+      "example": "urn:query:vred-t15-g"
     },
     {
       "id": 154,
       "op": "DROP",
       "site": "usloviya.law:59 drop premise `opredelyaetsya_stoimost_vosstanovitelnogo_remonta(`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 155,
       "op": "NEG",
       "site": "usloviya.law:59 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 156,
       "op": "DROP",
       "site": "usloviya.law:60 drop premise `not dokumenty_o_povrezhdeniyakh_v_dtp_predstavleny`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t15-g"
     },
     {
       "id": 157,
       "op": "NEG",
       "site": "usloviya.law:60 remove not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-h"
     },
     {
       "id": 158,
       "op": "DROP",
       "site": "oformlenie.law:90 drop premise `otchet_pechat(o: o, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t13-b"
     },
     {
       "id": 159,
       "op": "NEG",
       "site": "oformlenie.law:90 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 160,
       "op": "DROP",
       "site": "oformlenie.law:91 drop premise `otchet_podpis_utverzhdayushchego(o: o, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t13-c"
     },
     {
       "id": 161,
       "op": "NEG",
       "site": "oformlenie.law:91 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 162,
       "op": "DROP",
       "site": "oformlenie.law:97 drop premise `pechat_otsutstvuet(o)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t13-b"
     },
     {
       "id": 163,
       "op": "NEG",
       "site": "oformlenie.law:97 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t13-a"
     },
     {
       "id": 164,
       "op": "DROP",
       "site": "oformlenie.law:98 drop premise `otchet_podpis_utverzhdayushchego(o: o, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 165,
       "op": "NEG",
       "site": "oformlenie.law:98 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 166,
       "op": "DROP",
       "site": "oformlenie.law:104 drop premise `otchet_nomer(o: o, nomer: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 167,
       "op": "NEG",
       "site": "oformlenie.law:104 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 168,
       "op": "DROP",
       "site": "oformlenie.law:105 drop premise `otchet_data_sostavleniya(o: o, day: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 169,
       "op": "NEG",
       "site": "oformlenie.law:105 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 170,
       "op": "DROP",
       "site": "oformlenie.law:106 drop premise `otchet_marka(o: o, marka: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 171,
       "op": "NEG",
       "site": "oformlenie.law:106 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 172,
       "op": "DROP",
       "site": "oformlenie.law:107 drop premise `otchet_model(o: o, model: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 173,
       "op": "NEG",
       "site": "oformlenie.law:107 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 174,
       "op": "DROP",
       "site": "oformlenie.law:108 drop premise `otchet_gos_nomer(o: o, nomer: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 175,
       "op": "NEG",
       "site": "oformlenie.law:108 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 176,
       "op": "DROP",
       "site": "oformlenie.law:109 drop premise `otchet_data_osmotra(o: o, day: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 177,
       "op": "NEG",
       "site": "oformlenie.law:109 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 178,
       "op": "DROP",
       "site": "oformlenie.law:110 drop premise `otchet_zayavitel(o: o, naimenovanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 179,
       "op": "NEG",
       "site": "oformlenie.law:110 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 180,
       "op": "DROP",
       "site": "oformlenie.law:111 drop premise `otchet_strakhovshchik_naimenovanie(o: o, naimenova`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 181,
       "op": "NEG",
       "site": "oformlenie.law:111 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 182,
       "op": "DROP",
       "site": "oformlenie.law:112 drop premise `otchet_strakhovshchik_bin(o: o, bin: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 183,
       "op": "NEG",
       "site": "oformlenie.law:112 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 184,
       "op": "DROP",
       "site": "oformlenie.law:113 drop premise `otchet_strakhovshchik_rekvizity(o: o, rekvizity: _`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 185,
       "op": "NEG",
       "site": "oformlenie.law:113 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 186,
       "op": "DROP",
       "site": "oformlenie.law:114 drop premise `otchet_strakhovshchik_adres(o: o, adres: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 187,
       "op": "NEG",
       "site": "oformlenie.law:114 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 188,
       "op": "DROP",
       "site": "oformlenie.law:115 drop premise `otchet_zaveren(o)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t13-b"
     },
     {
       "id": 189,
       "op": "NEG",
       "site": "oformlenie.law:115 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t13-a"
     },
     {
       "id": 190,
       "op": "DROP",
       "site": "oformlenie.law:116 drop premise `otchet_opisanie_obekta(o: o, opisanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 191,
       "op": "NEG",
       "site": "oformlenie.law:116 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 192,
       "op": "DROP",
       "site": "oformlenie.law:122 drop premise `otchet_stoimost_detaley(o: o, amount: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 193,
       "op": "NEG",
       "site": "oformlenie.law:122 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 194,
       "op": "DROP",
       "site": "oformlenie.law:123 drop premise `otchet_obemy_rabot(o: o, opisanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 195,
       "op": "NEG",
       "site": "oformlenie.law:123 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 196,
       "op": "DROP",
       "site": "oformlenie.law:124 drop premise `otchet_stoimost_rabot(o: o, amount: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 197,
       "op": "NEG",
       "site": "oformlenie.law:124 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 198,
       "op": "DROP",
       "site": "oformlenie.law:125 drop premise `otchet_stoimost_materialov(o: o, amount: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t13-d"
     },
     {
       "id": 199,
       "op": "NEG",
       "site": "oformlenie.law:125 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 200,
       "op": "DROP",
       "site": "oformlenie.law:126 drop premise `otchet_stoimost_remonta(o: o, amount: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 201,
       "op": "NEG",
       "site": "oformlenie.law:126 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 202,
       "op": "DROP",
       "site": "oformlenie.law:132 drop premise `otchet_kalkulyatsiya_spo(o: o, fayl: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 203,
       "op": "NEG",
       "site": "oformlenie.law:132 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 204,
       "op": "DROP",
       "site": "oformlenie.law:133 drop premise `otchet_fotografii_obekta(o: o, fayly: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t13-f"
     },
     {
       "id": 205,
       "op": "NEG",
       "site": "oformlenie.law:133 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 206,
       "op": "DROP",
       "site": "oformlenie.law:134 drop premise `otchet_iskhodnye_dannye(o: o, perechen: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 207,
       "op": "NEG",
       "site": "oformlenie.law:134 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 208,
       "op": "DROP",
       "site": "oformlenie.law:140 drop premise `otchet_soderzhit_titulnyy_list(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 209,
       "op": "NEG",
       "site": "oformlenie.law:140 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 210,
       "op": "DROP",
       "site": "oformlenie.law:141 drop premise `otchet_raschet_iznosa(o: o, soderzhanie: _)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 211,
       "op": "NEG",
       "site": "oformlenie.law:141 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 212,
       "op": "DROP",
       "site": "oformlenie.law:142 drop premise `otchet_soderzhit_stoimosti_i_obemy(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 213,
       "op": "NEG",
       "site": "oformlenie.law:142 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 214,
       "op": "DROP",
       "site": "oformlenie.law:143 drop premise `otchet_soderzhit_prilozheniya(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 215,
       "op": "NEG",
       "site": "oformlenie.law:143 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 216,
       "op": "DROP",
       "site": "oformlenie.law:154 drop premise `itogovaya_stoimost_v_tenge(o: o, amount: amount)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "терм использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 217,
       "op": "NEG",
       "site": "oformlenie.law:154 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "терм использует несвязанные переменные [amount] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 218,
       "op": "DROP",
       "site": "oformlenie.law:155 drop premise `round(amount, 0, \"HALF_UP\") == amount`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t13-h"
     },
     {
       "id": 219,
       "op": "NEG",
       "site": "oformlenie.law:155 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "r failed:\n/var/folders/wj/hg9czcw57n93ff0w1935kd6w0000gn/T/parity-sysmut-q5wc250s/m0219/package/modules/otchet/oformlenie.law:155:18: error LDC-E1305: not поверх не-атома в теле — вне L0-среза (§190)\n"
     },
     {
       "id": 220,
       "op": "DROP",
       "site": "oformlenie.law:156 drop premise `otchet_summa_propisyu(o: o, propis: _)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-parity:I05"
     },
     {
       "id": 221,
       "op": "NEG",
       "site": "oformlenie.law:156 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 222,
       "op": "DROP",
       "site": "oformlenie.law:162 drop premise `otchet_predusmatrivaet_otmetku_o_soglasii(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 223,
       "op": "NEG",
       "site": "oformlenie.law:162 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 224,
       "op": "DROP",
       "site": "oformlenie.law:163 drop premise `otchet_predusmatrivaet_otmetku_ob_otsutstvii_zhalo`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 225,
       "op": "NEG",
       "site": "oformlenie.law:163 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 226,
       "op": "DROP",
       "site": "oformlenie.law:170 drop premise `otchet_utverdil_rukovoditel(o: o, fio: _)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "lem: head использует несвязанные переменные [o] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 227,
       "op": "NEG",
       "site": "oformlenie.law:170 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 228,
       "op": "DROP",
       "site": "oformlenie.law:176 drop premise `otchet_utverdilo_upolnomochennoe_litso(o: o, fio: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "som: head использует несвязанные переменные [o] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 229,
       "op": "NEG",
       "site": "oformlenie.law:176 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ргументом положительного литерала тела правила (§98, E-0165): «есть какое-либо значение». В голове, под `not`, в статус-тесте, внутри терма, в утверждении дела и в вопросе подчёркивание не терм (§14)\n"
     },
     {
       "id": 230,
       "op": "DROP",
       "site": "oformlenie.law:184 drop premise `otchet_predostavlen_v_bumazhnom_vide(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 231,
       "op": "NEG",
       "site": "oformlenie.law:184 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-27-OTCHET-OFORMLEN"
     },
     {
       "id": 232,
       "op": "DROP",
       "site": "oformlenie.law:185 drop premise `format_ne_pozvolyaet_vnosit_izmeneniya(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 233,
       "op": "NEG",
       "site": "oformlenie.law:185 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-27-OTCHET-OFORMLEN"
     },
     {
       "id": 234,
       "op": "DROP",
       "site": "oformlenie.law:191 drop premise `otchet_predostavlen_v_elektronnom_vide(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 235,
       "op": "NEG",
       "site": "oformlenie.law:191 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 236,
       "op": "DROP",
       "site": "oformlenie.law:192 drop premise `format_ne_pozvolyaet_vnosit_izmeneniya(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 237,
       "op": "NEG",
       "site": "oformlenie.law:192 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 238,
       "op": "DROP",
       "site": "oformlenie.law:198 drop premise `otchet_soderzhit_svedeniya_punkta_1(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 239,
       "op": "DROP",
       "site": "oformlenie.law:199 drop premise `otchet_soderzhit_itogovuyu_velichinu(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 240,
       "op": "NEG",
       "site": "oformlenie.law:199 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 241,
       "op": "DROP",
       "site": "oformlenie.law:200 drop premise `otchet_soderzhit_otmetki(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 242,
       "op": "NEG",
       "site": "oformlenie.law:200 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 243,
       "op": "DROP",
       "site": "oformlenie.law:201 drop premise `otchet_utverzhden(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 244,
       "op": "NEG",
       "site": "oformlenie.law:201 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 245,
       "op": "DROP",
       "site": "oformlenie.law:202 drop premise `otchet_predostavlen_v_dopustimom_vide(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 246,
       "op": "NEG",
       "site": "oformlenie.law:202 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t20-a"
     },
     {
       "id": 247,
       "op": "DROP",
       "site": "oformlenie.law:210 drop premise `otchet_po_raschetu(o: o, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 248,
       "op": "NEG",
       "site": "oformlenie.law:210 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-27-OTCHET-OFORMLEN"
     },
     {
       "id": 249,
       "op": "DROP",
       "site": "oformlenie.law:211 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 250,
       "op": "NEG",
       "site": "oformlenie.law:211 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 251,
       "op": "DROP",
       "site": "oformlenie.law:212 drop premise `otchet_vklyuchaet_kalkulyatsiyu_iz_spo(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 252,
       "op": "NEG",
       "site": "oformlenie.law:212 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-27-OTCHET-OFORMLEN"
     },
     {
       "id": 253,
       "op": "DROP",
       "site": "oformlenie.law:213 drop premise `otchet_oformlen_po_prilozheniyu_3(o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 254,
       "op": "CONST",
       "site": "sroki-i-vozrazheniya.law:40 3 -> 4",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t14-a"
     },
     {
       "id": 255,
       "op": "UNIT",
       "site": "sroki-i-vozrazheniya.law:40 unit swap",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t14-a"
     },
     {
       "id": 256,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:58 drop premise `srok_otmetki_poterpevshego(limit)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 257,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:58 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 258,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:59 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 259,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:59 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 260,
       "op": "UNLESS",
       "site": "sroki-i-vozrazheniya.law:60 drop defeater",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-parity:S09"
     },
     {
       "id": 261,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:69 drop premise `otmetka_o_soglasii_prostavlena(r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "iya: head использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 262,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:69 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 263,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:75 drop premise `otmetka_o_nesoglasii_prostavlena(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 264,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:75 add not",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 265,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:76 drop premise `prichiny_nesoglasiya_ukazany(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 266,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:76 add not",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 267,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:87 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 268,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:87 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 269,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:88 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 270,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:88 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 271,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:89 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 272,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:89 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 273,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:90 drop premise `predel_otmetki_poterpevshego(r: r, day: due)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 274,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:90 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 275,
       "op": "CONST",
       "site": "sroki-i-vozrazheniya.law:108 3 -> 4",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t14-c"
     },
     {
       "id": 276,
       "op": "UNIT",
       "site": "sroki-i-vozrazheniya.law:108 unit swap",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-parity:S15"
     },
     {
       "id": 277,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:114 drop premise `srok_otveta_strakhovshchika(limit)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 278,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:114 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 279,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:115 drop premise `otmetka_nesoglasiya_poluchena_strakhovshchikom(r: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 280,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:115 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 281,
       "op": "UNLESS",
       "site": "sroki-i-vozrazheniya.law:116 drop defeater",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 282,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:127 drop premise `korrektirovka_rascheta_predostavlena(r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "koy: head использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 283,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:127 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 284,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:133 drop premise `pismennyy_otvet_o_korrektnosti_napravlen(r)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "tom: head использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 285,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:133 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 286,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:144 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 287,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:144 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 288,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:145 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 289,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:145 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 290,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:146 drop premise `otmetka_nesoglasiya_poluchena_strakhovshchikom(r: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 291,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:146 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 292,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:147 drop premise `predel_otveta_strakhovshchika(r: r, day: due)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 293,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:147 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 294,
       "op": "CONST",
       "site": "sroki-i-vozrazheniya.law:166 5 -> 6",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 12,
+      "example": "urn:query:vred-t14-b"
     },
     {
       "id": 295,
       "op": "UNIT",
       "site": "sroki-i-vozrazheniya.law:166 unit swap",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 12,
+      "example": "urn:query:vred-t14-b"
     },
     {
       "id": 296,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:172 drop premise `srok_predostavleniya_otcheta(limit)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": " head использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 297,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:172 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "терал использует несвязанные переменные [limit] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 298,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:173 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [r, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 299,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:173 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [r, day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 300,
       "op": "UNLESS",
       "site": "sroki-i-vozrazheniya.law:174 drop defeater",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t11-d"
     },
     {
       "id": 301,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:195 drop premise `otchet_poluchen_poterpevshim(r: r, day: got)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 302,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:195 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [got] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 303,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:196 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 304,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:196 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 305,
       "op": "CMP",
       "site": "sroki-i-vozrazheniya.law:197 > -> >=",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-parity:S05"
     },
     {
       "id": 306,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:197 drop premise `got > due`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-parity:S05"
     },
     {
       "id": 307,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:203 drop premise `not otchet_predostavlen_poterpevshemu(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 308,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:203 remove not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 3,
+      "example": "urn:query:vred-t14-d"
     },
     {
       "id": 309,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:204 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 310,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:204 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 311,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:205 drop premise `den_rassmotreniya_dela(r: r, day: day)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 312,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:205 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ие/терм использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 313,
       "op": "CMP",
       "site": "sroki-i-vozrazheniya.law:206 > -> >=",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t14-d"
     },
     {
       "id": 314,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:206 drop premise `day > due`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t14-d"
     },
     {
       "id": 315,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:212 drop premise `otchet_ne_predostavlen_v_srok(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 16,
+      "example": "urn:query:vred-t14-d"
     },
     {
       "id": 316,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:212 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t14-d"
     },
     {
       "id": 317,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:213 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eta: head использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 318,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:213 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 319,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:235 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 320,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:235 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 321,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:236 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 322,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:236 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 323,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:237 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 324,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:237 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 325,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:238 drop premise `predel_predostavleniya_otcheta(r: r, day: due)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 326,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:238 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [due] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 327,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:256 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 328,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:256 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 329,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:257 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 330,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:257 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 331,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:258 drop premise `osmotr_osushchestvlen_strakhovshchikom(r: r, day: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 332,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:258 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 333,
       "op": "DROP",
       "site": "sroki-i-vozrazheniya.law:259 drop premise `uproshchennoe_oformlenie_proisshestviya(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t11-a"
     },
     {
       "id": 334,
       "op": "NEG",
       "site": "sroki-i-vozrazheniya.law:259 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "urn:query:vred-t11-d"
     },
     {
       "id": 335,
       "op": "DROP",
       "site": "organizatsiya.law:23 drop premise `raschet_osushchestvlyaet_strakhovshchik(r: r, s: s`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 336,
       "op": "NEG",
       "site": "organizatsiya.law:23 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 337,
       "op": "DROP",
       "site": "organizatsiya.law:24 drop premise `zayavlenie_po_raschetu(z: z, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 338,
       "op": "NEG",
       "site": "organizatsiya.law:24 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-21-RASCHET-STRAKHOVSHCHIKOM"
     },
     {
       "id": 339,
       "op": "DROP",
       "site": "organizatsiya.law:25 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 340,
       "op": "DROP",
       "site": "organizatsiya.law:26 drop premise `spo_primeneno(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 341,
       "op": "NEG",
       "site": "organizatsiya.law:26 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-21-RASCHET-STRAKHOVSHCHIKOM"
     },
     {
       "id": 342,
       "op": "DROP",
       "site": "organizatsiya.law:37 drop premise `mesto_i_vremya_osmotra_soglasovany(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-26-ORGANIZATSIYA-BEZ-SOGLASOVANIYA"
     },
     {
       "id": 343,
       "op": "NEG",
       "site": "organizatsiya.law:37 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-25-ORGANIZATSIYA-RASCHETA"
     },
     {
       "id": 344,
       "op": "DROP",
       "site": "organizatsiya.law:38 drop premise `osmotr_oformlen(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 345,
       "op": "NEG",
       "site": "organizatsiya.law:38 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-25-ORGANIZATSIYA-RASCHETA"
     },
     {
       "id": 346,
       "op": "DROP",
       "site": "organizatsiya.law:39 drop premise `spo_primeneno(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 347,
       "op": "NEG",
       "site": "organizatsiya.law:39 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-25-ORGANIZATSIYA-RASCHETA"
     },
     {
       "id": 348,
       "op": "DROP",
       "site": "otsenshchiki.law:30 drop premise `otsenshchik_privlechen_po_dogovoru(s: s, o: o, r: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": head использует несвязанные переменные [r, o] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 349,
       "op": "NEG",
       "site": "otsenshchiki.law:30 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рал использует несвязанные переменные [s, o, r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 350,
       "op": "DROP",
       "site": "otsenshchiki.law:38 drop premise `raschet_osushchestvlyaet_otsenshchik(r: r, o: o)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 351,
       "op": "NEG",
       "site": "otsenshchiki.law:38 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [o] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 352,
       "op": "DROP",
       "site": "otsenshchiki.law:39 drop premise `zayavlenie_po_raschetu(z: z, r: r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 353,
       "op": "NEG",
       "site": "otsenshchiki.law:39 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-22-RASCHET-OTSENSHCHIKOM"
     },
     {
       "id": 354,
       "op": "DROP",
       "site": "otsenshchiki.law:40 drop premise `zayavlenie_soderzhit_svedeniya_prilozheniya_1(z)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 355,
       "op": "DROP",
       "site": "otsenshchiki.law:41 drop premise `spo_primeneno(r)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 356,
       "op": "NEG",
       "site": "otsenshchiki.law:41 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 1,
+      "example": "KZ-VRED-22-RASCHET-OTSENSHCHIKOM"
     },
     {
       "id": 357,
       "op": "DROP",
       "site": "otsenshchiki.law:52 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 358,
       "op": "NEG",
       "site": "otsenshchiki.law:52 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 359,
       "op": "CMP",
       "site": "otsenshchiki.law:53 >= -> >",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t07"
     },
     {
       "id": 360,
       "op": "DROP",
       "site": "otsenshchiki.law:53 drop premise `n >= 2`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t08"
     },
     {
       "id": 361,
       "op": "CONST",
       "site": "otsenshchiki.law:53 2 -> 3",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t07"
     },
     {
       "id": 362,
       "op": "DROP",
       "site": "otsenshchiki.law:59 drop premise `predlozheno_otsenshchikov(r: r, n: n)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 363,
       "op": "NEG",
       "site": "otsenshchiki.law:59 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ение/терм использует несвязанные переменные [n] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 364,
       "op": "CMP",
       "site": "otsenshchiki.law:60 < -> <=",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 365,
       "op": "DROP",
       "site": "otsenshchiki.law:60 drop premise `n < 2`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 366,
       "op": "CONST",
       "site": "otsenshchiki.law:60 2 -> 3",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 367,
       "op": "DROP",
       "site": "otsenshchiki.law:71 drop premise `otsenshchik_privlechen_po_dogovoru(s: s, o: o, r: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 368,
       "op": "NEG",
       "site": "otsenshchiki.law:71 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "итерал использует несвязанные переменные [s, o] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 369,
       "op": "DROP",
       "site": "otsenshchiki.law:72 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 370,
       "op": "NEG",
       "site": "otsenshchiki.law:72 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 371,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:26 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 372,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:26 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 373,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:27 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 374,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:27 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 375,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:28 drop premise `zayavlenie_predstavleno_v_den(r: r, day: day)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 376,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:28 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 377,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:43 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "eficiary) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 378,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:43 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 379,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:44 drop premise `poterpevshiy_po_raschetu(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ": bearer) использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 380,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:44 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 381,
       "op": "DROP",
       "site": "uchastie-poterpevshego.law:45 drop premise `zayavlenie_predstavleno_v_den(r: r, day: day)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "window) использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 382,
       "op": "NEG",
       "site": "uchastie-poterpevshego.law:45 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "литерал использует несвязанные переменные [day] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 383,
       "op": "DROP",
       "site": "zayavlenie.law:24 drop premise `zayavlenie_soderzhit_datu_i_vremya_postupleniya(z)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 384,
       "op": "NEG",
       "site": "zayavlenie.law:24 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 385,
       "op": "DROP",
       "site": "zayavlenie.law:25 drop premise `zayavlenie_soderzhit_svedeniya_ob_imushchestve(z)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 386,
       "op": "NEG",
       "site": "zayavlenie.law:25 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t10-a"
     },
     {
       "id": 387,
       "op": "DROP",
       "site": "gibel-ts.law:41 drop premise `ozhidaemye_raskhody_na_vosstanovlenie(v: v, amount`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "/терм использует несвязанные переменные [costs] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 388,
       "op": "NEG",
       "site": "gibel-ts.law:41 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "/терм использует несвязанные переменные [costs] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 389,
       "op": "DROP",
       "site": "gibel-ts.law:42 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 20,
+      "example": "urn:query:vred-t01"
     },
     {
       "id": 390,
       "op": "NEG",
       "site": "gibel-ts.law:42 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 391,
       "op": "CONST",
       "site": "gibel-ts.law:43 0.8 -> 0.7",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 7,
+      "example": "urn:query:vred-t01"
     },
     {
       "id": 392,
       "op": "CMP",
       "site": "gibel-ts.law:44 > -> >=",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 6,
+      "example": "urn:query:vred-t01"
     },
     {
       "id": 393,
       "op": "DROP",
       "site": "gibel-ts.law:44 drop premise `costs > porog_gibeli`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "/var/folders/wj/hg9czcw57n93ff0w1935kd6w0000gn/T/parity-sysmut-q5wc250s/m0393/package/modules/vyplata/gibel-ts.law:43:13: error LDC-E0201: локальный терм porog_gibeli не используется после объявления\n"
     },
     {
       "id": 394,
       "op": "DROP",
       "site": "gibel-ts.law:50 drop premise `vosstanovlenie_tekhnicheski_nevozmozhno(v)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "sti: head использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 395,
       "op": "NEG",
       "site": "gibel-ts.law:50 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 396,
       "op": "DROP",
       "site": "gibel-ts.law:56 drop premise `vosstanovlenie_ekonomicheski_netselesoobrazno(v)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "sti: head использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 397,
       "op": "NEG",
       "site": "gibel-ts.law:56 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [v] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 398,
       "op": "DROP",
       "site": "gibel-ts.law:66 drop premise `raschet_po_ts(r: r, v: v)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 399,
       "op": "NEG",
       "site": "gibel-ts.law:66 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-parity:G04"
     },
     {
       "id": 400,
       "op": "DROP",
       "site": "gibel-ts.law:67 drop premise `ts_schitaetsya_unichtozhennym(v)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 401,
       "op": "NEG",
       "site": "gibel-ts.law:67 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-parity:G04"
     },
     {
       "id": 402,
       "op": "DROP",
       "site": "gibel-ts.law:68 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "head использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 403,
       "op": "NEG",
       "site": "gibel-ts.law:68 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 404,
       "op": "DROP",
       "site": "gibel-ts.law:69 drop premise `ostatki_peredany_v_sobstvennost_strakhovshchika(r)`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 9,
+      "example": "urn:query:vred-t15-b"
     },
     {
       "id": 405,
       "op": "NEG",
       "site": "gibel-ts.law:69 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 8,
+      "example": "urn:query:vred-t15-c"
     },
     {
       "id": 406,
       "op": "DROP",
       "site": "gibel-ts.law:79 drop premise `raschet_po_ts(r: r, v: v)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 407,
       "op": "NEG",
       "site": "gibel-ts.law:79 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [r] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 408,
       "op": "DROP",
       "site": "gibel-ts.law:80 drop premise `ts_schitaetsya_unichtozhennym(v)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 409,
       "op": "NEG",
       "site": "gibel-ts.law:80 add not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-c"
     },
     {
       "id": 410,
       "op": "DROP",
       "site": "gibel-ts.law:81 drop premise `rynochnaya_stoimost_na_datu_otcheta(v: v, amount: `",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-c"
     },
     {
       "id": 411,
       "op": "NEG",
       "site": "gibel-ts.law:81 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "ерал использует несвязанные переменные [market] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 412,
       "op": "DROP",
       "site": "gibel-ts.law:82 drop premise `stoimost_godnykh_k_realizatsii_ostatkov(v: v, amou`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-c"
     },
     {
       "id": 413,
       "op": "NEG",
       "site": "gibel-ts.law:82 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "рал использует несвязанные переменные [salvage] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 414,
       "op": "DROP",
       "site": "gibel-ts.law:83 drop premise `not ostatki_peredany_v_sobstvennost_strakhovshchik`",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 2,
+      "example": "urn:query:vred-t15-b"
     },
     {
       "id": 415,
       "op": "NEG",
       "site": "gibel-ts.law:83 remove not",
-      "outcome": "REJECTED"
+      "outcome": "KILLED",
+      "failing": 4,
+      "example": "urn:query:vred-t15-c"
     },
     {
       "id": 416,
       "op": "DROP",
       "site": "oplata-remonta.law:21 drop premise `strakhovshchik_po_raschetu(r: r, s: s)`",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": ", action) использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 417,
       "op": "NEG",
       "site": "oplata-remonta.law:21 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [s] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     },
     {
       "id": 418,
       "op": "DROP",
       "site": "oplata-remonta.law:22 drop premise `oplata_remonta_soglasovana(r: r, p: p)`",
-      "outcome": "REJECTED"
+      "outcome": "SURVIVED",
+      "failing": 0,
+      "example": null
     },
     {
       "id": 419,
       "op": "NEG",
       "site": "oplata-remonta.law:22 add not",
-      "outcome": "REJECTED"
+      "outcome": "REJECTED",
+      "detail": "й литерал использует несвязанные переменные [p] — правило                      не range-restricted (§190: связывание только позитивным                      established-конъюнктом конечного источника)\n"
     }
   ]
 }
